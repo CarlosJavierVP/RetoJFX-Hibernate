@@ -1,57 +1,22 @@
 package com.example.models;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.Objects;
-
+@Data
 @Entity
-@Table(name = "usuario", schema = "reto2", catalog = "")
+@Table(name = "usuario", schema = "reto2")
 public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "id")
     private int id;
-    @Basic
     @Column(name = "nombre_usuario")
     private String nombreUsuario;
-    @Basic
-    @Column(name = "password")
+
     private String password;
-    @Basic
     @Column(name = "is_admin")
     private Byte isAdmin;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNombreUsuario() {
-        return nombreUsuario;
-    }
-
-    public void setNombreUsuario(String nombreUsuario) {
-        this.nombreUsuario = nombreUsuario;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public Byte getIsAdmin() {
-        return isAdmin;
-    }
-
-    public void setIsAdmin(Byte isAdmin) {
-        this.isAdmin = isAdmin;
-    }
 
     @Override
     public boolean equals(Object o) {

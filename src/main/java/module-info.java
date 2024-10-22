@@ -1,9 +1,14 @@
-module com.example.retoconjunto2 {
+module com.example {
     requires javafx.controls;
     requires javafx.fxml;
     requires org.hibernate.orm.core;
+    requires jakarta.persistence;
+    requires lombok;
 
 
     opens com.example to javafx.fxml;
     exports com.example;
+    exports com.example.controllers;
+    opens com.example.controllers to javafx.fxml;
+    opens com.example.views to javafx.fxml;
 }
