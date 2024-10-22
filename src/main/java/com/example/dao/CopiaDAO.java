@@ -7,6 +7,7 @@ import com.example.models.Copia;
 import java.util.List;
 
 public class CopiaDAO implements DAO<Copia>{
+
     @Override
     public List<Copia> findAll() {
         return null;
@@ -31,4 +32,5 @@ public class CopiaDAO implements DAO<Copia>{
     public void delete(Copia copia) {
 
     }
+
 }

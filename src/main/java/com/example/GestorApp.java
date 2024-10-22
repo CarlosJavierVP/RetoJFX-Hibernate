@@ -22,7 +22,7 @@ public class GestorApp extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(GestorApp.class.getResource(view));
         Scene scene = null;
         try {
-            scene = new Scene(fxmlLoader.load(), 320, 240);
+            scene = new Scene(fxmlLoader.load(), 320, 380);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

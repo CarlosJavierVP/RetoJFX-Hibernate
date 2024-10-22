@@ -6,6 +6,7 @@ import java.util.List;
  * @author Carlos Javier
  * */
 public interface DAO <T>{
+
     /**El método devuelve una lista de todos los objetos*/
     public List<T> findAll();
     /**
@@ -28,6 +29,7 @@ public interface DAO <T>{
      * @param t el objeto eliminado
      * */
     public void delete (T t);
+
 
 
 
