@@ -20,7 +20,7 @@ public class UsuarioDAO implements DAO<Usuario> {
     public List<Usuario> findAll() {
         List<Usuario> lista;
 
-        try(Session session = HibernateUtil.getSessionFactory().openSession()){
+        try(Session session = sessionFactory.openSession()){
             Query<Usuario> query = session.createQuery("select u from Usuario u", Usuario.class);
             lista = query.list();
         }
@@ -29,9 +29,9 @@ public class UsuarioDAO implements DAO<Usuario> {
 
     @Override
     public Usuario findById(Integer id) {
-        Usuario user;
+        Usuario user = null;
 
-        try (Session session = HibernateUtil.getSessionFactory().openSession()){
+        try (Session session = sessionFactory.openSession()){
             user = session.get(Usuario.class, id);
         }
         return user;
@@ -39,7 +39,7 @@ public class UsuarioDAO implements DAO<Usuario> {
 
     @Override
     public void save(Usuario usuario) {
-        try (Session session = HibernateUtil.getSessionFactory().openSession()){
+        try (Session session = sessionFactory.openSession()){
             session.beginTransaction();
             session.persist(usuario);
             session.getTransaction().commit();
@@ -48,7 +48,7 @@ public class UsuarioDAO implements DAO<Usuario> {
 
     @Override
     public void update(Usuario usuario) {
-        try(Session session = HibernateUtil.getSessionFactory().openSession()){
+        try(Session session = sessionFactory.openSession()){
             session.beginTransaction();
             usuario = session.get(Usuario.class, usuario.getId());
             session.merge(usuario);
@@ -58,7 +58,7 @@ public class UsuarioDAO implements DAO<Usuario> {
 
     @Override
     public void delete(Usuario usuario) {
-        try(Session session = HibernateUtil.getSessionFactory().openSession()){
+        try(Session session = sessionFactory.openSession()){
             session.beginTransaction();
             session.remove(usuario);
             session.getTransaction().commit();
