@@ -18,6 +18,7 @@ public class Usuario {
     @Column(name = "is_admin")
     private Byte isAdmin;
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

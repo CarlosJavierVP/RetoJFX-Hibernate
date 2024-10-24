@@ -4,6 +4,7 @@ module com.example {
     requires org.hibernate.orm.core;
     requires jakarta.persistence;
     requires lombok;
+    requires java.naming;
 
 
     opens com.example to javafx.fxml;
