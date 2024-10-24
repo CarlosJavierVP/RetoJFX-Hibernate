@@ -19,7 +19,7 @@ public class Usuario {
     @Column(name = "is_admin")
     private Byte isAdmin;
 
-    @OneToMany(mappedBy = "usuario")
+    @OneToMany(mappedBy = "user")
     private List<Copia> misCopias;
 
 

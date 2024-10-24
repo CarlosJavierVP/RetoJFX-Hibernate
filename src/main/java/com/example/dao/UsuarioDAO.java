@@ -50,7 +50,7 @@ public class UsuarioDAO implements DAO<Usuario> {
 
     public Usuario validateUser (String nombre_usuario, String password){
         try(Session session = sessionFactory.openSession()){
-            Query<Usuario> q = session.createQuery("from Usuario where nombreUsuario =:nombre_usuario and password =:password", Usuario.class);
+            Query<Usuario> q = session.createQuery("from Usuario where nombreUsuario =:nombreUsuario and password =:password", Usuario.class);
             q.setParameter("nombreUsuario", nombre_usuario);
             q.setParameter("password", password);
             return q.getSingleResultOrNull();

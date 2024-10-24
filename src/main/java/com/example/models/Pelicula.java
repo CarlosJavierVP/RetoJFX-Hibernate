@@ -25,6 +25,9 @@ public class Pelicula {
     @Column(name = "image_url")
     private String imageUrl;
 
+    @OneToOne
+    private Copia copia;
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

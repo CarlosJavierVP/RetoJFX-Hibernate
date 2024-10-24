@@ -4,12 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit correciones pom">
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit implementación DAO terminada">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CurrentSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dto/CopyDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/main-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/5b02abaa-dc03-4781-8ab4-1efcebc789b0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5b02abaa-dc03-4781-8ab4-1efcebc789b0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5b02abaa-dc03-4781-8ab4-1efcebc789b0/storage_v2/_src_/schema/reto2.BCJ2Bg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5b02abaa-dc03-4781-8ab4-1efcebc789b0/storage_v2/_src_/schema/reto2.BCJ2Bg.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/GestorApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/GestorApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/LogginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/LogginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/UsuarioDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/models/Pelicula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/models/Pelicula.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/models/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/models/Usuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/loggin-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/loggin-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +29,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -49,7 +60,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Carlos/Downloads/HibernateDAO",
+    "last_opened_file_path": "C:/Users/Carlos/Desktop/2DAM/Desarrollo de interfaces/RetoConjunto1",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -69,6 +80,7 @@
       <recent name="C:\Users\Carlos\Desktop\2DAM\Desarrollo de interfaces\RetoConjunto2\src\main\java\com\example\retoconjunto2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Carlos\Desktop\2DAM\Desarrollo de interfaces\RetoConjunto2\src\main\java\com\example\controllers" />
       <recent name="C:\Users\Carlos\Desktop\2DAM\Desarrollo de interfaces\RetoConjunto2\src\main\resources\com\example\views" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -104,7 +116,7 @@
       <updated>1729602000773</updated>
       <workItem from="1729602001835" duration="245000" />
       <workItem from="1729602253599" duration="6714000" />
-      <workItem from="1729782341677" duration="1746000" />
+      <workItem from="1729782341677" duration="8490000" />
     </task>
     <task id="LOCAL-00001" summary="Commit conexión Hib, DAO y MODEL - revisar updateDAO">
       <option name="closed" value="true" />
@@ -138,7 +150,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729609013481</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Commit correción module-info y terminar implementar dao usuario">
+      <option name="closed" value="true" />
+      <created>1729784244662</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729784244662</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Commit implementación DAO terminada">
+      <option name="closed" value="true" />
+      <created>1729786398151</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1729786398151</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +177,8 @@
     <MESSAGE value="Commit ventana login" />
     <MESSAGE value="Commit diseño ventana login terminada - añadir funcionalidades y corregir el dao" />
     <MESSAGE value="Commit correciones pom" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit correciones pom" />
+    <MESSAGE value="Commit correción module-info y terminar implementar dao usuario" />
+    <MESSAGE value="Commit implementación DAO terminada" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit implementación DAO terminada" />
   </component>
 </project>

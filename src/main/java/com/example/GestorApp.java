@@ -18,11 +18,11 @@ public class GestorApp extends Application {
         stage.show();
     }
 
-    private static void loadFXML(String view, String title){
+    public static void loadFXML(String view, String title){
         FXMLLoader fxmlLoader = new FXMLLoader(GestorApp.class.getResource(view));
         Scene scene = null;
         try {
-            scene = new Scene(fxmlLoader.load(), 320, 380);
+            scene = new Scene(fxmlLoader.load(), 800, 600);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

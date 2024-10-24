@@ -24,7 +24,7 @@
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin></ImageView>
-            <Label alignment="CENTER" text="Loggin - My ListFilm">
+            <Label alignment="CENTER" text="Loggin - My ListMovies">
                <font>
                   <Font name="System Bold Italic" size="25.0" />
                </font>
@@ -41,13 +41,13 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </VBox.margin>
                         </Label>
-                        <TextField fx:id="txtUser" />
+                        <TextField fx:id="txtUser" text="juanperez" />
                         <Label text="Contraseña:">
                            <VBox.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </VBox.margin>
                         </Label>
-                        <PasswordField fx:id="pass" />
+                        <PasswordField fx:id="pass" text="password123" />
                      </children>
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -72,6 +72,7 @@
                   <Insets />
                </VBox.margin>
             </FlowPane>
+            <Label fx:id="infoLabel" />
          </children>
          <BorderPane.margin>
             <Insets />
