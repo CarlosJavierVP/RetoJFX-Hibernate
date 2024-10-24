@@ -11,9 +11,9 @@ public class Copia {
     @Id
     private int id;
 
-    private Object estado;
+    private String estado;
 
-    private Object soporte;
+    private String soporte;
 
 
     @OneToOne(mappedBy = "copia")
@@ -23,7 +23,7 @@ public class Copia {
     @JoinColumn(name = "id_usuario")
     private Usuario user;
 
-    
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

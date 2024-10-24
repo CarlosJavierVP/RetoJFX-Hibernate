@@ -27,10 +27,9 @@ public class LogginController implements Initializable {
     @FXML
     private Label infoLabel;
 
-    private UsuarioDAO userDAO = new UsuarioDAO(HibernateUtil.getSessionFactory());
     @FXML
     public void onConectar(ActionEvent actionEvent) {
-        Usuario user = new UsuarioDAO(userDAO.validateUser(txtUser.getText(), pass.getText());
+        Usuario user = new UsuarioDAO(HibernateUtil.getSessionFactory()).validateUser(txtUser.getText(), pass.getText());
 
         if (user != null){
             infoLabel.setText("Usuario conectado");

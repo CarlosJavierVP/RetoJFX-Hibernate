@@ -1,5 +1,6 @@
 package com.example.dao;
 
+import com.example.dto.CopyDTO;
 import com.example.models.Usuario;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -50,11 +51,21 @@ public class UsuarioDAO implements DAO<Usuario> {
 
     public Usuario validateUser (String nombre_usuario, String password){
         try(Session session = sessionFactory.openSession()){
-            Query<Usuario> q = session.createQuery("from Usuario where nombreUsuario =:nombreUsuario and password =:password", Usuario.class);
-            q.setParameter("nombreUsuario", nombre_usuario);
-            q.setParameter("password", password);
-            return q.getSingleResultOrNull();
+            Query<Usuario> query = session.createQuery("from Usuario where nombreUsuario =:nombreUsuario and password =:password", Usuario.class);
+            query.setParameter("nombreUsuario", nombre_usuario);
+            query.setParameter("password", password);
+            return query.getSingleResultOrNull();
         }
+    }
+
+    public List<CopyDTO> findAllUserCopies(Usuario user){
+        List<CopyDTO> myCopies;
+
+        try(Session session = sessionFactory.openSession()){
+            Query<CopyDTO> query = session.createQuery("", CopyDTO.class);
+            myCopies = query.list();
+        }
+        return myCopies;
     }
 
 

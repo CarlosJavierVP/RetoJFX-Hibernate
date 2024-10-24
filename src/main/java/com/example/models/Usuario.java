@@ -3,6 +3,7 @@ package com.example.models;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 @Data
@@ -20,7 +21,7 @@ public class Usuario {
     private Byte isAdmin;
 
     @OneToMany(mappedBy = "user")
-    private List<Copia> misCopias;
+    private List<Copia> misCopias = new ArrayList<>(0);
 
 
     public void addCopy(Copia c){
