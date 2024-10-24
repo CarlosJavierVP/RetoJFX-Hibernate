@@ -3,6 +3,7 @@ package com.example.models;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
 import java.util.Objects;
 @Data
 @Entity
@@ -17,6 +18,15 @@ public class Usuario {
     private String password;
     @Column(name = "is_admin")
     private Byte isAdmin;
+
+    @OneToMany(mappedBy = "usuario")
+    private List<Copia> misCopias;
+
+
+    public void addCopy(Copia c){
+        c.setUser(this);
+        this.misCopias.add(c);
+    }
 
 
     @Override
