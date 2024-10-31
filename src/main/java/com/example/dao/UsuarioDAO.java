@@ -5,7 +5,6 @@ import com.example.models.Usuario;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
-import java.util.ArrayList;
 import java.util.List;
 
 public class UsuarioDAO implements DAO<Usuario> {
@@ -51,7 +50,7 @@ public class UsuarioDAO implements DAO<Usuario> {
 
     public Usuario validateUser (String nombre_usuario, String password){
         try(Session session = sessionFactory.openSession()){
-            Query<Usuario> query = session.createQuery("from Usuario where nombreUsuario =:nombreUsuario and password =:password", Usuario.class);
+            Query<Usuario> query = session.createQuery("select u from Usuario u where u.nombreUsuario =:nombreUsuario and u.password =:password", Usuario.class);
             query.setParameter("nombreUsuario", nombre_usuario);
             query.setParameter("password", password);
             return query.getSingleResultOrNull();
@@ -62,11 +61,12 @@ public class UsuarioDAO implements DAO<Usuario> {
         List<CopyDTO> myCopies;
 
         try(Session session = sessionFactory.openSession()){
-            Query<CopyDTO> query = session.createQuery("", CopyDTO.class);
+            Query<CopyDTO> query = session.createQuery("select c from Copia c where c.user.id =:userid ", CopyDTO.class);
+            query.setParameter("userid", user.getIdUsuario());
             myCopies = query.list();
         }
         return myCopies;
     }
-
+//"select u.misCopias from Usuario u where u.id  =: userid "
 
 }

@@ -6,7 +6,7 @@ module com.example {
     requires lombok;
     requires java.naming;
 
-
+    exports com.example.models;
     opens com.example.models;
     opens com.example to javafx.fxml;
     exports com.example;

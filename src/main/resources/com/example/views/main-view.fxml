@@ -52,13 +52,8 @@
             </TableView>
             <HBox alignment="CENTER" prefHeight="50.0" prefWidth="784.0">
                <children>
-                  <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="50.0" prefWidth="640.0">
+                  <FlowPane alignment="CENTER_RIGHT" columnHalignment="CENTER" prefHeight="50.0" prefWidth="640.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#onClose" prefWidth="80.0" text="Salir">
-                           <FlowPane.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </FlowPane.margin>
-                        </Button>
                         <Button mnemonicParsing="false" onAction="#onBack" prefWidth="80.0" text="Atrás">
                            <FlowPane.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -66,7 +61,6 @@
                         </Button>
                      </children>
                   </FlowPane>
-                  <Button mnemonicParsing="false" onAction="#addCopy" prefWidth="80.0" text="Add" />
                </children>
             </HBox>
          </children>

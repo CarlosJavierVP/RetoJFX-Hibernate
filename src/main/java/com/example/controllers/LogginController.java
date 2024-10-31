@@ -17,10 +17,6 @@ import java.util.ResourceBundle;
 public class LogginController implements Initializable {
 
     @FXML
-    private Button btnCancel;
-    @FXML
-    private Button btnLog;
-    @FXML
     private PasswordField pass;
     @FXML
     private TextField txtUser;
@@ -29,13 +25,14 @@ public class LogginController implements Initializable {
 
     @FXML
     public void onConectar(ActionEvent actionEvent) {
-        Usuario user = new UsuarioDAO(HibernateUtil.getSessionFactory()).validateUser(txtUser.getText(), pass.getText());
+        UsuarioDAO dao = new UsuarioDAO(HibernateUtil.getSessionFactory());
+        Usuario user = dao.validateUser(txtUser.getText(), pass.getText());
+
 
         if (user != null){
             infoLabel.setText("Usuario conectado");
             CurrentSession.userSelected = user;
-            CurrentSession.copySelected = null; // implementar en UsuarioDAO una lista de CopyDTO que devuelva todas las copias del usuario
-            GestorApp.loadFXML("views/main-view.fxml","Movie Pro Manager - "+user.getNombreUsuario());
+            GestorApp.loadFXML("views/allmovies-view.fxml","Movie Pro Manager - "+user.getNombreUsuario());
         }else{
             infoLabel.setText("Usuario no encontrado");
         }

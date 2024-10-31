@@ -4,13 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit diseño ventana principal y validación usuario">
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit modificación de métodos y ajustes para la tabla">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/allmoviesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/allmovies-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/detail-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5b02abaa-dc03-4781-8ab4-1efcebc789b0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5b02abaa-dc03-4781-8ab4-1efcebc789b0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CurrentSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CurrentSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/GestorApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/GestorApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/LogginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/LogginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/UsuarioDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dto/CopyDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dto/CopyDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/models/Copia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/models/Copia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/models/Pelicula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/models/Pelicula.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/models/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/models/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/loggin-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/loggin-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/main-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,12 +64,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Carlos/Desktop/2DAM/Desarrollo de interfaces/RetoConjunto1",
+    "last_opened_file_path": "C:/Users/Carlos/Desktop/2DAM/Desarrollo de interfaces/DI-EjercicioInterfazSB",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "advanced.settings",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -68,6 +80,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Carlos\Desktop\2DAM\Desarrollo de interfaces\RetoConjunto2\src\main\resources\com\example\views" />
       <recent name="C:\Users\Carlos\Desktop\2DAM\Desarrollo de interfaces\RetoConjunto2\src\main\resources" />
       <recent name="C:\Users\Carlos\Desktop\2DAM\Desarrollo de interfaces\RetoConjunto2\src\main\java\com\example\retoconjunto2" />
     </key>
@@ -108,7 +121,13 @@
       <updated>1729602000773</updated>
       <workItem from="1729602001835" duration="245000" />
       <workItem from="1729602253599" duration="6714000" />
-      <workItem from="1729782341677" duration="12423000" />
+      <workItem from="1729782341677" duration="12727000" />
+      <workItem from="1730295583265" duration="8383000" />
+      <workItem from="1730314283095" duration="185000" />
+      <workItem from="1730314560126" duration="59000" />
+      <workItem from="1730314646747" duration="8000" />
+      <workItem from="1730373455139" duration="325000" />
+      <workItem from="1730373789471" duration="19148000" />
     </task>
     <task id="LOCAL-00001" summary="Commit conexión Hib, DAO y MODEL - revisar updateDAO">
       <option name="closed" value="true" />
@@ -166,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729797878534</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Commit modificación de métodos y ajustes para la tabla">
+      <option name="closed" value="true" />
+      <created>1729802341058</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1729802341058</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +207,7 @@
     <MESSAGE value="Commit correción module-info y terminar implementar dao usuario" />
     <MESSAGE value="Commit implementación DAO terminada" />
     <MESSAGE value="Commit diseño ventana principal y validación usuario" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit diseño ventana principal y validación usuario" />
+    <MESSAGE value="Commit modificación de métodos y ajustes para la tabla" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit modificación de métodos y ajustes para la tabla" />
   </component>
 </project>

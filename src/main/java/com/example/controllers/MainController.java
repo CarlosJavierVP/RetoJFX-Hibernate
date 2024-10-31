@@ -4,48 +4,54 @@ import com.example.CurrentSession;
 import com.example.GestorApp;
 import com.example.HibernateUtil;
 import com.example.dao.CopiaDAO;
+import com.example.dao.PeliculaDAO;
 import com.example.dao.UsuarioDAO;
 import com.example.dto.CopyDTO;
+import com.example.models.Copia;
+import com.example.models.Pelicula;
+import com.example.models.Usuario;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
 
     @javafx.fxml.FXML
-    private TableView tableCopies;
+    private TableView<Copia> tableCopies;
     @javafx.fxml.FXML
-    private TableColumn<CopyDTO, String> tablaTitulo;
+    private TableColumn<String, String> tablaTitulo;
     @javafx.fxml.FXML
-    private TableColumn<CopyDTO, String> tablaEstado;
+    private TableColumn<String, String> tablaEstado;
     @javafx.fxml.FXML
-    private TableColumn<CopyDTO, String> tablaSoporte;
+    private TableColumn<String, String> tablaSoporte;
+
+    UsuarioDAO userDAO = new UsuarioDAO(HibernateUtil.getSessionFactory());
+    private List<CopyDTO> copiesDTO;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        tablaTitulo.setCellValueFactory(new PropertyValueFactory<CopyDTO, String>("titulo"));
-        tablaEstado.setCellValueFactory(new PropertyValueFactory<CopyDTO, String>("estado"));
-        tablaSoporte.setCellValueFactory(new PropertyValueFactory<CopyDTO, String>("soporte"));
+        tablaTitulo.setCellValueFactory(new PropertyValueFactory<>("Titulo"));
+        tablaEstado.setCellValueFactory(new PropertyValueFactory<>("Estado"));
+        tablaSoporte.setCellValueFactory(new PropertyValueFactory<>("Soporte"));
+        //copiesDTO = userDAO.findAllUserCopies(CurrentSession.userSelected);
 
-        tableCopies.getSelectionModel().selectedItemProperty().addListener( (newValue) ->{
-            if (newValue == null) return;
-            CurrentSession.copySelected = (CopyDTO) newValue;
-            GestorApp.loadFXML("views/main-view.fxml","Movie Pro Manager - "+((CopyDTO) newValue).getPeli().getTitulo());
-        } );
-        tableRefresh();
-
-    }
-
-    //lazily por defecto
-    private void tableRefresh(){
-        tableCopies.getItems().clear();
-        new UsuarioDAO(HibernateUtil.getSessionFactory()).findById(CurrentSession.userSelected.getId()).getMisCopias().forEach((copies)->{
-            tableCopies.getItems().add(copies);
+        /*List<Copia>copies = userDAO.findAllUserCopies(CurrentSession.userSelected);
+        copies.forEach(c ->{
+            tableCopies.getItems().add(c);
         });
+
+         */
+
+        //copiesDTO.forEach(copies ->{
+            //tableCopies.getItems().add(copies);
+       // });
+
 
     }
 
@@ -53,11 +59,5 @@ public class MainController implements Initializable {
     public void onBack(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void onClose(ActionEvent actionEvent) {
-    }
 
-    @javafx.fxml.FXML
-    public void addCopy(ActionEvent actionEvent) {
-    }
 }

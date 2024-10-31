@@ -1,11 +1,15 @@
 package com.example;
 
+import com.example.dao.UsuarioDAO;
+import com.example.dto.CopyDTO;
+import com.example.models.Usuario;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.List;
 
 public class GestorApp extends Application {
 
@@ -14,7 +18,7 @@ public class GestorApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         ventana = stage;
-        loadFXML("views/loggin-view.fxml","Film Pro Manager - Login");
+        loadFXML("views/loggin-view.fxml","Movie Pro Manager - Login");
         stage.show();
     }
 
