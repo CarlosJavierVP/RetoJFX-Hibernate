@@ -1,6 +1,8 @@
 package com.example.dao;
 
 import com.example.dto.CopyDTO;
+import com.example.models.Copia;
+import com.example.models.Pelicula;
 import com.example.models.Usuario;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -61,12 +63,16 @@ public class UsuarioDAO implements DAO<Usuario> {
         List<CopyDTO> myCopies;
 
         try(Session session = sessionFactory.openSession()){
-            Query<CopyDTO> query = session.createQuery("select c from Copia c where c.user.id =:userid ", CopyDTO.class);
+            Query<CopyDTO> query = session.createQuery("select c, p.titulo from Copia c join c.user u join Pelicula p on c.idPelicula = p.id where u.id =:userid ", CopyDTO.class);
             query.setParameter("userid", user.getIdUsuario());
             myCopies = query.list();
         }
         return myCopies;
     }
+
+//"select p.titulo, u.misCopias from Usuario u join fetch Pelicula p where  u.id =:userid ", CopyDTO.class
+
+//"select c from Copia c where c.user.id =:userid ", CopyDTO.class
 //"select u.misCopias from Usuario u where u.id  =: userid "
 
 }

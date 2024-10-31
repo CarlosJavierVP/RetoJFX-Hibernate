@@ -25,32 +25,32 @@ public class MainController implements Initializable {
     @javafx.fxml.FXML
     private TableView<Copia> tableCopies;
     @javafx.fxml.FXML
-    private TableColumn<String, String> tablaTitulo;
+    private TableColumn<Pelicula, String> tablaTitulo;
     @javafx.fxml.FXML
     private TableColumn<String, String> tablaEstado;
     @javafx.fxml.FXML
     private TableColumn<String, String> tablaSoporte;
 
     UsuarioDAO userDAO = new UsuarioDAO(HibernateUtil.getSessionFactory());
-    private List<CopyDTO> copiesDTO;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         tablaTitulo.setCellValueFactory(new PropertyValueFactory<>("Titulo"));
         tablaEstado.setCellValueFactory(new PropertyValueFactory<>("Estado"));
         tablaSoporte.setCellValueFactory(new PropertyValueFactory<>("Soporte"));
-        //copiesDTO = userDAO.findAllUserCopies(CurrentSession.userSelected);
+        List<CopyDTO> copiesDTO = userDAO.findAllUserCopies(CurrentSession.userSelected);
 
-        /*List<Copia>copies = userDAO.findAllUserCopies(CurrentSession.userSelected);
+        /*
+        List<Copia>copies = userDAO.findAllUserCopies(CurrentSession.userSelected);
         copies.forEach(c ->{
             tableCopies.getItems().add(c);
         });
 
          */
 
-        //copiesDTO.forEach(copies ->{
-            //tableCopies.getItems().add(copies);
-       // });
+        copiesDTO.forEach(copies ->{
+            tableCopies.getItems().add(copies.getCopia());
+        });
 
 
     }
