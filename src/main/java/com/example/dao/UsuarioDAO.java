@@ -68,9 +68,13 @@ public class UsuarioDAO implements DAO<Usuario> {
         return myCopies;
     }
 
-//"select p.titulo, u.misCopias from Usuario u join fetch Pelicula p where  u.id =:userid ", CopyDTO.class
 
-//"select c from Copia c where c.user.id =:userid ", CopyDTO.class
-//"select u.misCopias from Usuario u where u.id  =: userid "
+    public Usuario validateNewUser(String user_name){
+        try(Session session = sessionFactory.openSession()){
+            Query<Usuario> query = session.createQuery("select u from Usuario u where u.nombreUsuario =: username");
+            query.setParameter("username", user_name);
+            return query.getSingleResultOrNull();
+        }
+    }
 
 }

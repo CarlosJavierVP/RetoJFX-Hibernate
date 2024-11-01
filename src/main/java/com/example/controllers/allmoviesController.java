@@ -27,8 +27,6 @@ public class allmoviesController implements Initializable {
     private List<Pelicula> allMovies;
     PeliculaDAO peliDAO = new PeliculaDAO(HibernateUtil.getSessionFactory());
 
-
-
     @Deprecated
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -42,22 +40,17 @@ public class allmoviesController implements Initializable {
             tableMovies.getItems().add(peli);
         });
 
-
         tableMovies.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->{
             CurrentSession.movieSelected = newValue;
             GestorApp.loadFXML("views/detail-view.fxml","Movie Pro Manager - "+CurrentSession.userSelected.getNombreUsuario());
         });
-
-
     }
-
 
     @javafx.fxml.FXML
     public void onBack(ActionEvent actionEvent) {
         CurrentSession.setParamsToNull();
         GestorApp.loadFXML("views/loggin-view.fxml","Movie Pro Manager - Login");
     }
-
 
     @javafx.fxml.FXML
     public void btnMyCopies(ActionEvent actionEvent) {

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -13,70 +14,162 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="371.0" prefWidth="331.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controllers.LogginController">
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controllers.LogginController">
    <center>
-      <VBox alignment="TOP_CENTER" prefHeight="388.0" prefWidth="426.0" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
          <children>
-            <ImageView fitHeight="104.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../media/logo.png" />
-               </image>
+            <ImageView fitHeight="144.0" fitWidth="288.0" pickOnBounds="true" preserveRatio="true">
                <VBox.margin>
-                  <Insets top="10.0" />
-               </VBox.margin></ImageView>
-            <Label alignment="CENTER" text="Loggin - My ListMovies">
-               <font>
-                  <Font name="System Bold Italic" size="25.0" />
-               </font>
-               <VBox.margin>
-                  <Insets top="5.0" />
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
+               <image>
+                  <Image url="@../../../media/pngegg.png" />
+               </image>
+            </ImageView>
+            <Label text="APP - MOVIE PRO MANAGER">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
             </Label>
-            <HBox alignment="TOP_CENTER" prefHeight="143.0" prefWidth="385.0">
+            <HBox alignment="CENTER">
                <children>
-                  <VBox prefHeight="131.0" prefWidth="195.0">
+                  <VBox alignment="TOP_CENTER">
                      <children>
-                        <Label text="Usuario:">
+                        <Label alignment="CENTER" text="Loggin - My ListMovies">
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font>
                            <VBox.margin>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                              <Insets top="5.0" />
                            </VBox.margin>
                         </Label>
-                        <TextField fx:id="txtUser" text="juanperez" />
-                        <Label text="Contraseña:">
+                        <HBox alignment="TOP_CENTER" prefHeight="143.0" prefWidth="385.0">
+                           <children>
+                              <VBox prefHeight="131.0" prefWidth="195.0">
+                                 <children>
+                                    <Label text="Usuario:">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="txtUser" text="juanperez" />
+                                    <Label text="Contraseña:">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <PasswordField fx:id="pass" text="password123" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <FlowPane alignment="CENTER" prefHeight="37.0" prefWidth="331.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#onConectar" text="Aceptar">
+                                 <FlowPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </FlowPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#onCancelar" text="Cancelar">
+                                 <FlowPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </FlowPane.margin>
+                              </Button>
+                           </children>
                            <VBox.margin>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                              <Insets />
                            </VBox.margin>
-                        </Label>
-                        <PasswordField fx:id="pass" text="password123" />
+                        </FlowPane>
+                        <Label fx:id="infoLabel" />
                      </children>
                      <HBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER">
+                     <children>
+                        <Label alignment="CENTER" text="Register New User">
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox alignment="TOP_CENTER" prefHeight="143.0" prefWidth="385.0">
+                           <children>
+                              <VBox prefHeight="131.0" prefWidth="195.0">
+                                 <children>
+                                    <Label text="Usuario:">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="newUser" promptText="Nuevo Usuario" />
+                                    <Label text="Contraseña:">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <PasswordField fx:id="newPass" promptText="Inserte contraseña" />
+                                    <Label text="Confirmar Contraseña:">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <PasswordField fx:id="newPass2" promptText="Confirmar contraseña" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <FlowPane alignment="TOP_RIGHT" prefHeight="37.0" prefWidth="331.0">
+                           <children>
+                              <Label fx:id="infoLabel1" />
+                              <Button fx:id="btnAddUser" mnemonicParsing="false" onAction="#onRegister" style="-fx-background-color: #00000000;">
+                                 <FlowPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </FlowPane.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="60.0" fitWidth="60.0">
+                                       <image>
+                                          <Image url="@../../../media/agregar-usuario.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </FlowPane>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
                   </VBox>
                </children>
             </HBox>
-            <FlowPane alignment="CENTER" prefHeight="37.0" prefWidth="331.0">
-               <children>
-                  <Button mnemonicParsing="false" onAction="#onConectar" text="Aceptar">
-                     <FlowPane.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </FlowPane.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" onAction="#onCancelar" text="Cancelar">
-                     <FlowPane.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </FlowPane.margin>
-                  </Button>
-               </children>
+            <ImageView fitHeight="150.0" fitWidth="634.0" pickOnBounds="true">
                <VBox.margin>
-                  <Insets />
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
-            </FlowPane>
-            <Label fx:id="infoLabel" />
+               <image>
+                  <Image url="@../../../media/banner2.jpg" />
+               </image>
+            </ImageView>
          </children>
-         <BorderPane.margin>
-            <Insets />
-         </BorderPane.margin>
       </VBox>
    </center>
 </BorderPane>
