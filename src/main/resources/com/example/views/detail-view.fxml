@@ -16,7 +16,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane prefHeight="568.0" prefWidth="746.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controllers.DetailController">
    <center>
       <VBox alignment="CENTER" prefHeight="534.0" prefWidth="746.0" BorderPane.alignment="CENTER">
@@ -29,12 +28,15 @@
                   <Insets />
                </VBox.margin>
             </Label>
-            <HBox alignment="CENTER" prefHeight="441.0" prefWidth="746.0">
+            <HBox alignment="CENTER">
                <children>
-                  <ImageView fx:id="img" fitHeight="412.0" fitWidth="358.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="img" fitHeight="412.0" fitWidth="290.0" pickOnBounds="true" preserveRatio="true">
                      <HBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        <Insets bottom="5.0" left="5.0" right="15.0" top="5.0" />
                      </HBox.margin>
+                     <image>
+                        <Image url="@../../../../../../covers/la_vida_de_brian.jpg" />
+                     </image>
                   </ImageView>
                   <VBox prefHeight="454.0" prefWidth="350.0">
                      <children>
@@ -44,16 +46,16 @@
                             <ColumnConstraints hgrow="SOMETIMES" maxWidth="291.0" minWidth="10.0" prefWidth="291.0" />
                           </columnConstraints>
                           <rowConstraints>
-                            <RowConstraints maxHeight="106.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-                            <RowConstraints maxHeight="146.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
-                            <RowConstraints maxHeight="248.0" minHeight="10.0" prefHeight="67.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="248.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <TextField fx:id="detailTitle" GridPane.columnIndex="1" />
-                              <TextField fx:id="detailGenre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField fx:id="detailYear" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <TextField fx:id="detailDirector" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="detailTitle" editable="false" GridPane.columnIndex="1" />
+                              <TextField fx:id="detailGenre" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="detailYear" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="detailDirector" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                               <Label alignment="CENTER_RIGHT" text="Título:" />
                               <Label text="Género:" GridPane.rowIndex="1" />
                               <Label text="Año:" GridPane.rowIndex="2" />
@@ -65,7 +67,7 @@
                               <Insets bottom="5.0" />
                            </VBox.margin>
                         </Label>
-                        <TextArea fx:id="detailDescrip" prefHeight="200.0" prefWidth="200.0" />
+                        <TextArea fx:id="detailDescrip" editable="false" wrapText="true" />
                      </children>
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -73,7 +75,7 @@
                   </VBox>
                </children>
             </HBox>
-            <FlowPane alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="746.0">
+            <FlowPane alignment="CENTER_RIGHT">
                <children>
                   <Button fx:id="btnAddCopy" mnemonicParsing="false" onAction="#addCopy" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #00000000;" text="Copy">
                      <font>

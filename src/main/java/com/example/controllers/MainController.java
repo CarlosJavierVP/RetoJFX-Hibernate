@@ -1,6 +1,7 @@
 package com.example.controllers;
 
 import com.example.CurrentSession;
+import com.example.GestorApp;
 import com.example.HibernateUtil;
 import com.example.dao.PeliculaDAO;
 import com.example.dao.UsuarioDAO;
@@ -44,6 +45,7 @@ public class MainController implements Initializable {
 
     @javafx.fxml.FXML
     public void onBack(ActionEvent actionEvent) {
+        GestorApp.loadFXML("views/allmovies-view.fxml", "Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
     }
 
 

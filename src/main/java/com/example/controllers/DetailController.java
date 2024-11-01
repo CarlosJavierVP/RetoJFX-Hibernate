@@ -4,8 +4,10 @@ import com.example.CurrentSession;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class DetailController implements Initializable {
@@ -35,7 +37,9 @@ public class DetailController implements Initializable {
         detailYear.setText(String.valueOf(CurrentSession.movieSelected.getAño()));
         detailDirector.setText(CurrentSession.movieSelected.getDirector());
         detailDescrip.setText(CurrentSession.movieSelected.getDescripcion());
-        //img.setImage();
+
+        //Image imgPeli = new Image("/covers/"+CurrentSession.movieSelected.getImageUrl());
+        //img.setImage(new Image("covers/"+CurrentSession.movieSelected.getImageUrl()));
 
     }
 
