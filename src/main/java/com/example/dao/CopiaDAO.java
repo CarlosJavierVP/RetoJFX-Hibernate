@@ -1,10 +1,10 @@
 package com.example.dao;
 
 import com.example.models.Copia;
+import com.example.models.Pelicula;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
-
 import java.util.List;
 
 public class CopiaDAO implements DAO<Copia>{
@@ -26,7 +26,7 @@ public class CopiaDAO implements DAO<Copia>{
     }
 
     @Override
-    public Copia findById(Integer id) {
+    public Copia findById(Long id) {
         Copia copy;
         try(Session session = sessionFactory.openSession()){
             copy = session.get(Copia.class, id);
@@ -48,5 +48,6 @@ public class CopiaDAO implements DAO<Copia>{
     public void delete(Copia copia) {
         sessionFactory.inTransaction(session -> session.remove(copia));
     }
+
 
 }

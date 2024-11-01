@@ -8,9 +8,7 @@ import com.example.models.Usuario;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.*;
-
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -32,6 +30,7 @@ public class LogginController implements Initializable {
         if (user != null){
             infoLabel.setText("Usuario conectado");
             CurrentSession.userSelected = user;
+            CurrentSession.listCopySelected = user.getMisCopias();
             GestorApp.loadFXML("views/allmovies-view.fxml","Movie Pro Manager - "+user.getNombreUsuario());
         }else{
             infoLabel.setText("Usuario no encontrado");

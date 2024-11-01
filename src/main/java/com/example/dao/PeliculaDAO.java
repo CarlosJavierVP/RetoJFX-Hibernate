@@ -1,11 +1,9 @@
 package com.example.dao;
 
-
 import com.example.models.Pelicula;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
-
 import java.util.List;
 
 public class PeliculaDAO implements DAO<Pelicula>{
@@ -26,7 +24,7 @@ public class PeliculaDAO implements DAO<Pelicula>{
     }
 
     @Override
-    public Pelicula findById(Integer id) {
+    public Pelicula findById(Long id) {
         Pelicula peli;
         try(Session session = sessionFactory.openSession()){
             peli = session.get(Pelicula.class, id);

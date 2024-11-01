@@ -1,8 +1,6 @@
 package com.example.dao;
 
-import com.example.dto.CopyDTO;
-import com.example.models.Copia;
-import com.example.models.Pelicula;
+import com.example.models.dto.CopyDTO;
 import com.example.models.Usuario;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -27,7 +25,7 @@ public class UsuarioDAO implements DAO<Usuario> {
     }
 
     @Override
-    public Usuario findById(Integer id) {
+    public Usuario findById(Long id) {
         Usuario user;
         try (Session session = sessionFactory.openSession()){
             user = session.get(Usuario.class, id);
@@ -63,7 +61,7 @@ public class UsuarioDAO implements DAO<Usuario> {
         List<CopyDTO> myCopies;
 
         try(Session session = sessionFactory.openSession()){
-            Query<CopyDTO> query = session.createQuery("select c, p.titulo from Copia c join c.user u join Pelicula p on c.idPelicula = p.id where u.id =:userid ", CopyDTO.class);
+            Query<CopyDTO> query = session.createQuery("select p.titulo, c.estado, c.soporte  from Copia c join c.user u join Pelicula p on c.idPelicula = p.id where u.id =:userid ", CopyDTO.class);
             query.setParameter("userid", user.getIdUsuario());
             myCopies = query.list();
         }

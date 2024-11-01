@@ -1,12 +1,10 @@
 package com.example.models;
 
-import com.example.dto.CopyDTO;
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
+
 @Data
 @Entity
 @Table(name = "usuario")

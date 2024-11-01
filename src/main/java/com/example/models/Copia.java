@@ -3,8 +3,6 @@ package com.example.models;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.List;
-import java.util.Objects;
 @Data
 @Entity
 @Table(name = "copia")

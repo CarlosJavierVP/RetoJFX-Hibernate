@@ -6,13 +6,13 @@ module com.example {
     requires lombok;
     requires java.naming;
 
-    exports com.example.models;
+    exports com.example.models to javafx.fxml;
     opens com.example.models;
     opens com.example to javafx.fxml;
     exports com.example;
     exports com.example.controllers;
     opens com.example.controllers to javafx.fxml;
     opens com.example.views to javafx.fxml;
-    exports com.example.dto;
-    opens com.example.dto to javafx.fxml;
+    exports com.example.models.dto;
+    opens com.example.models.dto to javafx.fxml;
 }

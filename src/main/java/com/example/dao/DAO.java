@@ -13,7 +13,7 @@ public interface DAO <T>{
      * El método devuelve un objeto por el id que se le pasa por parámetro
      * @param id del objeto
      * */
-    public T findById(Integer id);
+    public T findById(Long id);
     /**
      * El método persiste el nuevo objeto en la base de datos
      * @param t el nuevo objeto pasado por parámetro
