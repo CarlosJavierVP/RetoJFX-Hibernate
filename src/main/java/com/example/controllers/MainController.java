@@ -35,9 +35,9 @@ public class MainController implements Initializable {
         tablaTitulo.setCellValueFactory(new PropertyValueFactory<>("tituloPeli"));
         tablaEstado.setCellValueFactory(new PropertyValueFactory<>("estadoCopia"));
         tablaSoporte.setCellValueFactory(new PropertyValueFactory<>("soporteCopia"));
-        List<CopyDTO> copiesDTO = userDAO.findAllUserCopies(CurrentSession.userSelected);
+        CurrentSession.listDTOselected = userDAO.findAllUserCopies(CurrentSession.userSelected);
         tableCopies.getItems().clear();
-        tableCopies.getItems().addAll(copiesDTO);
+        tableCopies.getItems().addAll(CurrentSession.listDTOselected);
 
 
     }

@@ -30,7 +30,6 @@ public class LogginController implements Initializable {
         if (user != null){
             infoLabel.setText("Usuario conectado");
             CurrentSession.userSelected = user;
-            CurrentSession.listCopySelected = user.getMisCopias();
             GestorApp.loadFXML("views/allmovies-view.fxml","Movie Pro Manager - "+user.getNombreUsuario());
         }else{
             infoLabel.setText("Usuario no encontrado");
