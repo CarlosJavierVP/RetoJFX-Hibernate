@@ -76,7 +76,7 @@
                               <Insets left="15.0" right="10.0" />
                            </FlowPane.margin>
                         </ImageView>
-                        <TextField fx:id="search" prefWidth="687.0" promptText="Search..." />
+                        <TextField fx:id="search" onAction="#search" prefWidth="687.0" promptText="Search..." />
                      </children>
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -98,18 +98,14 @@
                   <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                </VBox.margin>
             </TableView>
-            <HBox alignment="CENTER" prefHeight="70.0" prefWidth="816.0">
+            <FlowPane alignment="CENTER_RIGHT">
                <children>
-                  <FlowPane alignment="CENTER_RIGHT" columnHalignment="CENTER" prefHeight="50.0" prefWidth="640.0">
-                     <children>
-                        <Button mnemonicParsing="false" onAction="#onBack" prefWidth="80.0" text="Atrás" />
-                     </children>
-                     <HBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </HBox.margin>
-                  </FlowPane>
+                  <Button mnemonicParsing="false" onAction="#onBack" text="Cerrar Sesión" />
                </children>
-            </HBox>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </VBox.margin>
+            </FlowPane>
          </children>
       </VBox>
    </center>

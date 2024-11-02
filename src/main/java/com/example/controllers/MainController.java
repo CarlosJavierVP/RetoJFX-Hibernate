@@ -15,6 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
@@ -29,11 +30,9 @@ public class MainController implements Initializable {
     private TableColumn<CopyDTO, String> tablaSoporte;
     @javafx.fxml.FXML
     private TextField search;
-
+    UsuarioDAO userDAO = new UsuarioDAO(HibernateUtil.getSessionFactory());
     ObservableList<CopyDTO> filter = FXCollections.observableArrayList();
     FilteredList<CopyDTO> filterMovie = new FilteredList<>(filter, p -> true); //Inicializar la lista filtrada
-
-    UsuarioDAO userDAO = new UsuarioDAO(HibernateUtil.getSessionFactory());
 
 
     @Override
@@ -43,20 +42,24 @@ public class MainController implements Initializable {
         tablaEstado.setCellValueFactory(new PropertyValueFactory<>("estadoCopia"));
         tablaSoporte.setCellValueFactory(new PropertyValueFactory<>("soporteCopia"));
         CurrentSession.listDTOselected = userDAO.findAllUserCopies(CurrentSession.userSelected);
-        tableCopies.getItems().clear();
-        tableCopies.getItems().addAll(CurrentSession.listDTOselected);
+        CurrentSession.listDTOselected.forEach(copyDTO -> {
+            tableCopies.getItems().add(copyDTO);
+            filter.add(copyDTO);
+        });
 
         search();
+
     }
 
+    @javafx.fxml.FXML
     private void search() {
-        //filtrar por películas
+        //filtrar por copiasDTO
         tableCopies.setEditable(true);
         tableCopies.setItems(filter);
 
         search.textProperty().addListener((observable, oldValue, newValue) ->{
             filterMovie.setPredicate(filter ->{
-                if (newValue.isEmpty() || newValue.isBlank() || newValue == null){
+                if (newValue.isEmpty() || newValue.isBlank()){
                     return true;
                 }
                 String searchKey = newValue.toLowerCase();
@@ -90,5 +93,11 @@ public class MainController implements Initializable {
     public void cerrar(ActionEvent actionEvent) {
         CurrentSession.setParamsToNull();
         System.exit(0);
+    }
+
+    @javafx.fxml.FXML
+    public void ventanaLog(ActionEvent actionEvent) {
+        CurrentSession.setParamsToNull();
+        GestorApp.loadFXML("views/loggin-view.fxml","Movie Pro Manager - Login");
     }
 }

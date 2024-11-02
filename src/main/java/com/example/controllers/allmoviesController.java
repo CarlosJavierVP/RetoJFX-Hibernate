@@ -62,7 +62,7 @@ public class allmoviesController implements Initializable {
 
     }
 
-
+    @FXML
     private void search() {
         //filtrar por películas
         tableMovies.setEditable(true);
@@ -70,7 +70,7 @@ public class allmoviesController implements Initializable {
 
         search.textProperty().addListener((observable, oldValue, newValue) ->{
             filterMovie.setPredicate(filter ->{
-                if (newValue.isEmpty() || newValue.isBlank() || newValue == null){
+                if (newValue.isEmpty() || newValue.isBlank()){
                     return true;
                 }
                 String searchKey = newValue.toLowerCase();
@@ -105,7 +105,6 @@ public class allmoviesController implements Initializable {
     public void btnMyCopies(ActionEvent actionEvent) {
         GestorApp.loadFXML("views/main-view.fxml","Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
     }
-
 
     @FXML
     public void cerrar(ActionEvent actionEvent) {
