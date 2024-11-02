@@ -34,7 +34,7 @@ public class DetailController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        detailYear.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1975,2024,2024,1));
+        detailYear.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1975,2024,2024,0));
 
         titleMovie.setText(CurrentSession.movieSelected.getTitulo());
         detailTitle.setText(CurrentSession.movieSelected.getTitulo());
