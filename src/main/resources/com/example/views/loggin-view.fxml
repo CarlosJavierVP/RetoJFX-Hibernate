@@ -29,7 +29,7 @@
                   <Image url="@../../../media/pngegg.png" />
                </image>
             </ImageView>
-            <Label text="APP - MOVIE PRO MANAGER">
+            <Label text="MOVIE PRO MANAGER">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>

@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit vistaLoggin y logginController modificados, funcionalidad addUser">
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit implementación search bar en la vista de allMovies">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/LogginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/LogginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/allmoviesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/allmoviesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/allmovies-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/allmovies-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/detail-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/detail-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/loggin-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/loggin-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/main-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +54,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Carlos/Desktop/2DAM/Desarrollo de interfaces/RetoConjunto1",
+    "last_opened_file_path": "C:/Users/Carlos/Downloads/GestorVideojuegos",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -116,7 +121,8 @@
       <workItem from="1730373455139" duration="325000" />
       <workItem from="1730373789471" duration="22534000" />
       <workItem from="1730445602783" duration="14643000" />
-      <workItem from="1730463759974" duration="14854000" />
+      <workItem from="1730463759974" duration="15257000" />
+      <workItem from="1730531848217" duration="5117000" />
     </task>
     <task id="LOCAL-00001" summary="Commit conexión Hib, DAO y MODEL - revisar updateDAO">
       <option name="closed" value="true" />
@@ -230,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730482948862</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Commit implementación search bar en la vista de allMovies">
+      <option name="closed" value="true" />
+      <created>1730490570873</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1730490570873</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +265,7 @@
     <MESSAGE value="Commit covers, details-view y controlador" />
     <MESSAGE value="Commit vista detalle y controlador" />
     <MESSAGE value="Commit vistaLoggin y logginController modificados, funcionalidad addUser" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit vistaLoggin y logginController modificados, funcionalidad addUser" />
+    <MESSAGE value="Commit implementación search bar en la vista de allMovies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit implementación search bar en la vista de allMovies" />
   </component>
 </project>

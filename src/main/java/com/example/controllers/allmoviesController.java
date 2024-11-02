@@ -10,6 +10,7 @@ import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -30,13 +31,13 @@ public class allmoviesController implements Initializable {
     private TableColumn <Pelicula, String> tablaDirector;
     @javafx.fxml.FXML
     private TextField search;
-    @javafx.fxml.FXML
-    private ChoiceBox searchChoiceBox;
     private List<Pelicula> allMovies;
     PeliculaDAO peliDAO = new PeliculaDAO(HibernateUtil.getSessionFactory());
 
     ObservableList<Pelicula> filter = FXCollections.observableArrayList();
     FilteredList<Pelicula> filterMovie = new FilteredList<>(filter, p -> true); //Inicializar la lista filtrada
+
+
 
     @Deprecated
     @Override
@@ -59,8 +60,8 @@ public class allmoviesController implements Initializable {
 
         search();
 
-
     }
+
 
     private void search() {
         //filtrar por películas
@@ -69,7 +70,7 @@ public class allmoviesController implements Initializable {
 
         search.textProperty().addListener((observable, oldValue, newValue) ->{
             filterMovie.setPredicate(filter ->{
-                if (newValue.isEmpty() || newValue.isBlank()){
+                if (newValue.isEmpty() || newValue.isBlank() || newValue == null){
                     return true;
                 }
                 String searchKey = newValue.toLowerCase();
@@ -93,6 +94,7 @@ public class allmoviesController implements Initializable {
         tableMovies.setItems(busquedaOrdenada); //aplicar filtro con los datos ordenados en la tabla
     }
 
+
     @javafx.fxml.FXML
     public void onBack(ActionEvent actionEvent) {
         CurrentSession.setParamsToNull();
@@ -102,5 +104,12 @@ public class allmoviesController implements Initializable {
     @javafx.fxml.FXML
     public void btnMyCopies(ActionEvent actionEvent) {
         GestorApp.loadFXML("views/main-view.fxml","Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
+    }
+
+
+    @FXML
+    public void cerrar(ActionEvent actionEvent) {
+        CurrentSession.setParamsToNull();
+        System.exit(0);
     }
 }

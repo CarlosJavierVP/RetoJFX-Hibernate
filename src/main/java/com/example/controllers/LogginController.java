@@ -6,11 +6,9 @@ import com.example.HibernateUtil;
 import com.example.dao.UsuarioDAO;
 import com.example.models.Usuario;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.image.ImageView;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -36,7 +34,6 @@ public class LogginController implements Initializable {
     private Label infoLabel1;
 
     UsuarioDAO dao = new UsuarioDAO(HibernateUtil.getSessionFactory());
-
 
 
     @FXML
@@ -75,6 +72,7 @@ public class LogginController implements Initializable {
 
     @FXML
     public void onCancelar(ActionEvent actionEvent) {
+        CurrentSession.setParamsToNull();
         System.exit(0);
     }
 

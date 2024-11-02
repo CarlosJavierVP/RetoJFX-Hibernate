@@ -15,8 +15,6 @@ public class DetailController implements Initializable {
     @javafx.fxml.FXML
     private ImageView img;
     @javafx.fxml.FXML
-    private TextField detailYear;
-    @javafx.fxml.FXML
     private Label titleMovie;
     @javafx.fxml.FXML
     private TextField detailGenre;
@@ -25,6 +23,8 @@ public class DetailController implements Initializable {
     @javafx.fxml.FXML
     private TextArea detailDescrip;
     @javafx.fxml.FXML
+    private Spinner<Integer> detailYear;
+    @javafx.fxml.FXML
     private Button btnAddCopy;
 
     @Override
@@ -32,7 +32,7 @@ public class DetailController implements Initializable {
         titleMovie.setText(CurrentSession.movieSelected.getTitulo());
         detailTitle.setText(CurrentSession.movieSelected.getTitulo());
         detailGenre.setText(CurrentSession.movieSelected.getGenero());
-        detailYear.setText(String.valueOf(CurrentSession.movieSelected.getAño()));
+        detailYear.getValueFactory().setValue(CurrentSession.movieSelected.getAño());
         detailDirector.setText(CurrentSession.movieSelected.getDirector());
         detailDescrip.setText(CurrentSession.movieSelected.getDescripcion());
 
