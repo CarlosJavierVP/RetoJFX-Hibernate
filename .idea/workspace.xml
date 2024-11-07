@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit x">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5b02abaa-dc03-4781-8ab4-1efcebc789b0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5b02abaa-dc03-4781-8ab4-1efcebc789b0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5b02abaa-dc03-4781-8ab4-1efcebc789b0/storage_v2/_src_/schema/reto2.BCJ2Bg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5b02abaa-dc03-4781-8ab4-1efcebc789b0/storage_v2/_src_/schema/reto2.BCJ2Bg.meta" afterDir="false" />
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit implementación de teaser en película">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/models/Pelicula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/models/Pelicula.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/detail-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/detail-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +128,7 @@
       <workItem from="1730735229893" duration="872000" />
       <workItem from="1730909589628" duration="6856000" />
       <workItem from="1730954904693" duration="403000" />
-      <workItem from="1730994100257" duration="4109000" />
+      <workItem from="1730994100257" duration="7328000" />
     </task>
     <task id="LOCAL-00001" summary="Commit conexión Hib, DAO y MODEL - revisar updateDAO">
       <option name="closed" value="true" />
@@ -290,7 +282,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730995599469</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Commit implementación de teaser en película">
+      <option name="closed" value="true" />
+      <created>1730998344419</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1730998344419</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,6 +316,7 @@
     <MESSAGE value="Commit implementación de imágenes en la ventana detalle, y moverse entre ventanas." />
     <MESSAGE value="Commit spinner no editable" />
     <MESSAGE value="Commit x" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit x" />
+    <MESSAGE value="Commit implementación de teaser en película" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit implementación de teaser en película" />
   </component>
 </project>
