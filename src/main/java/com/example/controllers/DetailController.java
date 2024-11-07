@@ -3,15 +3,17 @@ package com.example.controllers;
 import com.example.CurrentSession;
 import com.example.GestorApp;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 
 public class DetailController implements Initializable {
 
@@ -31,6 +33,8 @@ public class DetailController implements Initializable {
     private Spinner<Integer> detailYear;
     @javafx.fxml.FXML
     private Button btnAddCopy;
+    @FXML
+    private WebView idTeaser;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -49,6 +53,7 @@ public class DetailController implements Initializable {
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
+        idTeaser.getEngine().load(CurrentSession.movieSelected.getTeaserUrl());
 
 
     }

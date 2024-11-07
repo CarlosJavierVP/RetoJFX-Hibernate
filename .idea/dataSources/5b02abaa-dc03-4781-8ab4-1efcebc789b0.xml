@@ -1116,8 +1116,8 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="328" parent="1" name="reto2">
       <Current>1</Current>
-      <IntrospectionTimestamp>2024-11-01.13:01:44</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2024-11-01.11:01:44</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2024-11-07.18:46:03</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2024-11-07.16:46:03</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="329" parent="1" name="mysql.infoschema">
@@ -1235,40 +1235,44 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <DasType>varchar(50)|0s</DasType>
       <Position>7</Position>
     </column>
-    <index id="355" parent="335" name="PRIMARY">
+    <column id="355" parent="335" name="teaser_url">
+      <DasType>varchar(250)|0s</DasType>
+      <Position>8</Position>
+    </column>
+    <index id="356" parent="335" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="356" parent="335" name="PRIMARY">
+    <key id="357" parent="335" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="357" parent="336" name="id">
-      <AutoIncrement>6</AutoIncrement>
+    <column id="358" parent="336" name="id">
+      <AutoIncrement>8</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="358" parent="336" name="nombre_usuario">
+    <column id="359" parent="336" name="nombre_usuario">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="359" parent="336" name="password">
+    <column id="360" parent="336" name="password">
       <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="360" parent="336" name="is_admin">
+    <column id="361" parent="336" name="is_admin">
       <DasType>tinyint(1)|0s</DasType>
       <Position>4</Position>
     </column>
-    <index id="361" parent="336" name="PRIMARY">
+    <index id="362" parent="336" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="362" parent="336" name="PRIMARY">
+    <key id="363" parent="336" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

@@ -5,6 +5,7 @@ module com.example {
     requires jakarta.persistence;
     requires lombok;
     requires java.naming;
+    requires javafx.web;
 
     exports com.example.models to javafx.fxml;
     opens com.example.models;
