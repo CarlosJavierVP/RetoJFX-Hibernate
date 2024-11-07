@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit implementación de imágenes en la ventana detalle, y moverse entre ventanas.">
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit spinner no editable">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CurrentSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CurrentSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/PeliculaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/PeliculaDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +50,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Carlos/Desktop/2DAM/Desarrollo de interfaces/RetoConjunto2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Carlos/Desktop/2DAM/HIBERNATE - EJERCICIOS/PeliculasHibernate&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -118,6 +122,12 @@
       <workItem from="1730540133165" duration="3287000" />
       <workItem from="1730544015837" duration="102000" />
       <workItem from="1730544124766" duration="23000" />
+      <workItem from="1730544154934" duration="340000" />
+      <workItem from="1730653920941" duration="5660000" />
+      <workItem from="1730735229893" duration="872000" />
+      <workItem from="1730909589628" duration="6856000" />
+      <workItem from="1730954904693" duration="403000" />
+      <workItem from="1730994100257" duration="1417000" />
     </task>
     <task id="LOCAL-00001" summary="Commit conexión Hib, DAO y MODEL - revisar updateDAO">
       <option name="closed" value="true" />
@@ -255,7 +265,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730543754695</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Commit spinner no editable">
+      <option name="closed" value="true" />
+      <created>1730544294338</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1730544294338</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +297,7 @@
     <MESSAGE value="Commit implementación search bar en la vista de allMovies" />
     <MESSAGE value="Commit implementación search" />
     <MESSAGE value="Commit implementación de imágenes en la ventana detalle, y moverse entre ventanas." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit implementación de imágenes en la ventana detalle, y moverse entre ventanas." />
+    <MESSAGE value="Commit spinner no editable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit spinner no editable" />
   </component>
 </project>

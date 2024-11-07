@@ -48,5 +48,15 @@ public class PeliculaDAO implements DAO<Pelicula>{
         sessionFactory.inTransaction(session -> session.remove(pelicula));
     }
 
+    public Pelicula findByTitle (String title){
+        Pelicula peli;
+        try(Session session = sessionFactory.openSession()) {
+            Query<Pelicula> query = session.createQuery("select p from Pelicula p where p.titulo =: titulo", Pelicula.class);
+            query.setParameter("titulo", title);
+            peli = query.getSingleResultOrNull();
+        }
+        return peli;
+    }
+
 
 }

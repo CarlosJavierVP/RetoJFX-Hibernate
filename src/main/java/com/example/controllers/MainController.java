@@ -3,6 +3,7 @@ package com.example.controllers;
 import com.example.CurrentSession;
 import com.example.GestorApp;
 import com.example.HibernateUtil;
+import com.example.dao.PeliculaDAO;
 import com.example.dao.UsuarioDAO;
 import com.example.models.Pelicula;
 import com.example.models.dto.CopyDTO;
@@ -31,6 +32,7 @@ public class MainController implements Initializable {
     @javafx.fxml.FXML
     private TextField search;
     UsuarioDAO userDAO = new UsuarioDAO(HibernateUtil.getSessionFactory());
+    PeliculaDAO peliDAO = new PeliculaDAO(HibernateUtil.getSessionFactory());
     ObservableList<CopyDTO> filter = FXCollections.observableArrayList();
     FilteredList<CopyDTO> filterMovie = new FilteredList<>(filter, p -> true); //Inicializar la lista filtrada
 
@@ -45,6 +47,13 @@ public class MainController implements Initializable {
         CurrentSession.listDTOselected.forEach(copyDTO -> {
             tableCopies.getItems().add(copyDTO);
             filter.add(copyDTO);
+        });
+
+        tableCopies.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->{
+            CurrentSession.copySelected = newValue;
+            CurrentSession.movieSelected = peliDAO.findByTitle(newValue.getTituloPeli());
+            //ventana de detalle de Película junto con el formato y el estado de la copia
+            //GestorApp.loadFXML("views/detail-view.fxml","Movie Pro Manager - "+CurrentSession.userSelected.getNombreUsuario());
         });
 
         search();
