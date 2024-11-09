@@ -3,7 +3,6 @@ package com.example.controllers;
 import com.example.CurrentSession;
 import com.example.GestorApp;
 import com.example.HibernateUtil;
-import com.example.dao.CopiaDAO;
 import com.example.dao.UsuarioDAO;
 import com.example.models.Copia;
 import javafx.event.ActionEvent;
@@ -47,7 +46,7 @@ public class DetailMovieController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         detailYear.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1975,2024,2024,0));
-
+        detailTitle.setText(CurrentSession.movieSelected.getTitulo());
         titleMovie.setText(CurrentSession.movieSelected.getTitulo());
         detailGenre.setText(CurrentSession.movieSelected.getGenero());
         //detailYear.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1975,2024,CurrentSession.movieSelected.getAño(),1));
@@ -103,12 +102,11 @@ public class DetailMovieController implements Initializable {
             }
         }
 
-
     }
 
     @javafx.fxml.FXML
     public void onBack(ActionEvent actionEvent) {
-        GestorApp.loadFXML("views/main-view.fxml", "Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
+        GestorApp.loadFXML("views/allmovies-view.fxml", "Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
     }
 
     @javafx.fxml.FXML

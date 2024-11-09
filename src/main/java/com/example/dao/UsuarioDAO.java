@@ -61,7 +61,7 @@ public class UsuarioDAO implements DAO<Usuario> {
         List<CopyDTO> myCopies;
 
         try(Session session = sessionFactory.openSession()){
-            Query<CopyDTO> query = session.createQuery("select p.titulo, c.estado, c.soporte  from Copia c join c.user u join Pelicula p on c.idPelicula = p.id where u.id =:userid ", CopyDTO.class);
+            Query<CopyDTO> query = session.createQuery("select p.titulo, c.estado, c.soporte, c.idCopy, p.idPelicula  from Copia c join c.user u join Pelicula p on c.idPelicula = p.id where u.id =:userid ", CopyDTO.class);
             query.setParameter("userid", user.getIdUsuario());
             myCopies = query.list();
         }

@@ -7,13 +7,14 @@ module com.example {
     requires java.naming;
     requires javafx.web;
 
+
     exports com.example.models to javafx.fxml;
     opens com.example.models;
-    opens com.example to javafx.fxml;
+    opens com.example;
     exports com.example;
     exports com.example.controllers;
-    opens com.example.controllers to javafx.fxml;
-    opens com.example.views to javafx.fxml;
+    opens com.example.controllers;
+    opens com.example.views;
     exports com.example.models.dto;
-    opens com.example.models.dto to javafx.fxml;
+    opens com.example.models.dto;
 }

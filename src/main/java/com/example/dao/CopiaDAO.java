@@ -1,7 +1,7 @@
 package com.example.dao;
 
 import com.example.models.Copia;
-import com.example.models.Pelicula;
+import com.example.models.Usuario;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -48,6 +48,9 @@ public class CopiaDAO implements DAO<Copia>{
     public void delete(Copia copia) {
         sessionFactory.inTransaction(session -> session.remove(copia));
     }
+
+
+
 
 
 }

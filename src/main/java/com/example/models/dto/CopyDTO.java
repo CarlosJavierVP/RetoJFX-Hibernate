@@ -14,5 +14,8 @@ public class CopyDTO {
     private String tituloPeli;
     private String estadoCopia;
     private String soporteCopia;
+    private Long idMyCopy;
+    private Long idMyMovie;
+
 
 }

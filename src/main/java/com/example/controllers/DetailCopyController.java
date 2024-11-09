@@ -2,20 +2,21 @@ package com.example.controllers;
 
 import com.example.CurrentSession;
 import com.example.GestorApp;
+import com.example.HibernateUtil;
+import com.example.dao.CopiaDAO;
+import com.example.models.Copia;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.web.WebView;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class DetailCopyController implements Initializable {
-
 
     @javafx.fxml.FXML
     private TextField detailDirector;
@@ -39,13 +40,16 @@ public class DetailCopyController implements Initializable {
     private Label idEstado;
     @javafx.fxml.FXML
     private Label idFormato;
+    @javafx.fxml.FXML
+    private Button btnDelete;
 
+    CopiaDAO copyDAO = new CopiaDAO(HibernateUtil.getSessionFactory());
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         detailYear.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1975,2024,2024,0));
 
         titleCopy.setText(CurrentSession.copyDTOselected.getTituloPeli());
-        idEstado.setText(CurrentSession.copyDTOselected.getEstadoCopia());
+        idEstado.setText(CurrentSession.copyDTOselected.getEstadoCopia() );
         idFormato.setText(CurrentSession.copyDTOselected.getSoporteCopia());
         detailTitle.setText(CurrentSession.movieSelected.getTitulo());
         detailGenre.setText(CurrentSession.movieSelected.getGenero());
@@ -75,5 +79,12 @@ public class DetailCopyController implements Initializable {
     @javafx.fxml.FXML
     public void updateCopy(ActionEvent actionEvent) {
 
+    }
+
+    @javafx.fxml.FXML
+    public void deleteCopia(ActionEvent actionEvent) {
+        Copia myCopy = copyDAO.findById(CurrentSession.copyDTOselected.getIdMyCopy());
+        copyDAO.delete(myCopy);
+        GestorApp.loadFXML("views/main-view.fxml","Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
     }
 }

@@ -49,6 +49,7 @@ public class MainController implements Initializable {
 
         tableCopies.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->{
             CurrentSession.copyDTOselected = newValue;
+
             CurrentSession.movieSelected = peliDAO.findByTitle(newValue.getTituloPeli());
             GestorApp.loadFXML("views/detailcopy-view.fxml","Movie Pro Manager - "+CurrentSession.userSelected.getNombreUsuario());
         });
