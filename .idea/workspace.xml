@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit funcionalidad añadir copia">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/media/borrar.png" afterDir="false" />
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit funcionalidad borrar copia">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailCopyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailCopyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailMovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailMovieController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/CopiaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/CopiaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/UsuarioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/models/dto/CopyDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/models/dto/CopyDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/detailcopy-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/detailcopy-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/detailmovie-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/detailmovie-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +134,7 @@
       <workItem from="1730909589628" duration="6856000" />
       <workItem from="1730954904693" duration="403000" />
       <workItem from="1730994100257" duration="8121000" />
-      <workItem from="1731131375709" duration="16131000" />
+      <workItem from="1731131375709" duration="16969000" />
     </task>
     <task id="LOCAL-00001" summary="Commit conexión Hib, DAO y MODEL - revisar updateDAO">
       <option name="closed" value="true" />
@@ -344,7 +336,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731142966491</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Commit funcionalidad borrar copia">
+      <option name="closed" value="true" />
+      <created>1731149198875</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1731149198875</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +352,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Commit conexión Hib, DAO y MODEL - revisar updateDAO" />
     <MESSAGE value="Commit ventana login" />
     <MESSAGE value="Commit diseño ventana login terminada - añadir funcionalidades y corregir el dao" />
     <MESSAGE value="Commit correciones pom" />
@@ -377,6 +376,7 @@
     <MESSAGE value="Commit detalle Copia visualización" />
     <MESSAGE value="Commit implementando alert para añadir copia" />
     <MESSAGE value="Commit funcionalidad añadir copia" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit funcionalidad añadir copia" />
+    <MESSAGE value="Commit funcionalidad borrar copia" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit funcionalidad borrar copia" />
   </component>
 </project>

@@ -10,10 +10,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
 import javafx.scene.web.WebView;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class DetailCopyController implements Initializable {
@@ -78,13 +80,46 @@ public class DetailCopyController implements Initializable {
 
     @javafx.fxml.FXML
     public void updateCopy(ActionEvent actionEvent) {
+        Alert alert = new Alert(Alert.AlertType.NONE);
+        alert.setTitle("Actualizar copia");
+        alert.setContentText("¿Desea modificar la copia "+CurrentSession.copyDTOselected.getTituloPeli()+"?");
 
+        ChoiceBox<String> soportes = new ChoiceBox<>();
+        soportes.getItems().addAll("DVD", "Blu-ray");
+        soportes.setValue("DVD");
+        ChoiceBox<String> estados = new ChoiceBox<>();
+        estados.getItems().addAll("bueno", "dañado");
+        estados.setValue("bueno");
+
+        //Añadir los choiceBox a la alerta
+        VBox contenedor = new VBox();
+        contenedor.getChildren().addAll(estados, soportes);
+        alert.getDialogPane().setContent(contenedor);
+
+        ButtonType btnUpdate = new ButtonType("Actualizar Copia");
+        ButtonType btnCancel = new ButtonType("Cancelar", ButtonType.CANCEL.getButtonData());
+        alert.getButtonTypes().addAll(btnCancel, btnUpdate);
+        Optional<ButtonType> resultado = alert.showAndWait();
+
+        if (resultado.isPresent()){
+            if(resultado.get() == btnUpdate){
+                String estadoCopia = estados.getValue();
+                String soporteCopia = soportes.getValue();
+                CurrentSession.copySelected = copyDAO.findById(CurrentSession.copyDTOselected.getIdMyCopy());
+                CurrentSession.copySelected.setEstado(estadoCopia);
+                CurrentSession.copySelected.setIdPelicula(CurrentSession.movieSelected.getIdPelicula());
+                CurrentSession.copySelected.setSoporte(soporteCopia);
+                CurrentSession.copySelected.setUser(CurrentSession.userSelected);
+                copyDAO.update(CurrentSession.copySelected);
+                GestorApp.loadFXML("views/main-view.fxml","Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
+            }
+        }
     }
 
     @javafx.fxml.FXML
     public void deleteCopia(ActionEvent actionEvent) {
-        Copia myCopy = copyDAO.findById(CurrentSession.copyDTOselected.getIdMyCopy());
-        copyDAO.delete(myCopy);
+        CurrentSession.copySelected = copyDAO.findById(CurrentSession.copyDTOselected.getIdMyCopy());
+        copyDAO.delete(CurrentSession.copySelected);
         GestorApp.loadFXML("views/main-view.fxml","Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
     }
 }
