@@ -97,7 +97,7 @@
                   <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                </VBox.margin>
             </TableView>
-            <FlowPane alignment="CENTER_RIGHT" columnHalignment="CENTER">
+            <FlowPane alignment="CENTER_LEFT" columnHalignment="CENTER">
                <children>
                   <Button mnemonicParsing="false" onAction="#ventanaLog" text="Cerrar Sesión" />
                </children>

@@ -98,14 +98,37 @@
                   <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                </VBox.margin>
             </TableView>
-            <FlowPane alignment="CENTER_RIGHT">
+            <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#onBack" text="Cerrar Sesión" />
+                  <FlowPane alignment="CENTER_LEFT">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#onBack" text="Cerrar Sesión" />
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                  </FlowPane>
+                  <FlowPane alignment="CENTER_RIGHT">
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                     <children>
+                        <Button fx:id="btnAddMovie" disable="true" mnemonicParsing="false" onAction="#addMovie" prefHeight="28.0" prefWidth="40.0" style="-fx-background-color: #00000000;">
+                           <graphic>
+                              <ImageView fitHeight="37.0" fitWidth="37.0">
+                                 <image>
+                                    <Image url="@../../../media/disk2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </FlowPane>
                </children>
-               <VBox.margin>
-                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-               </VBox.margin>
-            </FlowPane>
+            </HBox>
          </children>
       </VBox>
    </center>

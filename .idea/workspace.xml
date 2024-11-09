@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit funcionalidad borrar copia">
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit funcionalidad actualizar/modificar copia">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/media/disk2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailCopyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailCopyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/allmoviesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/allmoviesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/allmovies-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/allmovies-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/main-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +137,7 @@
       <workItem from="1730909589628" duration="6856000" />
       <workItem from="1730954904693" duration="403000" />
       <workItem from="1730994100257" duration="8121000" />
-      <workItem from="1731131375709" duration="16969000" />
+      <workItem from="1731131375709" duration="18097000" />
     </task>
     <task id="LOCAL-00001" summary="Commit conexión Hib, DAO y MODEL - revisar updateDAO">
       <option name="closed" value="true" />
@@ -344,7 +347,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731149198875</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Commit funcionalidad actualizar/modificar copia">
+      <option name="closed" value="true" />
+      <created>1731149957153</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1731149957153</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +363,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Commit ventana login" />
     <MESSAGE value="Commit diseño ventana login terminada - añadir funcionalidades y corregir el dao" />
     <MESSAGE value="Commit correciones pom" />
     <MESSAGE value="Commit correción module-info y terminar implementar dao usuario" />
@@ -377,6 +387,7 @@
     <MESSAGE value="Commit implementando alert para añadir copia" />
     <MESSAGE value="Commit funcionalidad añadir copia" />
     <MESSAGE value="Commit funcionalidad borrar copia" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit funcionalidad borrar copia" />
+    <MESSAGE value="Commit funcionalidad actualizar/modificar copia" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit funcionalidad actualizar/modificar copia" />
   </component>
 </project>

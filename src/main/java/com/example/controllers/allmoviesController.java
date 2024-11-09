@@ -36,7 +36,8 @@ public class allmoviesController implements Initializable {
 
     ObservableList<Pelicula> filter = FXCollections.observableArrayList();
     FilteredList<Pelicula> filterMovie = new FilteredList<>(filter, p -> true); //Inicializar la lista filtrada
-
+    @FXML
+    private Button btnAddMovie;
 
 
     @Deprecated
@@ -59,6 +60,10 @@ public class allmoviesController implements Initializable {
         });
 
         search();
+
+        if (CurrentSession.userSelected.getIsAdmin() == 1){
+            btnAddMovie.setDisable(false);
+        }
 
     }
 
@@ -110,5 +115,10 @@ public class allmoviesController implements Initializable {
     public void cerrar(ActionEvent actionEvent) {
         CurrentSession.setParamsToNull();
         System.exit(0);
+    }
+
+    @FXML
+    public void addMovie(ActionEvent actionEvent) {
+
     }
 }

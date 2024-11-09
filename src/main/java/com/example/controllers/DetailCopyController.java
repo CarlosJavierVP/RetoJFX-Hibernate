@@ -4,7 +4,6 @@ import com.example.CurrentSession;
 import com.example.GestorApp;
 import com.example.HibernateUtil;
 import com.example.dao.CopiaDAO;
-import com.example.models.Copia;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
