@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit mdficacion column teaserUrl">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailCopyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/detailcopy-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5b02abaa-dc03-4781-8ab4-1efcebc789b0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5b02abaa-dc03-4781-8ab4-1efcebc789b0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5b02abaa-dc03-4781-8ab4-1efcebc789b0/storage_v2/_src_/schema/reto2.BCJ2Bg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5b02abaa-dc03-4781-8ab4-1efcebc789b0/storage_v2/_src_/schema/reto2.BCJ2Bg.meta" afterDir="false" />
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit detella Copia">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/GestorApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/GestorApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailMovieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CurrentSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CurrentSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailCopyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailCopyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/allmoviesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/allmoviesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/allmovies-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/allmovies-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/detail-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/detailmovie-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/detailcopy-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/detailcopy-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +133,7 @@
       <workItem from="1730909589628" duration="6856000" />
       <workItem from="1730954904693" duration="403000" />
       <workItem from="1730994100257" duration="8121000" />
-      <workItem from="1731131375709" duration="1712000" />
+      <workItem from="1731131375709" duration="4047000" />
     </task>
     <task id="LOCAL-00001" summary="Commit conexión Hib, DAO y MODEL - revisar updateDAO">
       <option name="closed" value="true" />
@@ -310,7 +303,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731009624641</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Commit detella Copia">
+      <option name="closed" value="true" />
+      <created>1731134763925</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1731134763925</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,6 +339,7 @@
     <MESSAGE value="Commit x" />
     <MESSAGE value="Commit implementación de teaser en película" />
     <MESSAGE value="Commit mdficacion column teaserUrl" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit mdficacion column teaserUrl" />
+    <MESSAGE value="Commit detella Copia" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit detella Copia" />
   </component>
 </project>

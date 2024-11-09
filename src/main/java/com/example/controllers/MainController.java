@@ -48,10 +48,9 @@ public class MainController implements Initializable {
         });
 
         tableCopies.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->{
-            CurrentSession.copySelected = newValue;
+            CurrentSession.copyDTOselected = newValue;
             CurrentSession.movieSelected = peliDAO.findByTitle(newValue.getTituloPeli());
-            //ventana de detalle de Película junto con el formato y el estado de la copia
-            //GestorApp.loadFXML("views/detailmovie-view.fxml","Movie Pro Manager - "+CurrentSession.userSelected.getNombreUsuario());
+            GestorApp.loadFXML("views/detailcopy-view.fxml","Movie Pro Manager - "+CurrentSession.userSelected.getNombreUsuario());
         });
 
         search();

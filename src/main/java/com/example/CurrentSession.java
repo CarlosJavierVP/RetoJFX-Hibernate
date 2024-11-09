@@ -14,7 +14,7 @@ public class CurrentSession {
     public static List<Copia> listCopySelected = null;
     public static List<CopyDTO> listDTOselected = null;
     public static Pelicula movieSelected = null;
-    public static CopyDTO copySelected = null;
+    public static CopyDTO copyDTOselected = null;
 
 
 
@@ -23,7 +23,7 @@ public class CurrentSession {
         listCopySelected = null;
         listDTOselected = null;
         movieSelected = null;
-        copySelected = null;
+        copyDTOselected = null;
     }
 
 }
