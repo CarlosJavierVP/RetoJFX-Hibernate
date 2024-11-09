@@ -18,7 +18,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class allmoviesController implements Initializable {
+public class AllMoviesController implements Initializable {
     @javafx.fxml.FXML
     private TableView <Pelicula> tableMovies;
     @javafx.fxml.FXML
@@ -119,6 +119,6 @@ public class allmoviesController implements Initializable {
 
     @FXML
     public void addMovie(ActionEvent actionEvent) {
-
+        GestorApp.loadFXML("views/addmovie-view.fxml","Movie Pro Manager - "+CurrentSession.userSelected.getNombreUsuario());
     }
 }

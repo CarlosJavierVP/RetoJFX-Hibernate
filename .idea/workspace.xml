@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit funcionalidad actualizar/modificar copia">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/media/disk2.png" afterDir="false" />
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit btn addMovie activo para admin y diseño">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/AddMovieController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/addmovie-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailCopyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailCopyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/allmoviesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/allmoviesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/allmoviesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/AllMoviesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/allmovies-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/allmovies-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/main-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +54,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Carlos/.m2/repository/com/fasterxml/classmate/1.5.1",
+    "last_opened_file_path": "C:/Users/Carlos/Desktop/2DAM/Desarrollo de interfaces/RepasoHibernate",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -137,7 +136,8 @@
       <workItem from="1730909589628" duration="6856000" />
       <workItem from="1730954904693" duration="403000" />
       <workItem from="1730994100257" duration="8121000" />
-      <workItem from="1731131375709" duration="18097000" />
+      <workItem from="1731131375709" duration="18972000" />
+      <workItem from="1731151933961" duration="2538000" />
     </task>
     <task id="LOCAL-00001" summary="Commit conexión Hib, DAO y MODEL - revisar updateDAO">
       <option name="closed" value="true" />
@@ -355,7 +355,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731149957153</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Commit btn addMovie activo para admin y diseño">
+      <option name="closed" value="true" />
+      <created>1731151324771</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1731151324771</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,7 +371,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Commit diseño ventana login terminada - añadir funcionalidades y corregir el dao" />
     <MESSAGE value="Commit correciones pom" />
     <MESSAGE value="Commit correción module-info y terminar implementar dao usuario" />
     <MESSAGE value="Commit implementación DAO terminada" />
@@ -388,6 +395,7 @@
     <MESSAGE value="Commit funcionalidad añadir copia" />
     <MESSAGE value="Commit funcionalidad borrar copia" />
     <MESSAGE value="Commit funcionalidad actualizar/modificar copia" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit funcionalidad actualizar/modificar copia" />
+    <MESSAGE value="Commit btn addMovie activo para admin y diseño" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit btn addMovie activo para admin y diseño" />
   </component>
 </project>
