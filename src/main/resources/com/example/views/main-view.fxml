@@ -47,7 +47,7 @@
                               <Font name="Gabriola" size="48.0" />
                            </font>
                            <graphic>
-                              <ImageView fitHeight="57.0" fitWidth="72.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="57.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../../media/flecha-derecha2.png" />
                                  </image>

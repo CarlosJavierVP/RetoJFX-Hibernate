@@ -11,8 +11,10 @@ import javafx.scene.image.ImageView;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
+import javafx.scene.layout.VBox;
 import javafx.scene.web.WebView;
 
 public class DetailMovieController implements Initializable {
@@ -60,6 +62,36 @@ public class DetailMovieController implements Initializable {
 
     @javafx.fxml.FXML
     public void addCopy(ActionEvent actionEvent) {
+        Alert alert = new Alert (Alert.AlertType.NONE);
+        alert.setTitle("Añadir una copia");
+        alert.setContentText("¿Desea añadir la película a tus copias?");
+
+        ChoiceBox<String> soportes = new ChoiceBox<>();
+        soportes.getItems().addAll("DVD", "Blue-ray");
+        soportes.setValue("DVD");
+        ChoiceBox<String> formatos = new ChoiceBox<>();
+        formatos.getItems().addAll("bueno", "dañado");
+
+        //Añadir los choiceBox a la alerta
+        VBox contenedor = new VBox();
+        contenedor.getChildren().addAll(formatos, soportes);
+        alert.getDialogPane().setContent(contenedor);
+
+        ButtonType btnSave = new ButtonType("Guardar Copia");
+        ButtonType btnCancel = new ButtonType("Cancelar", ButtonType.CANCEL.getButtonData());
+
+        alert.getButtonTypes().setAll(btnCancel, btnSave);
+        Optional<ButtonType> resultado = alert.showAndWait();
+        if (resultado.isPresent()){
+            if (resultado.get() == btnSave){
+                CurrentSession.copySelected.setUser(CurrentSession.userSelected);
+                CurrentSession.copySelected.setIdPelicula(CurrentSession.movieSelected.getIdPelicula());
+
+                //CurrentSession.userSelected.addCopy(CurrentSession.movieSelected);
+            }
+        }
+
+
     }
 
     @javafx.fxml.FXML
