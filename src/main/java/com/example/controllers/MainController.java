@@ -5,7 +5,6 @@ import com.example.GestorApp;
 import com.example.HibernateUtil;
 import com.example.dao.PeliculaDAO;
 import com.example.dao.UsuarioDAO;
-import com.example.models.Pelicula;
 import com.example.models.dto.CopyDTO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -16,7 +15,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
@@ -53,7 +51,7 @@ public class MainController implements Initializable {
             CurrentSession.copySelected = newValue;
             CurrentSession.movieSelected = peliDAO.findByTitle(newValue.getTituloPeli());
             //ventana de detalle de Película junto con el formato y el estado de la copia
-            //GestorApp.loadFXML("views/detail-view.fxml","Movie Pro Manager - "+CurrentSession.userSelected.getNombreUsuario());
+            //GestorApp.loadFXML("views/detailmovie-view.fxml","Movie Pro Manager - "+CurrentSession.userSelected.getNombreUsuario());
         });
 
         search();

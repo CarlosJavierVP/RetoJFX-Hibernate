@@ -55,7 +55,7 @@ public class allmoviesController implements Initializable {
 
         tableMovies.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->{
             CurrentSession.movieSelected = newValue;
-            GestorApp.loadFXML("views/detail-view.fxml","Movie Pro Manager - "+CurrentSession.userSelected.getNombreUsuario());
+            GestorApp.loadFXML("views/detailmovie-view.fxml","Movie Pro Manager - "+CurrentSession.userSelected.getNombreUsuario());
         });
 
         search();

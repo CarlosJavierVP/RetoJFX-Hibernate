@@ -1116,8 +1116,8 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="328" parent="1" name="reto2">
       <Current>1</Current>
-      <IntrospectionTimestamp>2024-11-07.18:46:03</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2024-11-07.16:46:03</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2024-11-07.22:00:35</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2024-11-07.20:00:35</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="329" parent="1" name="mysql.infoschema">

@@ -12,10 +12,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.scene.web.WebEngine;
+
 import javafx.scene.web.WebView;
 
-public class DetailController implements Initializable {
+public class DetailMovieController implements Initializable {
 
     @javafx.fxml.FXML
     private TextField detailDirector;
@@ -72,4 +72,5 @@ public class DetailController implements Initializable {
         CurrentSession.setParamsToNull();
         System.exit(0);
     }
+
 }
