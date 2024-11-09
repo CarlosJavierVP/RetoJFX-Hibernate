@@ -2,6 +2,10 @@ package com.example.controllers;
 
 import com.example.CurrentSession;
 import com.example.GestorApp;
+import com.example.HibernateUtil;
+import com.example.dao.CopiaDAO;
+import com.example.dao.UsuarioDAO;
+import com.example.models.Copia;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -13,7 +17,6 @@ import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
-
 import javafx.scene.layout.VBox;
 import javafx.scene.web.WebView;
 
@@ -38,12 +41,14 @@ public class DetailMovieController implements Initializable {
     @FXML
     private WebView idTeaser;
 
+    //CopiaDAO copyDAO = new CopiaDAO(HibernateUtil.getSessionFactory());
+    UsuarioDAO userDAO = new UsuarioDAO(HibernateUtil.getSessionFactory());
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         detailYear.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1975,2024,2024,0));
 
         titleMovie.setText(CurrentSession.movieSelected.getTitulo());
-        detailTitle.setText(CurrentSession.movieSelected.getTitulo());
         detailGenre.setText(CurrentSession.movieSelected.getGenero());
         //detailYear.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1975,2024,CurrentSession.movieSelected.getAño(),1));
         detailYear.getValueFactory().setValue(CurrentSession.movieSelected.getAño());
@@ -67,14 +72,15 @@ public class DetailMovieController implements Initializable {
         alert.setContentText("¿Desea añadir la película a tus copias?");
 
         ChoiceBox<String> soportes = new ChoiceBox<>();
-        soportes.getItems().addAll("DVD", "Blue-ray");
+        soportes.getItems().addAll("DVD", "Blu-ray");
         soportes.setValue("DVD");
-        ChoiceBox<String> formatos = new ChoiceBox<>();
-        formatos.getItems().addAll("bueno", "dañado");
+        ChoiceBox<String> estados = new ChoiceBox<>();
+        estados.getItems().addAll("bueno", "dañado");
+        estados.setValue("bueno");
 
         //Añadir los choiceBox a la alerta
         VBox contenedor = new VBox();
-        contenedor.getChildren().addAll(formatos, soportes);
+        contenedor.getChildren().addAll(estados, soportes);
         alert.getDialogPane().setContent(contenedor);
 
         ButtonType btnSave = new ButtonType("Guardar Copia");
@@ -84,10 +90,16 @@ public class DetailMovieController implements Initializable {
         Optional<ButtonType> resultado = alert.showAndWait();
         if (resultado.isPresent()){
             if (resultado.get() == btnSave){
-                CurrentSession.copySelected.setUser(CurrentSession.userSelected);
+                String estadoCopia = estados.getValue();
+                String soporteCopia = soportes.getValue();
+                CurrentSession.copySelected = new Copia();
+                CurrentSession.copySelected.setEstado(estadoCopia);
                 CurrentSession.copySelected.setIdPelicula(CurrentSession.movieSelected.getIdPelicula());
-
-                //CurrentSession.userSelected.addCopy(CurrentSession.movieSelected);
+                CurrentSession.copySelected.setSoporte(soporteCopia);
+                CurrentSession.copySelected.setUser(CurrentSession.userSelected);
+                CurrentSession.userSelected.addCopy(CurrentSession.copySelected);
+                userDAO.update(CurrentSession.userSelected);
+                GestorApp.loadFXML("views/main-view.fxml", "Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
             }
         }
 
@@ -96,7 +108,7 @@ public class DetailMovieController implements Initializable {
 
     @javafx.fxml.FXML
     public void onBack(ActionEvent actionEvent) {
-        GestorApp.loadFXML("views/allmovies-view.fxml", "Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
+        GestorApp.loadFXML("views/main-view.fxml", "Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
     }
 
     @javafx.fxml.FXML

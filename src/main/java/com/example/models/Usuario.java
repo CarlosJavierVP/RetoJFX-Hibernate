@@ -19,7 +19,7 @@ public class Usuario {
     @Column(name = "is_admin")
     private Byte isAdmin;
 
-    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     private List<Copia> misCopias = new ArrayList<>(0);
 
 

@@ -43,6 +43,7 @@ public class DetailCopyController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         detailYear.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1975,2024,2024,0));
+
         titleCopy.setText(CurrentSession.copyDTOselected.getTituloPeli());
         idEstado.setText(CurrentSession.copyDTOselected.getEstadoCopia());
         idFormato.setText(CurrentSession.copyDTOselected.getSoporteCopia());

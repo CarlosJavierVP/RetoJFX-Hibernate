@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit detalle Copia visualización">
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit implementando alert para añadir copia">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CurrentSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CurrentSession.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailMovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailMovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/LogginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/LogginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/models/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/models/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/main-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +131,7 @@
       <workItem from="1730909589628" duration="6856000" />
       <workItem from="1730954904693" duration="403000" />
       <workItem from="1730994100257" duration="8121000" />
-      <workItem from="1731131375709" duration="6675000" />
+      <workItem from="1731131375709" duration="9943000" />
     </task>
     <task id="LOCAL-00001" summary="Commit conexión Hib, DAO y MODEL - revisar updateDAO">
       <option name="closed" value="true" />
@@ -320,7 +317,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731136378973</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Commit implementando alert para añadir copia">
+      <option name="closed" value="true" />
+      <created>1731139312138</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1731139312138</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,6 +355,7 @@
     <MESSAGE value="Commit mdficacion column teaserUrl" />
     <MESSAGE value="Commit detella Copia" />
     <MESSAGE value="Commit detalle Copia visualización" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit detalle Copia visualización" />
+    <MESSAGE value="Commit implementando alert para añadir copia" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit implementando alert para añadir copia" />
   </component>
 </project>
