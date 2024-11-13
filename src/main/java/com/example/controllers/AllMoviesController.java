@@ -63,6 +63,7 @@ public class AllMoviesController implements Initializable {
 
         if (CurrentSession.userSelected.getIsAdmin() == 1){
             btnAddMovie.setDisable(false);
+            btnAddMovie.setVisible(true);
         }
 
     }

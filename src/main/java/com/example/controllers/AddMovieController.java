@@ -6,18 +6,14 @@ import com.example.HibernateUtil;
 import com.example.dao.PeliculaDAO;
 import com.example.models.Pelicula;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.web.WebView;
 import javafx.stage.FileChooser;
-import javafx.stage.Stage;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -39,13 +35,36 @@ public class AddMovieController implements Initializable {
     private TextArea detailDescrip;
     @javafx.fxml.FXML
     private Button btnAddMovie;
+    @javafx.fxml.FXML
+    private TextField newUrl;
+    @javafx.fxml.FXML
+    private Button btnAddPoster;
 
     PeliculaDAO peliDAO = new PeliculaDAO(HibernateUtil.getSessionFactory());
+
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         detailYear.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1975,2024,2024,1));
+
+        addPoster();
+
+    }
+
+    private void addPoster() {
+        btnAddPoster.setOnAction(e ->{
+            FileChooser fc = new FileChooser();
+            fc.setTitle("Añadir póster de la película");
+            fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("Todos los archivos permitidos", "*.*"));
+
+            File imgFile = fc.showOpenDialog(null);
+            if (imgFile != null){
+                Image newImg = new Image("covers:"+imgFile.getAbsolutePath());
+                img.setImage(newImg);
+            }
+
+        });
     }
 
     @javafx.fxml.FXML
@@ -67,31 +86,29 @@ public class AddMovieController implements Initializable {
         CurrentSession.movieSelected.setAño(detailYear.getValue());
         CurrentSession.movieSelected.setDirector(detailDirector.getText());
         CurrentSession.movieSelected.setDescripcion(detailDescrip.getText());
-        try{
-            Image imgPeli = new Image(new FileInputStream("covers/"+CurrentSession.movieSelected.getImageUrl()));
-            //CurrentSession.movieSelected.setImageUrl(img);
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+        String urlCadena = newUrl.getText();
+        CurrentSession.movieSelected.setTeaserUrl(urlCadena);
+        CurrentSession.movieSelected.setImageUrl(String.valueOf(img));
+
+        if (CurrentSession.movieSelected.getTitulo().isBlank() || CurrentSession.movieSelected.getGenero().isBlank()
+                || CurrentSession.movieSelected.getDescripcion().isBlank() || CurrentSession.movieSelected.getDirector().isBlank()
+                || CurrentSession.movieSelected.getImageUrl() == null || CurrentSession.movieSelected.getTeaserUrl() == null){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Añadir película");
+            alert.setContentText("Tiene que completar todos los campos");
+            alert.show();
+        }else{
+            peliDAO.save(CurrentSession.movieSelected);
+            detailTitle.clear();
+            detailGenre.clear();
+            detailYear.getValueFactory().setValue(2024);
+            detailDirector.clear();
+            detailDescrip.clear();
+            newUrl.clear();
+            GestorApp.loadFXML("views/allmovies-view.fxml", "Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
         }
 
 
-
-        peliDAO.save(CurrentSession.movieSelected);
-
-        detailTitle.clear();
-        detailGenre.clear();
-        detailYear.getValueFactory().setValue(2024);
-        detailDirector.clear();
-        detailDescrip.clear();
-        GestorApp.loadFXML("views/allmovies-view.fxml", "Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
     }
 
-    @javafx.fxml.FXML
-    public void addPoster(Event event) {
-        FileChooser fc = new FileChooser();
-        fc.setTitle("Añadir póster de la película");
-        fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("Todos los archivos permitidos", "*.*"));
-
-
-    }
 }

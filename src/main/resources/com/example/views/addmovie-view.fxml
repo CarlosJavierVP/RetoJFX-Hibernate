@@ -36,14 +36,17 @@
         </Label>
         <HBox alignment="CENTER">
             <children>
-                <ImageView fx:id="img" fitHeight="412.0" fitWidth="290.0" onMouseClicked="#addPoster" pickOnBounds="true" preserveRatio="true">
-                    <HBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="15.0" top="5.0" />
-                    </HBox.margin>
-                    <image>
-                        <Image url="@../../../../../../covers/la_vida_de_brian.jpg" />
-                    </image>
-                </ImageView>
+                  <Button id="btnImg" fx:id="btnAddPoster" mnemonicParsing="false" styleClass="btnImg" stylesheets="@../../../css/style.css">
+                     <graphic>
+                      <ImageView fx:id="img" fitHeight="412.0" fitWidth="290.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
                 <VBox>
                     <children>
                         <GridPane alignment="CENTER">
@@ -74,18 +77,35 @@
                             </VBox.margin>
                         </Label>
                         <TextArea fx:id="detailDescrip" wrapText="true" />
-                        <FlowPane alignment="CENTER">
-                            <children>
-                                <WebView fx:id="idTeaser" prefHeight="131.0" prefWidth="254.0">
-                                    <FlowPane.margin>
-                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                    </FlowPane.margin>
-                                </WebView>
-                            </children>
-                            <VBox.margin>
-                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                            </VBox.margin>
-                        </FlowPane>
+                        <VBox>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <FlowPane alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label text="Inserte URL:">
+                                       <FlowPane.margin>
+                                          <Insets right="10.0" />
+                                       </FlowPane.margin>
+                                    </Label>
+                                    <TextField fx:id="newUrl" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </FlowPane>
+                              <FlowPane alignment="CENTER">
+                                  <children>
+                                      <WebView fx:id="idTeaser" prefHeight="131.0" prefWidth="254.0">
+                                          <FlowPane.margin>
+                                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                          </FlowPane.margin>
+                                      </WebView>
+                                  </children>
+                              </FlowPane>
+                           </children>
+                        </VBox>
                         <FlowPane alignment="CENTER_RIGHT">
                             <children>
                                 <Button fx:id="btnAddMovie" mnemonicParsing="false" onAction="#addMovie" style="-fx-background-color: #00000000;">
@@ -126,8 +146,8 @@
     <menus>
         <Menu mnemonicParsing="false" text="Options">
             <items>
-                <MenuItem mnemonicParsing="false" onAction="#onBack" text="Back" />
-                <MenuItem mnemonicParsing="false" onAction="#cerrar" text="Close" />
+                <MenuItem mnemonicParsing="false" onAction="#onBack" text="Regresar" />
+                <MenuItem mnemonicParsing="false" onAction="#cerrar" text="Desconectar" />
             </items>
         </Menu>
     </menus>
