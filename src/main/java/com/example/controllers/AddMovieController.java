@@ -12,9 +12,13 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.web.WebView;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
-import java.io.File;
+import java.io.*;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.util.ResourceBundle;
 
 public class AddMovieController implements Initializable {
@@ -59,10 +63,29 @@ public class AddMovieController implements Initializable {
             fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("Todos los archivos permitidos", "*.*"));
 
             File imgFile = fc.showOpenDialog(null);
+            FileOutputStream fos = null;
+            FileInputStream fis = null;
+
+            //splitear y sacar el nombre del archivo
+            File f = new File("covers/"+namePoster+".*");
             if (imgFile != null){
-                Image newImg = new Image("covers:"+imgFile.getAbsolutePath());
+                //File f = fc.showSaveDialog(null);
+                try {
+                    fis = new FileInputStream(imgFile);
+                    fos = new FileOutputStream(f, true);
+                    int caracter = fis.read();
+                    while (caracter != -1){
+                        fos.write(caracter);
+                        caracter = fis.read();
+                    }
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+
+                Image newImg = new Image("covers/"+namePoster+".*");
                 img.setImage(newImg);
             }
+
 
         });
     }
@@ -88,7 +111,7 @@ public class AddMovieController implements Initializable {
         CurrentSession.movieSelected.setDescripcion(detailDescrip.getText());
         String urlCadena = newUrl.getText();
         CurrentSession.movieSelected.setTeaserUrl(urlCadena);
-        CurrentSession.movieSelected.setImageUrl(String.valueOf(img));
+        CurrentSession.movieSelected.setImageUrl(img.getImage().getUrl());
 
         if (CurrentSession.movieSelected.getTitulo().isBlank() || CurrentSession.movieSelected.getGenero().isBlank()
                 || CurrentSession.movieSelected.getDescripcion().isBlank() || CurrentSession.movieSelected.getDirector().isBlank()
