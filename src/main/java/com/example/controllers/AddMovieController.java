@@ -47,11 +47,9 @@ public class AddMovieController implements Initializable {
     PeliculaDAO peliDAO = new PeliculaDAO(HibernateUtil.getSessionFactory());
 
 
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         detailYear.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1975,2024,2024,1));
-
         addPoster();
 
     }
@@ -61,16 +59,15 @@ public class AddMovieController implements Initializable {
             FileChooser fc = new FileChooser();
             fc.setTitle("Añadir póster de la película");
             fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("Todos los archivos permitidos", "*.*"));
-
             File imgFile = fc.showOpenDialog(null);
-            FileOutputStream fos = null;
-            FileInputStream fis = null;
 
             String cadena = String.valueOf(imgFile);
             String[] trozos = cadena.split("\\\\");
             String namePoster = trozos[trozos.length-1];
 
             File f = new File("covers/"+namePoster);
+            FileOutputStream fos = null;
+            FileInputStream fis = null;
             Image newImg = null;
             if (imgFile != null){
                 //File f = fc.showSaveDialog(null);
@@ -83,11 +80,12 @@ public class AddMovieController implements Initializable {
                         caracter = fis.read();
                     }
                     newImg = new Image(new FileInputStream("covers/"+namePoster));
-                    img.setImage(newImg);
+
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
                 }
             }
+            img.setImage(newImg);
         });
     }
 
