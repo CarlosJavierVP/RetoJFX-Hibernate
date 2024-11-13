@@ -66,8 +66,12 @@ public class AddMovieController implements Initializable {
             FileOutputStream fos = null;
             FileInputStream fis = null;
 
-            //splitear y sacar el nombre del archivo
-            File f = new File("covers/"+namePoster+".*");
+            String cadena = String.valueOf(imgFile);
+            String[] trozos = cadena.split("\\\\");
+            String namePoster = trozos[trozos.length-1];
+
+            File f = new File("covers/"+namePoster);
+            Image newImg = null;
             if (imgFile != null){
                 //File f = fc.showSaveDialog(null);
                 try {
@@ -78,15 +82,12 @@ public class AddMovieController implements Initializable {
                         fos.write(caracter);
                         caracter = fis.read();
                     }
+                    newImg = new Image(new FileInputStream("covers/"+namePoster));
+                    img.setImage(newImg);
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
                 }
-
-                Image newImg = new Image("covers/"+namePoster+".*");
-                img.setImage(newImg);
             }
-
-
         });
     }
 

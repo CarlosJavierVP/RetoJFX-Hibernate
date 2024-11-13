@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit add poster y url">
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit save newPoster">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/AddMovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/AddMovieController.java" afterDir="false" />
     </list>
@@ -139,6 +139,7 @@
       <workItem from="1731485169350" duration="7319000" />
       <workItem from="1731495255252" duration="3921000" />
       <workItem from="1731499192927" duration="1940000" />
+      <workItem from="1731501146884" duration="1152000" />
     </task>
     <task id="LOCAL-00001" summary="Commit conexión Hib, DAO y MODEL - revisar updateDAO">
       <option name="closed" value="true" />
@@ -380,7 +381,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731487449936</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Commit save newPoster">
+      <option name="closed" value="true" />
+      <created>1731501166279</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1731501166279</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +397,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Commit implementación DAO terminada" />
     <MESSAGE value="Commit diseño ventana principal y validación usuario" />
     <MESSAGE value="Commit modificación de métodos y ajustes para la tabla" />
     <MESSAGE value="Commit ventana para todas las pelis de la DB, ventana acceso a tu lista de copias, implementando la ventana detalle y métodos para mostrar copias del usuario" />
@@ -413,6 +421,7 @@
     <MESSAGE value="Commit btn addMovie activo para admin y diseño" />
     <MESSAGE value="Commit (incompleta)funcionalidad addMovie" />
     <MESSAGE value="Commit add poster y url" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit add poster y url" />
+    <MESSAGE value="Commit save newPoster" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit save newPoster" />
   </component>
 </project>
