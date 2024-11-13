@@ -120,6 +120,7 @@ public class AllMoviesController implements Initializable {
 
     @FXML
     public void addMovie(ActionEvent actionEvent) {
+        CurrentSession.movieSelected = null;
         GestorApp.loadFXML("views/addmovie-view.fxml","Movie Pro Manager - "+CurrentSession.userSelected.getNombreUsuario());
     }
 }

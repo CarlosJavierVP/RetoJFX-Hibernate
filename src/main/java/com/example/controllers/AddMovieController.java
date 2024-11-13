@@ -43,55 +43,59 @@ public class AddMovieController implements Initializable {
     private TextField newUrl;
     @javafx.fxml.FXML
     private Button btnAddPoster;
-
+    private File imgFile = null;
     PeliculaDAO peliDAO = new PeliculaDAO(HibernateUtil.getSessionFactory());
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        detailYear.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1975,2024,2024,1));
+        detailYear.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1975, 2024, 2024, 1));
         addPoster();
 
     }
 
     private void addPoster() {
-        btnAddPoster.setOnAction(e ->{
+        btnAddPoster.setOnAction(e -> {
             FileChooser fc = new FileChooser();
             fc.setTitle("Añadir póster de la película");
             fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("Todos los archivos permitidos", "*.*"));
-            File imgFile = fc.showOpenDialog(null);
+            imgFile = fc.showOpenDialog(null);
 
             String cadena = String.valueOf(imgFile);
             String[] trozos = cadena.split("\\\\");
-            String namePoster = trozos[trozos.length-1];
+            String namePoster = trozos[trozos.length - 1];
 
-            File f = new File("covers/"+namePoster);
-            FileOutputStream fos = null;
-            FileInputStream fis = null;
-            Image newImg = null;
-            if (imgFile != null){
-                //File f = fc.showSaveDialog(null);
-                try {
-                    fis = new FileInputStream(imgFile);
-                    fos = new FileOutputStream(f, true);
-                    int caracter = fis.read();
-                    while (caracter != -1){
-                        fos.write(caracter);
-                        caracter = fis.read();
-                    }
-                    newImg = new Image(new FileInputStream("covers/"+namePoster));
-
-                } catch (IOException ex) {
-                    throw new RuntimeException(ex);
-                }
-            }
+            Image newImg = addImage(namePoster, imgFile);
             img.setImage(newImg);
         });
     }
 
+    private Image addImage(String namePoster, File imgFile) {
+        File f = new File("covers/" + namePoster);
+        FileOutputStream fos = null;
+        FileInputStream fis = null;
+        Image newImg = null;
+        if (imgFile != null) {
+            //File f = fc.showSaveDialog(null);
+            try {
+                fis = new FileInputStream(imgFile);
+                fos = new FileOutputStream(f, true);
+                int caracter = fis.read();
+                while (caracter != -1) {
+                    fos.write(caracter);
+                    caracter = fis.read();
+                }
+                newImg = new Image(new FileInputStream("covers/" + namePoster));
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        }
+        return newImg;
+    }
+
     @javafx.fxml.FXML
     public void onBack(ActionEvent actionEvent) {
-        GestorApp.loadFXML("views/allmovies-view.fxml", "Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
+        GestorApp.loadFXML("views/allmovies-view.fxml", "Movie Pro Manager - " + CurrentSession.userSelected.getNombreUsuario());
     }
 
     @javafx.fxml.FXML
@@ -110,16 +114,16 @@ public class AddMovieController implements Initializable {
         CurrentSession.movieSelected.setDescripcion(detailDescrip.getText());
         String urlCadena = newUrl.getText();
         CurrentSession.movieSelected.setTeaserUrl(urlCadena);
-        CurrentSession.movieSelected.setImageUrl(img.getImage().getUrl());
+        CurrentSession.movieSelected.setImageUrl(imgFile.getName());
 
         if (CurrentSession.movieSelected.getTitulo().isBlank() || CurrentSession.movieSelected.getGenero().isBlank()
                 || CurrentSession.movieSelected.getDescripcion().isBlank() || CurrentSession.movieSelected.getDirector().isBlank()
-                || CurrentSession.movieSelected.getImageUrl() == null || CurrentSession.movieSelected.getTeaserUrl() == null){
+                || CurrentSession.movieSelected.getImageUrl() == null || CurrentSession.movieSelected.getTeaserUrl() == null) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Añadir película");
             alert.setContentText("Tiene que completar todos los campos");
             alert.show();
-        }else{
+        } else {
             peliDAO.save(CurrentSession.movieSelected);
             detailTitle.clear();
             detailGenre.clear();
@@ -127,7 +131,7 @@ public class AddMovieController implements Initializable {
             detailDirector.clear();
             detailDescrip.clear();
             newUrl.clear();
-            GestorApp.loadFXML("views/allmovies-view.fxml", "Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
+            GestorApp.loadFXML("views/allmovies-view.fxml", "Movie Pro Manager - " + CurrentSession.userSelected.getNombreUsuario());
         }
 
 
