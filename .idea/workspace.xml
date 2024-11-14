@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit persistencia en la dataBase 2">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit correcta implementación de addPoster para la película y la persistencia en la db">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/AddMovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/AddMovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/AllMoviesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/AllMoviesController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +140,8 @@
       <workItem from="1731495255252" duration="3921000" />
       <workItem from="1731499192927" duration="1940000" />
       <workItem from="1731501146884" duration="2220000" />
-      <workItem from="1731513941940" duration="3197000" />
+      <workItem from="1731513941940" duration="3716000" />
+      <workItem from="1731571390009" duration="2089000" />
     </task>
     <task id="LOCAL-00001" summary="Commit conexión Hib, DAO y MODEL - revisar updateDAO">
       <option name="closed" value="true" />
@@ -408,7 +407,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731503356681</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Commit correcta implementación de addPoster para la película y la persistencia en la db">
+      <option name="closed" value="true" />
+      <created>1731517643011</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1731517643011</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -416,7 +423,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Commit ventana para todas las pelis de la DB, ventana acceso a tu lista de copias, implementando la ventana detalle y métodos para mostrar copias del usuario" />
     <MESSAGE value="Commit sentencia HQL - revisar" />
     <MESSAGE value="Commit sentencia HQL revisada - DTO ajustado" />
     <MESSAGE value="Commit covers, details-view y controlador" />
@@ -441,6 +447,7 @@
     <MESSAGE value="Commit save newPoster" />
     <MESSAGE value="Commit persistencia en la dataBase" />
     <MESSAGE value="Commit persistencia en la dataBase 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit persistencia en la dataBase 2" />
+    <MESSAGE value="Commit correcta implementación de addPoster para la película y la persistencia en la db" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit correcta implementación de addPoster para la película y la persistencia en la db" />
   </component>
 </project>

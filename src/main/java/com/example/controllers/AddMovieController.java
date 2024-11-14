@@ -64,9 +64,8 @@ public class AddMovieController implements Initializable {
             String cadena = String.valueOf(imgFile);
             String[] trozos = cadena.split("\\\\");
             String namePoster = trozos[trozos.length - 1];
-
-            Image newImg = addImage(namePoster, imgFile);
-            img.setImage(newImg);
+            //Image newImg = addImage(namePoster, imgFile);
+            img.setImage(addImage(namePoster, imgFile));
         });
     }
 
@@ -112,8 +111,8 @@ public class AddMovieController implements Initializable {
         CurrentSession.movieSelected.setAño(detailYear.getValue());
         CurrentSession.movieSelected.setDirector(detailDirector.getText());
         CurrentSession.movieSelected.setDescripcion(detailDescrip.getText());
-        String urlCadena = newUrl.getText();
-        CurrentSession.movieSelected.setTeaserUrl(urlCadena);
+        String urlTeaser = embed(newUrl.getText());
+        CurrentSession.movieSelected.setTeaserUrl(urlTeaser);
         CurrentSession.movieSelected.setImageUrl(imgFile.getName());
 
         if (CurrentSession.movieSelected.getTitulo().isBlank() || CurrentSession.movieSelected.getGenero().isBlank()
@@ -133,8 +132,16 @@ public class AddMovieController implements Initializable {
             newUrl.clear();
             GestorApp.loadFXML("views/allmovies-view.fxml", "Movie Pro Manager - " + CurrentSession.userSelected.getNombreUsuario());
         }
-
-
     }
+
+    private String embed(String url){
+        //Para hacer que el enlace del vídeo sea embebido
+        String idVideo = url.substring(url.indexOf("v=")+2);
+        if (idVideo.contains("&")){
+            idVideo = idVideo.substring(0,idVideo.indexOf("&"));
+        }
+        return "https://www.youtube.com/embed/"+idVideo;
+    }
+
 
 }
