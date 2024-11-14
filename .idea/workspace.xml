@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit correcta implementación de addPoster para la película y la persistencia en la db">
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit parsear enlace del vídeo para embeberlo">
+      <change afterPath="$PROJECT_DIR$/listadoPelis.jasper" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/JdbcUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/services/ReportService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/media/pdf.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/AddMovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/AddMovieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/AllMoviesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/AllMoviesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/allmovies-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/allmovies-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,34 +50,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;5b02abaa-dc03-4781-8ab4-1efcebc789b0&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/1º DESARROLLO APLICACIONES MULTIPLATAFORMA/Programación/TEMA 7.-/Casos prácticos JAVA/UD07CP03&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "JPA.DatabaseSchemaImportDialog": "5b02abaa-dc03-4781-8ab4-1efcebc789b0",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Carlos/Desktop/2DAM/Desarrollo de interfaces/RetoConjunto1",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Carlos\Desktop\2DAM\Desarrollo de interfaces\RetoConjunto2" />
       <recent name="C:\Users\Carlos\Desktop\2DAM\Desarrollo de interfaces\RetoConjunto2\src\main\resources\com\example\views" />
       <recent name="C:\Users\Carlos\Desktop\2DAM\Desarrollo de interfaces\RetoConjunto2\src\main\resources" />
       <recent name="C:\Users\Carlos\Desktop\2DAM\Desarrollo de interfaces\RetoConjunto2\src\main\java\com\example\retoconjunto2" />
@@ -96,6 +104,8 @@
       <envs>
         <env name="hibernate_password" value="123456" />
         <env name="hibernate_username" value="root" />
+        <env name="MYSQL_USER" value="root" />
+        <env name="MYSQL_ROOT_PASSWORD" value="123456" />
       </envs>
       <option name="MAIN_CLASS_NAME" value="com.example.GestorApp" />
       <module name="RetoConjunto2" />
@@ -141,7 +151,7 @@
       <workItem from="1731499192927" duration="1940000" />
       <workItem from="1731501146884" duration="2220000" />
       <workItem from="1731513941940" duration="3716000" />
-      <workItem from="1731571390009" duration="2089000" />
+      <workItem from="1731571390009" duration="8056000" />
     </task>
     <task id="LOCAL-00001" summary="Commit conexión Hib, DAO y MODEL - revisar updateDAO">
       <option name="closed" value="true" />
@@ -415,7 +425,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731517643011</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Commit parsear enlace del vídeo para embeberlo">
+      <option name="closed" value="true" />
+      <created>1731574993734</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1731574993734</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,7 +441,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Commit sentencia HQL - revisar" />
     <MESSAGE value="Commit sentencia HQL revisada - DTO ajustado" />
     <MESSAGE value="Commit covers, details-view y controlador" />
     <MESSAGE value="Commit vista detalle y controlador" />
@@ -448,6 +465,7 @@
     <MESSAGE value="Commit persistencia en la dataBase" />
     <MESSAGE value="Commit persistencia en la dataBase 2" />
     <MESSAGE value="Commit correcta implementación de addPoster para la película y la persistencia en la db" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit correcta implementación de addPoster para la película y la persistencia en la db" />
+    <MESSAGE value="Commit parsear enlace del vídeo para embeberlo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit parsear enlace del vídeo para embeberlo" />
   </component>
 </project>

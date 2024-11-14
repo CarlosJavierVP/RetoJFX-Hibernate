@@ -6,7 +6,8 @@ module com.example {
     requires lombok;
     requires java.naming;
     requires javafx.web;
-
+    requires java.sql;
+    requires net.sf.jasperreports.core;
 
     exports com.example.models to javafx.fxml;
     opens com.example.models;

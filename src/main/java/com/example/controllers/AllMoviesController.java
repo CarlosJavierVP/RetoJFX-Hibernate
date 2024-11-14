@@ -3,8 +3,10 @@ package com.example.controllers;
 import com.example.CurrentSession;
 import com.example.GestorApp;
 import com.example.HibernateUtil;
+import com.example.JdbcUtil;
 import com.example.dao.PeliculaDAO;
 import com.example.models.Pelicula;
+import com.example.services.ReportService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -31,13 +33,15 @@ public class AllMoviesController implements Initializable {
     private TableColumn <Pelicula, String> tablaDirector;
     @javafx.fxml.FXML
     private TextField search;
+    @FXML
+    private Button btnAddMovie;
+    @FXML
+    private Button btnExportPDF;
     private List<Pelicula> allMovies;
     PeliculaDAO peliDAO = new PeliculaDAO(HibernateUtil.getSessionFactory());
 
     ObservableList<Pelicula> filter = FXCollections.observableArrayList();
     FilteredList<Pelicula> filterMovie = new FilteredList<>(filter, p -> true); //Inicializar la lista filtrada
-    @FXML
-    private Button btnAddMovie;
 
 
     @Deprecated
@@ -64,6 +68,8 @@ public class AllMoviesController implements Initializable {
         if (CurrentSession.userSelected.getIsAdmin() == 1){
             btnAddMovie.setDisable(false);
             btnAddMovie.setVisible(true);
+            btnExportPDF.setDisable(false);
+            btnExportPDF.setVisible(true);
         }
 
     }
@@ -122,5 +128,15 @@ public class AllMoviesController implements Initializable {
     public void addMovie(ActionEvent actionEvent) {
         CurrentSession.movieSelected = null;
         GestorApp.loadFXML("views/addmovie-view.fxml","Movie Pro Manager - "+CurrentSession.userSelected.getNombreUsuario());
+    }
+
+    @FXML
+    public void exportPDF(ActionEvent actionEvent) {
+        ReportService rs = new ReportService(JdbcUtil.getCon());
+        rs.generarInforme();
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Informe Películas");
+        alert.setContentText("EL informe ha sido creado");
+        alert.show();
     }
 }

@@ -82,6 +82,25 @@
                         <Insets />
                      </HBox.margin>
                   </FlowPane>
+                  <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnExportPDF" disable="true" mnemonicParsing="false" onAction="#exportPDF" style="-fx-background-color: #00000000;">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="50.0">
+                                 <image>
+                                    <Image url="@../../../media/pdf.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </FlowPane>
                </children>
             </HBox>
             <TableView fx:id="tableMovies">
