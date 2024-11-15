@@ -12,10 +12,19 @@ public class ReportService {
         con = conect;
     }
 
-    public void generarInforme(){
+    public void generarInformePeliculas(){
         try{
             JasperPrint jp = JasperFillManager.fillReport("listadoPelis.jasper", null, con);
-            JasperExportManager.exportReportToPdfFile(jp,"AllMovies"+".pdf");
+            JasperExportManager.exportReportToPdfFile(jp,"AllMovies.pdf");
+        } catch (JRException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void generarInformeCopias(){
+        try{
+            JasperPrint jp = JasperFillManager.fillReport("listadoCopias.jasper", null, con);
+            JasperExportManager.exportReportToPdfFile(jp,"MyCopies.pdf");
         } catch (JRException e) {
             throw new RuntimeException(e);
         }

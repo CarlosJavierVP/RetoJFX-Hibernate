@@ -133,10 +133,10 @@ public class AllMoviesController implements Initializable {
     @FXML
     public void exportPDF(ActionEvent actionEvent) {
         ReportService rs = new ReportService(JdbcUtil.getCon());
-        rs.generarInforme();
+        rs.generarInformePeliculas();
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Informe Películas");
-        alert.setContentText("EL informe ha sido creado");
+        alert.setContentText("El informe de todas las películas ha sido creado");
         alert.show();
     }
 }

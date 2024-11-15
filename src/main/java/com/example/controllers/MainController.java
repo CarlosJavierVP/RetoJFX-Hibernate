@@ -3,9 +3,11 @@ package com.example.controllers;
 import com.example.CurrentSession;
 import com.example.GestorApp;
 import com.example.HibernateUtil;
+import com.example.JdbcUtil;
 import com.example.dao.PeliculaDAO;
 import com.example.dao.UsuarioDAO;
 import com.example.models.dto.CopyDTO;
+import com.example.services.ReportService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -29,10 +31,13 @@ public class MainController implements Initializable {
     private TableColumn<CopyDTO, String> tablaSoporte;
     @javafx.fxml.FXML
     private TextField search;
+    @javafx.fxml.FXML
+    private Button btnExportPDF;
     UsuarioDAO userDAO = new UsuarioDAO(HibernateUtil.getSessionFactory());
     PeliculaDAO peliDAO = new PeliculaDAO(HibernateUtil.getSessionFactory());
     ObservableList<CopyDTO> filter = FXCollections.observableArrayList();
     FilteredList<CopyDTO> filterMovie = new FilteredList<>(filter, p -> true); //Inicializar la lista filtrada
+
 
 
     @Override
@@ -105,5 +110,15 @@ public class MainController implements Initializable {
     public void ventanaLog(ActionEvent actionEvent) {
         CurrentSession.setParamsToNull();
         GestorApp.loadFXML("views/loggin-view.fxml","Movie Pro Manager - Login");
+    }
+
+    @javafx.fxml.FXML
+    public void exportPEDF(ActionEvent actionEvent) {
+        ReportService rs = new ReportService(JdbcUtil.getCon());
+        rs.generarInformeCopias();
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Informe de copias");
+        alert.setContentText("El informe de tus copias ha sido creado");
+        alert.show();
     }
 }
