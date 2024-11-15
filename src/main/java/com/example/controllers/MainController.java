@@ -13,6 +13,7 @@ import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -112,8 +113,8 @@ public class MainController implements Initializable {
         GestorApp.loadFXML("views/loggin-view.fxml","Movie Pro Manager - Login");
     }
 
-    @javafx.fxml.FXML
-    public void exportPEDF(ActionEvent actionEvent) {
+    @FXML
+    public void exportPDF(ActionEvent actionEvent) {
         ReportService rs = new ReportService(JdbcUtil.getCon());
         rs.generarInformeCopias();
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
