@@ -84,7 +84,7 @@
                   </FlowPane>
                   <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="btnExportPDF" disable="true" mnemonicParsing="false" onAction="#exportPEDF" style="-fx-background-color: #00000000;">
+                        <Button fx:id="btnExportPDF" mnemonicParsing="false" onAction="#exportPEDF" style="-fx-background-color: #00000000;">
                            <graphic>
                               <ImageView fitHeight="50.0" fitWidth="50.0">
                                  <image>
@@ -92,6 +92,9 @@
                                  </image>
                               </ImageView>
                            </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </Button>
                      </children>
                   </FlowPane>
