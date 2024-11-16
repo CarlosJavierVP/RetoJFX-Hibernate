@@ -97,6 +97,7 @@ public class DetailMovieController implements Initializable {
         ButtonType btnCancel = new ButtonType("Cancelar", ButtonType.CANCEL.getButtonData());
 
         alert.getButtonTypes().setAll(btnCancel, btnSave);
+        alert.getDialogPane().getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
         Optional<ButtonType> resultado = alert.showAndWait();
         if (resultado.isPresent()){
             if (resultado.get() == btnSave){

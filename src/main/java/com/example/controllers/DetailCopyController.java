@@ -107,6 +107,7 @@ public class DetailCopyController implements Initializable {
         ButtonType btnUpdate = new ButtonType("Actualizar Copia");
         ButtonType btnCancel = new ButtonType("Cancelar", ButtonType.CANCEL.getButtonData());
         alert.getButtonTypes().addAll(btnCancel, btnUpdate);
+        alert.getDialogPane().getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
         Optional<ButtonType> resultado = alert.showAndWait();
 
         if (resultado.isPresent()){

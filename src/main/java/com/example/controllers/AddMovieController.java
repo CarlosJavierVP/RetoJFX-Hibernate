@@ -104,6 +104,7 @@ public class AddMovieController implements Initializable {
         CurrentSession.setParamsToNull();
         System.exit(0);
     }
+
     @javafx.fxml.FXML
     public void cancelar(ActionEvent actionEvent) {
         GestorApp.loadFXML("views/allmovies-view.fxml", "Movie Pro Manager - " + CurrentSession.userSelected.getNombreUsuario());
@@ -121,13 +122,11 @@ public class AddMovieController implements Initializable {
         CurrentSession.movieSelected.setTeaserUrl(urlTeaser);
         CurrentSession.movieSelected.setImageUrl(imgFile.getName());
 
+
         if (CurrentSession.movieSelected.getTitulo().isBlank() || CurrentSession.movieSelected.getGenero().isBlank()
                 || CurrentSession.movieSelected.getDescripcion().isBlank() || CurrentSession.movieSelected.getDirector().isBlank()
-                || CurrentSession.movieSelected.getImageUrl() == null || CurrentSession.movieSelected.getTeaserUrl() == null) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Añadir película");
-            alert.setContentText("Tiene que completar todos los campos");
-            alert.show();
+                || CurrentSession.movieSelected.getImageUrl() == null || CurrentSession.movieSelected.getTeaserUrl().isBlank() ) {
+            alertaError();
         } else {
             peliDAO.save(CurrentSession.movieSelected);
             detailTitle.clear();
@@ -140,15 +139,28 @@ public class AddMovieController implements Initializable {
         }
     }
 
-    private String embed(String url){
-        //Para hacer que el enlace del vídeo sea embebido
-        String idVideo = url.substring(url.indexOf("v=")+2);
-        if (idVideo.contains("&")){
-            idVideo = idVideo.substring(0,idVideo.indexOf("&"));
-        }
-        return "https://www.youtube.com/embed/"+idVideo;
+    private void alertaError() {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Añadir película");
+        alert.setContentText("Tiene que completar todos los campos");
+        alert.getDialogPane().getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
+        alert.show();
     }
 
+    private String embed(String url) {
+        String resultado="";
+        //Para hacer que el enlace del vídeo sea embebido
+        if(url.isBlank()){
+            alertaError();
+        }else{
+            String idVideo = url.substring(url.indexOf("v=") + 2);
+            if (idVideo.contains("&")) {
+                idVideo = idVideo.substring(0, idVideo.indexOf("&"));
+            }
+            resultado = "https://www.youtube.com/embed/" + idVideo;
+        }
+        return resultado;
+    }
 
 
 }

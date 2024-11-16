@@ -165,8 +165,7 @@ public class MainController implements Initializable {
         ButtonType btnCancel = new ButtonType("Cancelar", ButtonType.CANCEL.getButtonData());
         alert.getButtonTypes().addAll(btnCancel,btnInforme);
 
-        alert.getDialogPane().getContent().getStyleClass().add("/css/style.css");
-
+        alert.getDialogPane().getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
         Optional<ButtonType> resultado = alert.showAndWait();
 
         if (resultado.isPresent()){
@@ -186,6 +185,7 @@ public class MainController implements Initializable {
                 Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
                 alert2.setTitle("Informe Copias");
                 alert2.setContentText("El informe de tus copias ha sido creado");
+                alert2.getDialogPane().getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
                 alert2.show();
             }
         }

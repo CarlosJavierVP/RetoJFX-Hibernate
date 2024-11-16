@@ -113,49 +113,43 @@
     -fx-background-color: #301609;
 }
 
-.contenedor .alert-pane{
+/*estilo de la ventana*/
+.dialog-pane{
     -fx-background-color: #e8e0cd;
-    -fx-border-color: #e0af46;
+    -fx-border-color: #301609;
     -fx-border-width: 2px;
-    -fx-border-radius: 10px;
     -fx-padding: 20px;
-    -fx-background-radius: 10px;
-}
 
-.contenedor .alert-title{
-    -fx-text-fill: #9e4c1c;
-    -fx-font-size: 20px;
+}
+/*titulo*/
+.label.header-panel{
+    -fx-text-fill: #301609;
+    -fx-font-size: 15px;
     -fx-font-weight: bold;
 }
-
-.contenedor .alert-message{
+/*contenido de la alerta*/
+.label.content{
     -fx-text-fill: #301609;
-    -fx-font-size: 16px;
-    -fx-padding: 10px 0;
+    -fx-font-size: 12px;
+    -fx-padding: 10px;
 }
-.contenedor .alert-button{
+/*botones de la alerta*/
+.button-bar .button{
     -fx-background-color: #e0af46;
     -fx-text-fill: #301609;
-    -fx-font-weight: bold;
-    -fx-background-radius: 5px;
-    -fx-padding: 5px 15px;
     -fx-cursor: hand;
+    -fx-font-size: 15px;
+    -fx-border-radius: 5px;
 }
-
-.contenedor .alert-button:hover{
+.button-bar .button:hover{
     -fx-background-color: #e3936e;
-}
-
-.contenedor .alert-button:pressed{
-    -fx-background-color:#9e4c1c;
-    -fx-text-fill: #ffffff;
 }
 
 
 .btnImg{
     -fx-background-color: #9e4c1c;
-   -fx-border-radius: 15px;
-   -fx-transition: background-color 0.3;
+    -fx-border-radius: 15px;
+    -fx-transition: background-color 0.3;
     -fx-opacity: 0.2;
 }
 

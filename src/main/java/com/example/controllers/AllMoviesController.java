@@ -139,14 +139,17 @@ public class AllMoviesController implements Initializable {
         alert.setTitle("Informe Películas");
         alert.setHeaderText("Generar archivo pdf");
         alert.setContentText("¿Quieres exportar el listado de películas a un archivo pdf?");
-
+        alert.getDialogPane().getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
         Optional<ButtonType> resultado = alert.showAndWait();
+
         if(resultado.isPresent()){
             if(resultado.get() == ButtonType.OK){
                 rs.generarInformePeliculas();
                 Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
                 alert2.setTitle("Informe generado");
                 alert2.setContentText("Archivo pdf creado correctamente");
+
+                alert2.getDialogPane().getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
                 alert2.show();
             }
         }
