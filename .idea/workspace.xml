@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit implementación funcionalidad informes 2">
-      <change afterPath="$PROJECT_DIR$/copiasEstado.jasper" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/copiasSoporte.jasper" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/copiasSoporteEstado.jasper" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5b02abaa-dc03-4781-8ab4-1efcebc789b0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5b02abaa-dc03-4781-8ab4-1efcebc789b0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5b02abaa-dc03-4781-8ab4-1efcebc789b0/storage_v2/_src_/schema/reto2.BCJ2Bg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5b02abaa-dc03-4781-8ab4-1efcebc789b0/storage_v2/_src_/schema/reto2.BCJ2Bg.meta" afterDir="false" />
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit implementación funcionalidad informes 3">
+      <change afterPath="$PROJECT_DIR$/MyCopies.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listadoCopias.jasper" beforeDir="false" afterPath="$PROJECT_DIR$/listadoCopias.jasper" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listadoPelis.jasper" beforeDir="false" afterPath="$PROJECT_DIR$/listadoPelis.jasper" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/copiasEstado.jasper" beforeDir="false" afterPath="$PROJECT_DIR$/copiasEstado.jasper" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/copiasSoporte.jasper" beforeDir="false" afterPath="$PROJECT_DIR$/copiasSoporte.jasper" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/services/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/services/ReportService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +152,7 @@
       <workItem from="1731686572899" duration="2029000" />
       <workItem from="1731738360950" duration="3820000" />
       <workItem from="1731748648540" duration="3103000" />
-      <workItem from="1731751766030" duration="298000" />
+      <workItem from="1731751766030" duration="4457000" />
     </task>
     <task id="LOCAL-00001" summary="Commit conexión Hib, DAO y MODEL - revisar updateDAO">
       <option name="closed" value="true" />
@@ -487,7 +482,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731742535920</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Commit implementación funcionalidad informes 3">
+      <option name="closed" value="true" />
+      <created>1731752123907</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1731752123907</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,7 +498,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Commit implementación de imágenes en la ventana detalle, y moverse entre ventanas." />
     <MESSAGE value="Commit spinner no editable" />
     <MESSAGE value="Commit x" />
     <MESSAGE value="Commit implementación de teaser en película" />
@@ -520,6 +522,7 @@
     <MESSAGE value="Commit implementación de informe Jaspersoft - lista de las copias del usuario - retoques 2" />
     <MESSAGE value="Commit implementación funcionalidad informes" />
     <MESSAGE value="Commit implementación funcionalidad informes 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit implementación funcionalidad informes 2" />
+    <MESSAGE value="Commit implementación funcionalidad informes 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit implementación funcionalidad informes 3" />
   </component>
 </project>

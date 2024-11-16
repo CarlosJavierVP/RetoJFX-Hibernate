@@ -171,18 +171,26 @@ public class MainController implements Initializable {
 
         if (resultado.isPresent()){
             if (resultado.get() == btnInforme){
-                allCopies.setOnAction(e ->{
-                    if (allCopies.isSelected()){
-                        rs.generarInformeCopias();
-                    }
-                    //implementar los métodos en reportService para los demás informes
+                if (allCopies.isSelected()){
+                    rs.generarInformeCopias();
+                }
+                if (estado.isSelected() && soporte.isSelected()){
+                    //el valor que se pasa es el del choiceBox
+                    rs.informeCopiasSoporteEstado(soportes.getValue(), estados.getValue());
+                } else if (estado.isSelected() && !soporte.isSelected()) {
+                    rs.informeCopias(estados.getValue());
+                } else if (!estado.isSelected() && soporte.isSelected()) {
+                    rs.informeCopias(soportes.getValue());
+                }
 
-                });
+                Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
+                alert2.setTitle("Informe Copias");
+                alert2.setContentText("El informe de tus copias ha sido creado");
+                alert2.show();
+                GestorApp.loadFXML("views/main-view.fxml","Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
 
             }
         }
-
-
 
     }
 }
