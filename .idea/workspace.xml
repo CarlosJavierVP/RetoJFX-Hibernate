@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit implementación de informe Jaspersoft - lista de las copias del usuario - retoques 2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailCopyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailCopyController.java" afterDir="false" />
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit implementación funcionalidad informes">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +145,7 @@
       <workItem from="1731513941940" duration="3716000" />
       <workItem from="1731571390009" duration="10034000" />
       <workItem from="1731686572899" duration="2029000" />
-      <workItem from="1731738360950" duration="2641000" />
+      <workItem from="1731738360950" duration="3520000" />
     </task>
     <task id="LOCAL-00001" summary="Commit conexión Hib, DAO y MODEL - revisar updateDAO">
       <option name="closed" value="true" />
@@ -462,7 +459,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731689843571</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Commit implementación funcionalidad informes">
+      <option name="closed" value="true" />
+      <created>1731741089924</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1731741089924</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +475,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Commit implementación search bar en la vista de allMovies" />
     <MESSAGE value="Commit implementación search" />
     <MESSAGE value="Commit implementación de imágenes en la ventana detalle, y moverse entre ventanas." />
     <MESSAGE value="Commit spinner no editable" />
@@ -495,6 +499,7 @@
     <MESSAGE value="Commit implementación de informe Jaspersoft - lista de las copias del usuario" />
     <MESSAGE value="Commit implementación de informe Jaspersoft - lista de las copias del usuario - retoques" />
     <MESSAGE value="Commit implementación de informe Jaspersoft - lista de las copias del usuario - retoques 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit implementación de informe Jaspersoft - lista de las copias del usuario - retoques 2" />
+    <MESSAGE value="Commit implementación funcionalidad informes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit implementación funcionalidad informes" />
   </component>
 </project>

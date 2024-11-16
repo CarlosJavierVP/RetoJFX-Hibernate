@@ -21,6 +21,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
@@ -131,10 +132,10 @@ public class MainController implements Initializable {
         estados.getItems().addAll("bueno","dañado");
         estados.setValue("bueno");
 
-        CheckBox allCopies = new CheckBox("Por defecto");
+        RadioButton allCopies = new RadioButton("Por defecto");
         allCopies.setSelected(true);
-        CheckBox estado = new CheckBox("Estado");
-        CheckBox soporte = new CheckBox("Soporte");
+        RadioButton estado = new RadioButton("Estado");
+        RadioButton soporte = new RadioButton("Soporte");
 
         VBox contenedor = new VBox();
         HBox condicion = new HBox();
@@ -145,13 +146,25 @@ public class MainController implements Initializable {
         contenedor.getChildren().addAll(allCopies,condicion,formato);
         alert.getDialogPane().setContent(contenedor);
 
-        //pero a raíz del button
-        allCopies.setOnAction(e ->{
-            if (allCopies.isSelected()){
-                rs.generarInformeCopias();
-            }
+        ButtonType btnInforme = new ButtonType("Generar informe");
+        ButtonType btnCancel = new ButtonType("Cancelar", ButtonType.CANCEL.getButtonData());
+        alert.getButtonTypes().addAll(btnCancel,btnInforme);
+        Optional<ButtonType> resultado = alert.showAndWait();
 
-        });
+        if (resultado.isPresent()){
+            if (resultado.get() == btnInforme){
+                allCopies.setOnAction(e ->{
+                    if (allCopies.isSelected()){
+                        rs.generarInformeCopias();
+                    }
+                    //implementar los métodos en reportService para los demás informes
+
+                });
+
+            }
+        }
+
+
 
     }
 }
