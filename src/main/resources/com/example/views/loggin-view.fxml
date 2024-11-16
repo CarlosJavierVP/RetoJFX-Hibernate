@@ -26,7 +26,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
                <image>
-                  <Image url="@../../../media/pngegg.png" />
+                  <Image url="@../../../media/logo2.png" />
                </image>
             </ImageView>
             <Label text="MOVIE PRO MANAGER">
@@ -161,14 +161,6 @@
                   </VBox>
                </children>
             </HBox>
-            <ImageView fitHeight="150.0" fitWidth="634.0" pickOnBounds="true">
-               <VBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </VBox.margin>
-               <image>
-                  <Image url="@../../../media/banner2.jpg" />
-               </image>
-            </ImageView>
          </children>
       </VBox>
    </center>

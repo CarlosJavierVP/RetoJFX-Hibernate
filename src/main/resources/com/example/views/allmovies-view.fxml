@@ -84,7 +84,7 @@
                   </FlowPane>
                   <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="btnExportPDF" disable="true" mnemonicParsing="false" onAction="#exportPDF" style="-fx-background-color: #00000000;">
+                        <Button fx:id="btnExportPDF" disable="true" mnemonicParsing="false" onAction="#exportPDF" style="-fx-background-color: #00000000;" visible="false">
                            <graphic>
                               <ImageView fitHeight="50.0" fitWidth="50.0">
                                  <image>
@@ -132,14 +132,7 @@
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </HBox.margin>
                      <children>
-                        <Button fx:id="btnAddMovie" disable="true" mnemonicParsing="false" onAction="#addMovie" prefHeight="28.0" prefWidth="40.0" style="-fx-background-color: #00000000;">
-                           <graphic>
-                              <ImageView fitHeight="37.0" fitWidth="37.0">
-                                 <image>
-                                    <Image url="@../../../media/disk2.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
+                        <Button fx:id="btnAddMovie" disable="true" mnemonicParsing="false" onAction="#addMovie" text="Añadir nueva película" visible="false">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>

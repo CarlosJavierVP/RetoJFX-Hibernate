@@ -10,7 +10,6 @@
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -104,33 +103,42 @@
                                       </WebView>
                                   </children>
                               </FlowPane>
+                              <HBox>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <FlowPane alignment="CENTER_LEFT">
+                                       <children>
+                                          <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#cancelar" text="Cancelar">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <FlowPane.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </FlowPane.margin>
+                                          </Button>
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane alignment="CENTER_RIGHT">
+                                        <children>
+                                            <Button fx:id="btnAddMovie" mnemonicParsing="false" onAction="#addMovie" text="Guardar">
+                                                <font>
+                                                    <Font size="14.0" />
+                                                </font>
+                                                <cursor>
+                                                    <Cursor fx:constant="HAND" />
+                                                </cursor>
+                                                <FlowPane.margin>
+                                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                </FlowPane.margin>
+                                            </Button>
+                                        </children>
+                                    </FlowPane>
+                                 </children>
+                              </HBox>
                            </children>
                         </VBox>
-                        <FlowPane alignment="CENTER_RIGHT">
-                            <children>
-                                <Button fx:id="btnAddMovie" mnemonicParsing="false" onAction="#addMovie" style="-fx-background-color: #00000000;">
-                                    <font>
-                                        <Font name="System Bold" size="14.0" />
-                                    </font>
-                                    <graphic>
-                                        <ImageView fitHeight="40.0" fitWidth="34.0">
-                                            <image>
-                                                <Image url="@../../../media/disco-flexible.png" />
-                                            </image>
-                                        </ImageView>
-                                    </graphic>
-                                    <cursor>
-                                        <Cursor fx:constant="HAND" />
-                                    </cursor>
-                                    <FlowPane.margin>
-                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                    </FlowPane.margin>
-                                </Button>
-                            </children>
-                            <VBox.margin>
-                                <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
-                            </VBox.margin>
-                        </FlowPane>
                     </children>
                     <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

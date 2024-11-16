@@ -184,8 +184,6 @@ public class MainController implements Initializable {
                 alert2.setTitle("Informe Copias");
                 alert2.setContentText("El informe de tus copias ha sido creado");
                 alert2.show();
-                GestorApp.loadFXML("views/main-view.fxml","Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
-
             }
         }
 

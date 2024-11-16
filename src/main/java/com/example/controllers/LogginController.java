@@ -43,7 +43,7 @@ public class LogginController implements Initializable {
         if (user != null){
             infoLabel.setText("Usuario conectado");
             CurrentSession.userSelected = user;
-            GestorApp.loadFXML("views/main-view.fxml","Movie Pro Manager - "+user.getNombreUsuario());
+            GestorApp.loadFXML("views/main-view.fxml","Movie Pro Manager - "+CurrentSession.userSelected.getNombreUsuario());
         }else{
             infoLabel.setText("Usuario no encontrado");
         }
@@ -60,8 +60,10 @@ public class LogginController implements Initializable {
                 nuevoUsuario.setPassword(newPass.getText());
                 CurrentSession.userSelected = nuevoUsuario;
                 CurrentSession.userSelected.setMisCopias(CurrentSession.listCopySelected = new ArrayList<>(0));
+                CurrentSession.userSelected.setIsAdmin((byte) 0);
                 dao.save(CurrentSession.userSelected);
                 infoLabel1.setText("Usuario registrado correctamente");
+                GestorApp.loadFXML("views/main-view.fxml","Movie Pro Manager - "+CurrentSession.userSelected.getNombreUsuario());
             }else{
                 infoLabel1.setText("La contraseña no coincide");
             }

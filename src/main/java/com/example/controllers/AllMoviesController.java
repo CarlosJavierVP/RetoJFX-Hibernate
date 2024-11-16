@@ -18,6 +18,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import java.net.URL;
 import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class AllMoviesController implements Initializable {
@@ -133,10 +134,21 @@ public class AllMoviesController implements Initializable {
     @FXML
     public void exportPDF(ActionEvent actionEvent) {
         ReportService rs = new ReportService(JdbcUtil.getCon());
-        rs.generarInformePeliculas();
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Informe Películas");
-        alert.setContentText("El informe de todas las películas ha sido creado");
-        alert.show();
+        alert.setHeaderText("Generar archivo pdf");
+        alert.setContentText("¿Quieres exportar el listado de películas a un archivo pdf?");
+
+        Optional<ButtonType> resultado = alert.showAndWait();
+        if(resultado.isPresent()){
+            if(resultado.get() == ButtonType.OK){
+                rs.generarInformePeliculas();
+                Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
+                alert2.setTitle("Informe generado");
+                alert2.setContentText("Archivo pdf creado correctamente");
+                alert2.show();
+            }
+        }
     }
 }

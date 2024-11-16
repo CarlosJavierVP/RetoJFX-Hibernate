@@ -45,6 +45,8 @@ public class AddMovieController implements Initializable {
     private Button btnAddPoster;
     private File imgFile = null;
     PeliculaDAO peliDAO = new PeliculaDAO(HibernateUtil.getSessionFactory());
+    @javafx.fxml.FXML
+    private Button btnCancelar;
 
 
     @Override
@@ -102,6 +104,10 @@ public class AddMovieController implements Initializable {
         CurrentSession.setParamsToNull();
         System.exit(0);
     }
+    @javafx.fxml.FXML
+    public void cancelar(ActionEvent actionEvent) {
+        GestorApp.loadFXML("views/allmovies-view.fxml", "Movie Pro Manager - " + CurrentSession.userSelected.getNombreUsuario());
+    }
 
     @javafx.fxml.FXML
     public void addMovie(ActionEvent actionEvent) {
@@ -142,6 +148,7 @@ public class AddMovieController implements Initializable {
         }
         return "https://www.youtube.com/embed/"+idVideo;
     }
+
 
 
 }

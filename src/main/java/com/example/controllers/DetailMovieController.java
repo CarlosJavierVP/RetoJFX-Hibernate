@@ -16,6 +16,8 @@ import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
+
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.web.WebView;
 
@@ -39,9 +41,12 @@ public class DetailMovieController implements Initializable {
     private Button btnAddCopy;
     @FXML
     private WebView idTeaser;
+    @FXML
+    private Button btnVolver;
 
     //CopiaDAO copyDAO = new CopiaDAO(HibernateUtil.getSessionFactory());
     UsuarioDAO userDAO = new UsuarioDAO(HibernateUtil.getSessionFactory());
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -77,9 +82,15 @@ public class DetailMovieController implements Initializable {
         estados.getItems().addAll("bueno", "dañado");
         estados.setValue("bueno");
 
-        //Añadir los choiceBox a la alerta
         VBox contenedor = new VBox();
-        contenedor.getChildren().addAll(estados, soportes);
+        HBox formato = new HBox();
+        HBox condicion = new HBox();
+        Label est = new Label("Estado");
+        Label spt = new Label("Soporte");
+        formato.getChildren().addAll(spt,soportes);
+        condicion.getChildren().addAll(est,estados);
+
+        contenedor.getChildren().addAll(condicion, formato);
         alert.getDialogPane().setContent(contenedor);
 
         ButtonType btnSave = new ButtonType("Guardar Copia");
@@ -115,4 +126,8 @@ public class DetailMovieController implements Initializable {
         System.exit(0);
     }
 
+    @FXML
+    public void volver(ActionEvent actionEvent) {
+        GestorApp.loadFXML("views/allmovies-view.fxml", "Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
+    }
 }
