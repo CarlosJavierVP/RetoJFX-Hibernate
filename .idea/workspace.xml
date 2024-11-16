@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit retoques btn y alertas">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/media/boton-circular-plus.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/addmovie-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/addmovie-view.fxml" afterDir="false" />
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit retoques aspecto visual">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/loggin-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/loggin-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -149,7 +149,7 @@
       <workItem from="1731686572899" duration="2029000" />
       <workItem from="1731738360950" duration="3820000" />
       <workItem from="1731748648540" duration="3103000" />
-      <workItem from="1731751766030" duration="14129000" />
+      <workItem from="1731751766030" duration="15194000" />
     </task>
     <task id="LOCAL-00001" summary="Commit conexión Hib, DAO y MODEL - revisar updateDAO">
       <option name="closed" value="true" />
@@ -511,7 +511,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731766871490</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Commit retoques aspecto visual">
+      <option name="closed" value="true" />
+      <created>1731767690384</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1731767690384</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,7 +527,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Commit mdficacion column teaserUrl" />
     <MESSAGE value="Commit detella Copia" />
     <MESSAGE value="Commit detalle Copia visualización" />
     <MESSAGE value="Commit implementando alert para añadir copia" />
@@ -544,6 +551,7 @@
     <MESSAGE value="Commit implementación finalizada funcionalidad informes" />
     <MESSAGE value="Commit solucionado informes datosCopias del usuario" />
     <MESSAGE value="Commit retoques btn y alertas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit retoques btn y alertas" />
+    <MESSAGE value="Commit retoques aspecto visual" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit retoques aspecto visual" />
   </component>
 </project>

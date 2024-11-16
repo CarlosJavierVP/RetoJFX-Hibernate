@@ -1,4 +1,37 @@
 
+.root{
+    -fx-background-color: #e8e0cd;
+
+}
+
+.label {
+    -fx-text-fill: #9e4c1c;
+    -fx-font-size: 15px;
+}
+
+.label.title{
+    -fx-text-fill: #9e4c1c;
+    -fx-font-size: 70px;
+    -fx-font-family: "Gabriola";
+}
+
+.label.subTitle{
+    -fx-text-fill: #9e4c1c;
+    -fx-font-size: 25px;
+}
+
+.button{
+    -fx-background-color: #e0af46;
+    -fx-text-fill: #301609;
+    -fx-cursor: hand;
+    -fx-font-size: 15px;
+}
+.button:hover{
+    -fx-background-color: #e3936e;
+}
+
+
+
 .btnImg{
     -fx-background-color: #9e4c1c;
    /*-fx-background-color: rgba(255,255,255,0.3);*/
@@ -11,4 +44,5 @@
 .btnImg:hover{
     background-color: rgba(255,255,255,0.5);
 }
+
 

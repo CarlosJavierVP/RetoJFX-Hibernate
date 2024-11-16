@@ -14,14 +14,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controllers.LogginController">
+<BorderPane stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controllers.LogginController">
    <center>
-      <VBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" stylesheets="@../../../css/style.css" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets />
          </BorderPane.margin>
          <children>
-            <ImageView fitHeight="144.0" fitWidth="288.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="163.0" fitWidth="161.0" pickOnBounds="true" preserveRatio="true">
                <VBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
@@ -29,7 +29,7 @@
                   <Image url="@../../../media/logo2.png" />
                </image>
             </ImageView>
-            <Label text="MOVIE PRO MANAGER">
+            <Label styleClass="title" text="MOVIE PRO MANAGER">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
@@ -38,7 +38,7 @@
                <children>
                   <VBox alignment="TOP_CENTER">
                      <children>
-                        <Label alignment="CENTER" text="Loggin - My ListMovies">
+                        <Label alignment="CENTER" styleClass="subTitle" text="Loggin - My ListMovies">
                            <font>
                               <Font name="System Bold Italic" size="20.0" />
                            </font>
@@ -94,7 +94,7 @@
                   </VBox>
                   <VBox alignment="TOP_CENTER">
                      <children>
-                        <Label alignment="CENTER" text="Register New User">
+                        <Label alignment="CENTER" styleClass="subTitle" text="Register New User">
                            <font>
                               <Font name="System Bold Italic" size="20.0" />
                            </font>
