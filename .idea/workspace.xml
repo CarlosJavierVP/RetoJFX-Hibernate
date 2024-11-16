@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit css Loggin">
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit css Loggin y main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/allmovies-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/allmovies-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/detailmovie-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/detailmovie-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/main-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/style.css" afterDir="false" />
@@ -150,7 +151,7 @@
       <workItem from="1731686572899" duration="2029000" />
       <workItem from="1731738360950" duration="3820000" />
       <workItem from="1731748648540" duration="3103000" />
-      <workItem from="1731751766030" duration="16760000" />
+      <workItem from="1731751766030" duration="18755000" />
     </task>
     <task id="LOCAL-00001" summary="Commit conexión Hib, DAO y MODEL - revisar updateDAO">
       <option name="closed" value="true" />
@@ -528,7 +529,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731768722100</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Commit css Loggin y main">
+      <option name="closed" value="true" />
+      <created>1731770257058</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1731770257058</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -536,7 +545,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Commit detalle Copia visualización" />
     <MESSAGE value="Commit implementando alert para añadir copia" />
     <MESSAGE value="Commit funcionalidad añadir copia" />
     <MESSAGE value="Commit funcionalidad borrar copia" />
@@ -561,6 +569,7 @@
     <MESSAGE value="Commit retoques btn y alertas" />
     <MESSAGE value="Commit retoques aspecto visual" />
     <MESSAGE value="Commit css Loggin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit css Loggin" />
+    <MESSAGE value="Commit css Loggin y main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit css Loggin y main" />
   </component>
 </project>

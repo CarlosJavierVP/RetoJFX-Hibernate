@@ -22,11 +22,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.WebView?>
 
-<BorderPane prefHeight="614.0" prefWidth="865.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controllers.DetailMovieController">
+<BorderPane prefHeight="614.0" prefWidth="865.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controllers.DetailMovieController">
    <center>
       <VBox alignment="CENTER" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="titleMovie" alignment="CENTER" text="Titulo Pelicula" textAlignment="JUSTIFY">
+            <Label fx:id="titleMovie" alignment="CENTER" styleClass="title" text="Titulo Pelicula" textAlignment="JUSTIFY">
                <font>
                   <Font name="System Bold" size="35.0" />
                </font>
@@ -61,14 +61,14 @@
                               <TextField fx:id="detailTitle" editable="false" GridPane.columnIndex="1" />
                               <TextField fx:id="detailGenre" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                               <TextField fx:id="detailDirector" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <Label alignment="CENTER_RIGHT" text="Título:" />
-                              <Label text="Género:" GridPane.rowIndex="1" />
-                              <Label text="Año:" GridPane.rowIndex="2" />
-                              <Label text="Director:" GridPane.rowIndex="3" />
+                              <Label alignment="CENTER_RIGHT" styleClass="subTitle" text="Título:" />
+                              <Label styleClass="subTitle" text="Género:" GridPane.rowIndex="1" />
+                              <Label styleClass="subTitle" text="Año:" GridPane.rowIndex="2" />
+                              <Label styleClass="subTitle" text="Director:" GridPane.rowIndex="3" />
                               <Spinner fx:id="detailYear" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
-                        <Label text="Descripción:">
+                        <Label styleClass="subTitle" text="Descripción:">
                            <VBox.margin>
                               <Insets bottom="5.0" />
                            </VBox.margin>

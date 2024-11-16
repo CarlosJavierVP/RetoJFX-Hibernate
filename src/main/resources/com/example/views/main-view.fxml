@@ -115,7 +115,7 @@
             </TableView>
             <FlowPane alignment="CENTER_LEFT" columnHalignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" onAction="#ventanaLog" text="Cerrar Sesión" />
+                  <Button mnemonicParsing="false" onAction="#ventanaLog" styleClass="cerrar" text="Cerrar Sesión" />
                </children>
                <VBox.margin>
                   <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />

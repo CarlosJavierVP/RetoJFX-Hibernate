@@ -12,6 +12,8 @@
     -fx-font-weight: bold;
 }
 
+
+
 .label.title{
     -fx-text-fill: #9e4c1c;
     -fx-font-size: 70px;
@@ -21,6 +23,7 @@
 .label.subTitle{
     -fx-text-fill: #9e4c1c;
     -fx-font-size: 25px;
+    -fx-font-family: "MV Boli";
 }
 
 .button{
@@ -74,6 +77,19 @@
 
 .menu-bar .label{
     -fx-text-fill: #e8e0cd;
+}
+.menu-item:hover{
+    -fx-background-color: #e3936e;
+}
+
+.button.cerrar{
+    -fx-background-color: #9e4c1c;
+    -fx-text-fill: #e8e0cd;
+    -fx-font-size: 16px;
+}
+
+.button.cerrar:hover{
+    -fx-background-color: #301609;
 }
 
 

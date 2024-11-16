@@ -22,11 +22,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.WebView?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controllers.AddMovieController">
+<BorderPane stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controllers.AddMovieController">
 <center>
 <VBox alignment="CENTER" BorderPane.alignment="CENTER">
     <children>
-        <Label alignment="CENTER" text="Añadir Película a la DataBase" textAlignment="JUSTIFY">
+        <Label alignment="CENTER" styleClass="title" text="Añadir Película a la DataBase" textAlignment="JUSTIFY">
             <font>
                 <Font name="System Bold" size="35.0" />
             </font>
@@ -67,14 +67,17 @@
                                 <TextField fx:id="detailTitle" GridPane.columnIndex="1" />
                                 <TextField fx:id="detailGenre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                 <TextField fx:id="detailDirector" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                <Label alignment="CENTER_RIGHT" text="Título:" />
-                                <Label text="Género:" GridPane.rowIndex="1" />
-                                <Label text="Año:" GridPane.rowIndex="2" />
-                                <Label text="Director:" GridPane.rowIndex="3" />
+                                <Label alignment="CENTER_RIGHT" styleClass="subTitle" text="Título:">
+                                 <font>
+                                    <Font name="MV Boli" size="12.0" />
+                                 </font></Label>
+                                <Label styleClass="subTitle" text="Género:" GridPane.rowIndex="1" />
+                                <Label styleClass="subTitle" text="Año:" GridPane.rowIndex="2" />
+                                <Label styleClass="subTitle" text="Director:" GridPane.rowIndex="3" />
                                 <Spinner fx:id="detailYear" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                             </children>
                         </GridPane>
-                        <Label text="Descripción:">
+                        <Label styleClass="subTitle" text="Descripción:">
                             <VBox.margin>
                                 <Insets bottom="5.0" />
                             </VBox.margin>
@@ -87,7 +90,7 @@
                            <children>
                               <FlowPane alignment="CENTER_LEFT">
                                  <children>
-                                    <Label text="Inserte URL:">
+                                    <Label styleClass="subTitle" text="Inserte URL:">
                                        <FlowPane.margin>
                                           <Insets right="10.0" />
                                        </FlowPane.margin>
@@ -114,7 +117,7 @@
                                  <children>
                                     <FlowPane alignment="CENTER_LEFT">
                                        <children>
-                                          <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#cancelar" text="Cancelar">
+                                          <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#cancelar" styleClass="cerrar" text="Cancelar">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
@@ -126,7 +129,7 @@
                                     </FlowPane>
                                     <FlowPane alignment="CENTER_RIGHT">
                                         <children>
-                                            <Button fx:id="btnAddMovie" mnemonicParsing="false" onAction="#addMovie" text="Guardar">
+                                            <Button fx:id="btnAddMovie" mnemonicParsing="false" onAction="#addMovie" styleClass="cerrar" text="Guardar">
                                                 <font>
                                                     <Font size="14.0" />
                                                 </font>
