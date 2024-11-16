@@ -10,6 +10,7 @@
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -35,9 +36,12 @@
         </Label>
         <HBox alignment="CENTER">
             <children>
-                  <Button id="btnImg" fx:id="btnAddPoster" mnemonicParsing="false" styleClass="btnImg" stylesheets="@../../../css/style.css">
+                  <Button id="btnImg" fx:id="btnAddPoster" minHeight="420.0" minWidth="306.0" mnemonicParsing="false" prefHeight="420.0" prefWidth="306.0" styleClass="btnImg" stylesheets="@../../../css/style.css">
                      <graphic>
-                      <ImageView fx:id="img" fitHeight="412.0" fitWidth="290.0" pickOnBounds="true" preserveRatio="true" />
+                      <ImageView fx:id="img" fitHeight="86.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../media/boton-circular-plus.png" />
+                           </image></ImageView>
                      </graphic>
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
