@@ -54,19 +54,24 @@ public class LogginController implements Initializable {
         Usuario nuevoUsuario = dao.validateNewUser(newUser.getText());
 
         if(nuevoUsuario == null){
-            if(Arrays.equals(newPass.getText().toCharArray(), newPass2.getText().toCharArray())){
-                nuevoUsuario = new Usuario();
-                nuevoUsuario.setNombreUsuario(newUser.getText());
-                nuevoUsuario.setPassword(newPass.getText());
-                CurrentSession.userSelected = nuevoUsuario;
-                CurrentSession.userSelected.setMisCopias(CurrentSession.listCopySelected = new ArrayList<>(0));
-                CurrentSession.userSelected.setIsAdmin((byte) 0);
-                dao.save(CurrentSession.userSelected);
-                infoLabel1.setText("Usuario registrado correctamente");
-                GestorApp.loadFXML("views/main-view.fxml","Movie Pro Manager - "+CurrentSession.userSelected.getNombreUsuario());
-            }else{
-                infoLabel1.setText("La contraseña no coincide");
+            if(!newPass2.getText().isBlank() && !newUser.getText().isBlank()){
+                if(Arrays.equals(newPass.getText().toCharArray(), newPass2.getText().toCharArray())){
+                    nuevoUsuario = new Usuario();
+                    nuevoUsuario.setNombreUsuario(newUser.getText());
+                    nuevoUsuario.setPassword(newPass.getText());
+                    CurrentSession.userSelected = nuevoUsuario;
+                    CurrentSession.userSelected.setMisCopias(CurrentSession.listCopySelected = new ArrayList<>(0));
+                    CurrentSession.userSelected.setIsAdmin((byte) 0);
+                    dao.save(CurrentSession.userSelected);
+                    infoLabel1.setText("Usuario registrado correctamente");
+                    GestorApp.loadFXML("views/main-view.fxml","Movie Pro Manager - "+CurrentSession.userSelected.getNombreUsuario());
+                }else{
+                    infoLabel1.setText("La contraseña no coincide");
+                }
+            }else {
+                infoLabel1.setText("No deje los campos de registro vacíos");
             }
+
         }else{
             infoLabel1.setText("Ese nombre de usuario no está disponible");
         }

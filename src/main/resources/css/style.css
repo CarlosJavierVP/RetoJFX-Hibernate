@@ -12,11 +12,9 @@
     -fx-font-weight: bold;
 }
 
-
-
 .label.title{
     -fx-text-fill: #9e4c1c;
-    -fx-font-size: 70px;
+    -fx-font-size: 60px;
     -fx-font-family: "Gabriola";
 }
 
@@ -79,7 +77,7 @@
     -fx-text-fill: #e8e0cd;
 }
 .menu-item:hover{
-    -fx-background-color: #e3936e;
+    -fx-background-color: #301609;
 }
 
 .button.cerrar{
@@ -90,6 +88,45 @@
 
 .button.cerrar:hover{
     -fx-background-color: #301609;
+}
+
+
+.alert-pane{
+    -fx-background-color: #e8e0cd;
+    -fx-border-color: #e0af46;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-padding: 20px;
+    -fx-background-radius: 10px;
+}
+
+.alert-title{
+    -fx-text-fill: #9e4c1c;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.alert-message{
+    -fx-text-fill: #301609;
+    -fx-font-size: 16px;
+    -fx-padding: 10px 0;
+}
+.alert-button{
+    -fx-background-color: #e0af46;
+    -fx-text-fill: #301609;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px 15px;
+    -fx-cursor: hand;
+}
+
+.alert-button:hover{
+    -fx-background-color: #e3936e;
+}
+
+.alert-button:pressed{
+    -fx-background-color:#9e4c1c;
+    -fx-text-fill: #ffffff;
 }
 
 
