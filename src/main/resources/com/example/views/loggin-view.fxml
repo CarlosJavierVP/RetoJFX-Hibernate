@@ -50,13 +50,13 @@
                            <children>
                               <VBox prefHeight="131.0" prefWidth="195.0">
                                  <children>
-                                    <Label text="Usuario:">
+                                    <Label styleClass="loginlab" text="Usuario:">
                                        <VBox.margin>
                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <TextField fx:id="txtUser" text="juanperez" />
-                                    <Label text="Contraseña:">
+                                    <Label styleClass="loginlab" text="Contraseña:">
                                        <VBox.margin>
                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                        </VBox.margin>
@@ -106,19 +106,19 @@
                            <children>
                               <VBox prefHeight="131.0" prefWidth="195.0">
                                  <children>
-                                    <Label text="Usuario:">
+                                    <Label styleClass="loginlab" text="Usuario:">
                                        <VBox.margin>
                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <TextField fx:id="newUser" promptText="Nuevo Usuario" />
-                                    <Label text="Contraseña:">
+                                    <Label styleClass="loginlab" text="Contraseña:">
                                        <VBox.margin>
                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <PasswordField fx:id="newPass" promptText="Inserte contraseña" />
-                                    <Label text="Confirmar Contraseña:">
+                                    <Label styleClass="loginlab" text="Confirmar Contraseña:">
                                        <VBox.margin>
                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                        </VBox.margin>

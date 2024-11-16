@@ -8,6 +8,9 @@
     -fx-text-fill: #9e4c1c;
     -fx-font-size: 15px;
 }
+.label.loginlab{
+    -fx-font-weight: bold;
+}
 
 .label.title{
     -fx-text-fill: #9e4c1c;
@@ -30,12 +33,52 @@
     -fx-background-color: #e3936e;
 }
 
+.button.btnAllMovies{
+    -fx-background-color: transparent;
+    -fx-text-fill: #9e4c1c;
+    -fx-font-size: 48px;
+    -fx-font-family: "Gabriola";
+}
+
+.text-field{
+    -fx-prompt-text-fill:#9e4c1c;
+    /*-fx-background-color: #e8e0cd;*/
+    -fx-text-fill: #301609;
+    -fx-border-color: #9e4c1c;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+}
+.table-view{
+    -fx-background-color: #e8e0cd;
+    -fx-border-color: #301609; /* #9e4c1c*/
+    -fx-table-cell-border-color: #301609; /* #9e4c1c*/
+}
+
+.table-view .column-header{
+    -fx-background-color: #e0af46;
+    -fx-font-weight: bold;
+    -fx-text-fill: #301609;
+}
+
+.table-view .table-row-cell:even{
+    -fx-background-color: #f1ead4;
+}
+
+.table-view .table-row-cell:odd{
+    -fx-background-color: #e8e0cd;
+}
+
+.menu-bar{
+    -fx-background-color:#301609 ;
+}
+
+.menu-bar .label{
+    -fx-text-fill: #e8e0cd;
+}
 
 
 .btnImg{
     -fx-background-color: #9e4c1c;
-   /*-fx-background-color: rgba(255,255,255,0.3);*/
-   /*-fx-border: 1px solid rgba(255,255,255,0.6);*/
    -fx-border-radius: 15px;
    -fx-transition: background-color 0.3;
     -fx-opacity: 0.2;
