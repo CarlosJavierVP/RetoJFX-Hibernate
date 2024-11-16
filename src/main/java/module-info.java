@@ -9,6 +9,8 @@ module com.example {
     requires java.sql;
     requires net.sf.jasperreports.core;
 
+    exports com.example.services;
+    opens com.example.services;
     exports com.example.models to javafx.fxml;
     opens com.example.models;
     opens com.example;

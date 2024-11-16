@@ -1,10 +1,8 @@
 package com.example.services;
 
-import net.sf.jasperreports.engine.JRException;
-import net.sf.jasperreports.engine.JasperExportManager;
-import net.sf.jasperreports.engine.JasperFillManager;
-import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.*;
 import java.sql.Connection;
+import java.util.HashMap;
 
 public class ReportService {
     private static Connection con;
@@ -28,6 +26,19 @@ public class ReportService {
         } catch (JRException e) {
             throw new RuntimeException(e);
         }
+    }
+    public void informeCopiasSoporteEstado(String soporte, String estado){
+        var params = new HashMap<>();
+        params.put("Soporte", soporte);
+        params.put("Estado", estado);
+
+        try{
+            JasperPrint jp = JasperFillManager.fillReport("copiasSoporteEstado.jasper", params, con);
+            JasperExportManager.exportReportToPdfFile(jp,"MyCopies"+soporte+estado+".pdf");
+        }catch (JRException e){
+            throw new RuntimeException();
+        }
+
     }
 
 }

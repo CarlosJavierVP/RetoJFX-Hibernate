@@ -137,6 +137,24 @@ public class MainController implements Initializable {
         RadioButton estado = new RadioButton("Estado");
         RadioButton soporte = new RadioButton("Soporte");
 
+        allCopies.setOnAction(e ->{
+            if (allCopies.isSelected()){
+                estado.setSelected(false);
+                soporte.setSelected(false);
+            }
+        });
+        estado.setOnAction(e ->{
+            if (estado.isSelected()){
+                allCopies.setSelected(false);
+            }
+        });
+        soporte.setOnAction(e ->{
+            if(soporte.isSelected()){
+                allCopies.setSelected(false);
+            }
+        });
+
+
         VBox contenedor = new VBox();
         HBox condicion = new HBox();
         HBox formato = new HBox();
