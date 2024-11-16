@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit implementación funcionalidad informes 3">
-      <change afterPath="$PROJECT_DIR$/MyCopies.pdf" afterDir="false" />
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit implementación finalizada funcionalidad informes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/copiasEstado.jasper" beforeDir="false" afterPath="$PROJECT_DIR$/copiasEstado.jasper" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/copiasSoporte.jasper" beforeDir="false" afterPath="$PROJECT_DIR$/copiasSoporte.jasper" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/copiasSoporteEstado.jasper" beforeDir="false" afterPath="$PROJECT_DIR$/copiasSoporteEstado.jasper" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listadoCopias.jasper" beforeDir="false" afterPath="$PROJECT_DIR$/listadoCopias.jasper" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reto2.sql" beforeDir="false" afterPath="$PROJECT_DIR$/reto2.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/services/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/services/ReportService.java" afterDir="false" />
     </list>
@@ -47,32 +49,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;5b02abaa-dc03-4781-8ab4-1efcebc789b0&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Carlos/Desktop/2DAM/Desarrollo de interfaces/RetoConjunto2&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "JPA.DatabaseSchemaImportDialog": "5b02abaa-dc03-4781-8ab4-1efcebc789b0",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Carlos/Desktop/2DAM/Desarrollo de interfaces/RetoConjunto2",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Carlos\Desktop\2DAM\Desarrollo de interfaces\RetoConjunto2" />
@@ -152,7 +154,7 @@
       <workItem from="1731686572899" duration="2029000" />
       <workItem from="1731738360950" duration="3820000" />
       <workItem from="1731748648540" duration="3103000" />
-      <workItem from="1731751766030" duration="4457000" />
+      <workItem from="1731751766030" duration="10655000" />
     </task>
     <task id="LOCAL-00001" summary="Commit conexión Hib, DAO y MODEL - revisar updateDAO">
       <option name="closed" value="true" />
@@ -490,7 +492,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731752123907</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Commit implementación finalizada funcionalidad informes">
+      <option name="closed" value="true" />
+      <created>1731756447694</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1731756447694</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,7 +508,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Commit spinner no editable" />
     <MESSAGE value="Commit x" />
     <MESSAGE value="Commit implementación de teaser en película" />
     <MESSAGE value="Commit mdficacion column teaserUrl" />
@@ -523,6 +532,7 @@
     <MESSAGE value="Commit implementación funcionalidad informes" />
     <MESSAGE value="Commit implementación funcionalidad informes 2" />
     <MESSAGE value="Commit implementación funcionalidad informes 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit implementación funcionalidad informes 3" />
+    <MESSAGE value="Commit implementación finalizada funcionalidad informes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit implementación finalizada funcionalidad informes" />
   </component>
 </project>

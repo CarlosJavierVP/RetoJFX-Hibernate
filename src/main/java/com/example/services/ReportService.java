@@ -1,13 +1,14 @@
 package com.example.services;
 
+import com.example.CurrentSession;
 import net.sf.jasperreports.engine.*;
 import java.sql.Connection;
 import java.util.HashMap;
 
 public class ReportService {
     private static Connection con;
-    public ReportService(Connection conect) {
-        con = conect;
+
+    public ReportService(Connection c) {con=c;
     }
 
     public void generarInformePeliculas(){
@@ -17,31 +18,38 @@ public class ReportService {
         } catch (JRException e) {
             throw new RuntimeException(e);
         }
+
     }
 
     public void generarInformeCopias(){
+        HashMap<String, Object> param = new HashMap<>();
+        param.put("UsuarioId",CurrentSession.userSelected.getIdUsuario());
         try{
-            JasperPrint jp = JasperFillManager.fillReport("listadoCopias.jasper", null, con);
+            JasperPrint jp = JasperFillManager.fillReport("listadoCopias.jasper", param, con);
             JasperExportManager.exportReportToPdfFile(jp,"MyCopies.pdf");
         } catch (JRException e) {
             throw new RuntimeException(e);
         }
+
     }
     public void informeCopiasSoporteEstado(String soporte, String estado){
         HashMap<String, Object> params = new HashMap<>();
         params.put("Soporte", soporte);
         params.put("Estado", estado);
-
+        params.put("UsuarioId",CurrentSession.userSelected.getIdUsuario());
         try{
             JasperPrint jp = JasperFillManager.fillReport("copiasSoporteEstado.jasper", params, con);
             JasperExportManager.exportReportToPdfFile(jp,"MyCopies"+soporte+"_"+estado+".pdf");
         }catch (JRException e){
             throw new RuntimeException();
         }
+
+
     }
 
     public void informeCopias(String parametro){
         HashMap<String, Object> param = new HashMap<>();
+        param.put("UsuarioId",CurrentSession.userSelected.getIdUsuario());
         try{
             if (parametro.contains("DVD") || parametro.contains("Blu-ray")){
                 param.put("Soporte", parametro);
@@ -55,6 +63,7 @@ public class ReportService {
         } catch (JRException e) {
             throw new RuntimeException(e);
         }
+
     }
 
 }

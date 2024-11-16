@@ -19,7 +19,6 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -42,8 +41,6 @@ public class MainController implements Initializable {
     PeliculaDAO peliDAO = new PeliculaDAO(HibernateUtil.getSessionFactory());
     ObservableList<CopyDTO> filter = FXCollections.observableArrayList();
     FilteredList<CopyDTO> filterMovie = new FilteredList<>(filter, p -> true); //Inicializar la lista filtrada
-
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

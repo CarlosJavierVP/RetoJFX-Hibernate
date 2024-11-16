@@ -78,11 +78,4 @@ lo que desencadena una serie de eventos imprevistos.', 'Bong Joon-ho'),
 y se dan una serie de tronchantes equívocos', 'Terry Jones' );
 
 
-INSERT INTO Copia (id_pelicula, id_usuario, estado, soporte) VALUES
-(1,1,'bueno','DVD'),
-(1,1,'bueno','Blu-ray'),
-(2,2,'dañado','DVD'),
-(3,1,'bueno','Blu-ray'),
-(4,2,'bueno','DVD'),
-(4,1,'bueno','Blu-ray');
 
