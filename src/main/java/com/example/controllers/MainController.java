@@ -1,9 +1,6 @@
 package com.example.controllers;
 
-import com.example.CurrentSession;
-import com.example.GestorApp;
-import com.example.HibernateUtil;
-import com.example.JdbcUtil;
+import com.example.*;
 import com.example.dao.PeliculaDAO;
 import com.example.dao.UsuarioDAO;
 import com.example.models.dto.CopyDTO;
@@ -15,10 +12,14 @@ import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.StageStyle;
+
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -151,7 +152,6 @@ public class MainController implements Initializable {
             }
         });
 
-
         VBox contenedor = new VBox();
         HBox condicion = new HBox();
         HBox formato = new HBox();
@@ -164,6 +164,9 @@ public class MainController implements Initializable {
         ButtonType btnInforme = new ButtonType("Generar informe");
         ButtonType btnCancel = new ButtonType("Cancelar", ButtonType.CANCEL.getButtonData());
         alert.getButtonTypes().addAll(btnCancel,btnInforme);
+
+        alert.getDialogPane().getContent().getStyleClass().add("/css/style.css");
+
         Optional<ButtonType> resultado = alert.showAndWait();
 
         if (resultado.isPresent()){

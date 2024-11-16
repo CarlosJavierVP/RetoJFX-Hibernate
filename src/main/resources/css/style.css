@@ -51,8 +51,8 @@
 }
 .table-view{
     -fx-background-color: #e8e0cd;
-    -fx-border-color: #301609; /* #9e4c1c*/
-    -fx-table-cell-border-color: #301609; /* #9e4c1c*/
+    -fx-border-color: #9e4c1c; /* #301609*/
+    -fx-table-cell-border-color: #9e4c1c; /* #301609*/
 }
 
 .table-view .column-header{
@@ -60,7 +60,9 @@
     -fx-font-weight: bold;
     -fx-text-fill: #301609;
 }
-
+.table-view .table-cell{
+    -fx-text-fill: #301609;
+}
 .table-view .table-row-cell:even{
     -fx-background-color: #f1ead4;
 }
@@ -68,6 +70,27 @@
 .table-view .table-row-cell:odd{
     -fx-background-color: #e8e0cd;
 }
+
+.table-view .table-row-cell:hover{
+    -fx-background-color: #e0af46;
+}
+.table-view. table-row-cell:odd:hover{
+    -fx-background-color:  #e0af46;
+}
+.table-view. table-row-cell:even:hover{
+    -fx-background-color:  #e0af46;
+}
+
+/*estilo a la barra de scroll*/
+.table-view .scroll-bar:vertical .track{
+    -fx-background-color: #301609;
+}
+.table-view .scroll-bar:vertical .thumb{
+    -fx-background-color:  #e0af46;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+}
+
 
 .menu-bar{
     -fx-background-color:#301609 ;
@@ -90,8 +113,7 @@
     -fx-background-color: #301609;
 }
 
-
-.alert-pane{
+.contenedor .alert-pane{
     -fx-background-color: #e8e0cd;
     -fx-border-color: #e0af46;
     -fx-border-width: 2px;
@@ -100,18 +122,18 @@
     -fx-background-radius: 10px;
 }
 
-.alert-title{
+.contenedor .alert-title{
     -fx-text-fill: #9e4c1c;
     -fx-font-size: 20px;
     -fx-font-weight: bold;
 }
 
-.alert-message{
+.contenedor .alert-message{
     -fx-text-fill: #301609;
     -fx-font-size: 16px;
     -fx-padding: 10px 0;
 }
-.alert-button{
+.contenedor .alert-button{
     -fx-background-color: #e0af46;
     -fx-text-fill: #301609;
     -fx-font-weight: bold;
@@ -120,11 +142,11 @@
     -fx-cursor: hand;
 }
 
-.alert-button:hover{
+.contenedor .alert-button:hover{
     -fx-background-color: #e3936e;
 }
 
-.alert-button:pressed{
+.contenedor .alert-button:pressed{
     -fx-background-color:#9e4c1c;
     -fx-text-fill: #ffffff;
 }
