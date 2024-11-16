@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit implementación de informe Jaspersoft - lista de las copias del usuario" />
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit implementación de informe Jaspersoft - lista de las copias del usuario - retoques 2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailCopyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailCopyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/style.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,7 +147,8 @@
       <workItem from="1731501146884" duration="2220000" />
       <workItem from="1731513941940" duration="3716000" />
       <workItem from="1731571390009" duration="10034000" />
-      <workItem from="1731686572899" duration="1219000" />
+      <workItem from="1731686572899" duration="2029000" />
+      <workItem from="1731738360950" duration="2641000" />
     </task>
     <task id="LOCAL-00001" summary="Commit conexión Hib, DAO y MODEL - revisar updateDAO">
       <option name="closed" value="true" />
@@ -440,7 +446,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731689646700</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Commit implementación de informe Jaspersoft - lista de las copias del usuario - retoques">
+      <option name="closed" value="true" />
+      <created>1731689770228</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1731689770228</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Commit implementación de informe Jaspersoft - lista de las copias del usuario - retoques 2">
+      <option name="closed" value="true" />
+      <created>1731689843571</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1731689843571</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -448,8 +470,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Commit vista detalle y controlador" />
-    <MESSAGE value="Commit vistaLoggin y logginController modificados, funcionalidad addUser" />
     <MESSAGE value="Commit implementación search bar en la vista de allMovies" />
     <MESSAGE value="Commit implementación search" />
     <MESSAGE value="Commit implementación de imágenes en la ventana detalle, y moverse entre ventanas." />
@@ -473,6 +493,8 @@
     <MESSAGE value="Commit parsear enlace del vídeo para embeberlo" />
     <MESSAGE value="Commit implementación de informe Jaspersoft - lista de todas las películas" />
     <MESSAGE value="Commit implementación de informe Jaspersoft - lista de las copias del usuario" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit implementación de informe Jaspersoft - lista de las copias del usuario" />
+    <MESSAGE value="Commit implementación de informe Jaspersoft - lista de las copias del usuario - retoques" />
+    <MESSAGE value="Commit implementación de informe Jaspersoft - lista de las copias del usuario - retoques 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit implementación de informe Jaspersoft - lista de las copias del usuario - retoques 2" />
   </component>
 </project>

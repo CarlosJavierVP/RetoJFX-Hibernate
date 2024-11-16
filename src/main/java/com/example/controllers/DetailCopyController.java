@@ -9,6 +9,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.web.WebView;
 import java.io.FileInputStream;
@@ -92,7 +94,14 @@ public class DetailCopyController implements Initializable {
 
         //Añadir los choiceBox a la alerta
         VBox contenedor = new VBox();
-        contenedor.getChildren().addAll(estados, soportes);
+        HBox formato = new HBox();
+        HBox condicion = new HBox();
+        Label est = new Label("Estado");
+        Label spt = new Label("Soporte");
+        formato.getChildren().addAll(spt,soportes);
+        condicion.getChildren().addAll(est,estados);
+
+        contenedor.getChildren().addAll(condicion, formato);
         alert.getDialogPane().setContent(contenedor);
 
         ButtonType btnUpdate = new ButtonType("Actualizar Copia");

@@ -17,6 +17,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -116,10 +119,39 @@ public class MainController implements Initializable {
     @FXML
     public void exportPDF(ActionEvent actionEvent) {
         ReportService rs = new ReportService(JdbcUtil.getCon());
-        rs.generarInformeCopias();
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
+        Alert alert = new Alert(Alert.AlertType.NONE);
         alert.setTitle("Informe de copias");
-        alert.setContentText("El informe de tus copias ha sido creado");
-        alert.show();
+        alert.setContentText("Elige como quieres el informe");
+
+        ChoiceBox<String> soportes = new ChoiceBox<>();
+        soportes.getItems().addAll("DVD", "Blu-ray");
+        soportes.setValue("DVD");
+        ChoiceBox<String> estados = new ChoiceBox<>();
+        estados.getItems().addAll("bueno","dañado");
+        estados.setValue("bueno");
+
+        CheckBox allCopies = new CheckBox("Por defecto");
+        allCopies.setSelected(true);
+        CheckBox estado = new CheckBox("Estado");
+        CheckBox soporte = new CheckBox("Soporte");
+
+        VBox contenedor = new VBox();
+        HBox condicion = new HBox();
+        HBox formato = new HBox();
+
+        condicion.getChildren().addAll(estado, estados);
+        formato.getChildren().addAll(soporte,soportes);
+        contenedor.getChildren().addAll(allCopies,condicion,formato);
+        alert.getDialogPane().setContent(contenedor);
+
+        //pero a raíz del button
+        allCopies.setOnAction(e ->{
+            if (allCopies.isSelected()){
+                rs.generarInformeCopias();
+            }
+
+        });
+
     }
 }
