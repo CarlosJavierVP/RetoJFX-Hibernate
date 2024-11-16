@@ -6,6 +6,7 @@ import com.example.HibernateUtil;
 import com.example.dao.PeliculaDAO;
 import com.example.models.Pelicula;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -120,12 +121,14 @@ public class AddMovieController implements Initializable {
         CurrentSession.movieSelected.setDescripcion(detailDescrip.getText());
         String urlTeaser = embed(newUrl.getText());
         CurrentSession.movieSelected.setTeaserUrl(urlTeaser);
-        CurrentSession.movieSelected.setImageUrl(imgFile.getName());
+        if (imgFile != null){
+            CurrentSession.movieSelected.setImageUrl(imgFile.getName());
+        }
 
 
         if (CurrentSession.movieSelected.getTitulo().isBlank() || CurrentSession.movieSelected.getGenero().isBlank()
                 || CurrentSession.movieSelected.getDescripcion().isBlank() || CurrentSession.movieSelected.getDirector().isBlank()
-                || CurrentSession.movieSelected.getImageUrl() == null || CurrentSession.movieSelected.getTeaserUrl().isBlank() ) {
+                || CurrentSession.movieSelected.getImageUrl() == null || CurrentSession.movieSelected.getTeaserUrl() == null ) {
             alertaError();
         } else {
             peliDAO.save(CurrentSession.movieSelected);
@@ -148,10 +151,10 @@ public class AddMovieController implements Initializable {
     }
 
     private String embed(String url) {
-        String resultado="";
+        String resultado= "";
         //Para hacer que el enlace del vídeo sea embebido
         if(url.isBlank()){
-            alertaError();
+            resultado = null;
         }else{
             String idVideo = url.substring(url.indexOf("v=") + 2);
             if (idVideo.contains("&")) {
