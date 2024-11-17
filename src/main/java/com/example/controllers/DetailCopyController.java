@@ -4,6 +4,7 @@ import com.example.CurrentSession;
 import com.example.GestorApp;
 import com.example.HibernateUtil;
 import com.example.dao.CopiaDAO;
+import com.example.dao.UsuarioDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -48,6 +49,7 @@ public class DetailCopyController implements Initializable {
     @javafx.fxml.FXML
     private Button btnDelete;
     CopiaDAO copyDAO = new CopiaDAO(HibernateUtil.getSessionFactory());
+    UsuarioDAO userDAO = new UsuarioDAO(HibernateUtil.getSessionFactory());
 
     /**
      * Metodo initialize para inicializar la ventana y sus métodos
@@ -152,6 +154,7 @@ public class DetailCopyController implements Initializable {
     public void deleteCopia(ActionEvent actionEvent) {
         CurrentSession.copySelected = copyDAO.findById(CurrentSession.copyDTOselected.getIdMyCopy());
         copyDAO.delete(CurrentSession.copySelected);
+        CurrentSession.copySelected = null;
         GestorApp.loadFXML("views/main-view.fxml","Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
     }
 }

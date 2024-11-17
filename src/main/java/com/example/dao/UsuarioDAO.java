@@ -60,7 +60,11 @@ public class UsuarioDAO implements DAO<Usuario> {
      */
     @Override
     public void update(Usuario usuario) {
-        sessionFactory.inTransaction(session -> session.merge(usuario));
+        sessionFactory.inTransaction(session -> {
+            session.merge(usuario);
+            session.flush();
+            session.clear();
+        });
     }
 
     /**
@@ -69,7 +73,9 @@ public class UsuarioDAO implements DAO<Usuario> {
      */
     @Override
     public void delete(Usuario usuario) {
-        sessionFactory.inTransaction(session -> session.remove(usuario));
+        sessionFactory.inTransaction(session -> {
+            session.remove(usuario);
+        });
     }
 
     /**
