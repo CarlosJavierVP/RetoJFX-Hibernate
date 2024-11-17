@@ -157,10 +157,19 @@
     -fx-background-color: #9e4c1c;
     -fx-border-radius: 15px;
     -fx-transition: background-color 0.3;
-    -fx-opacity: 0.2;
+    -fx-opacity: 0.3;
+}
+.btnNewImg{
+    -fx-background-color: #9e4c1c;
+    -fx-border-radius: 15px;
+    -fx-transition: background-color 0.3;
+    -fx-opacity: 1.0;
 }
 
 .btnImg:hover{
+    background-color: rgba(255,255,255,0.5);
+}
+.btnNewImg:hover{
     background-color: rgba(255,255,255,0.5);
 }
 

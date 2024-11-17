@@ -62,6 +62,10 @@ public class AddMovieController implements Initializable {
             String[] trozos = cadena.split("\\\\");
             String namePoster = trozos[trozos.length - 1];
             //Image newImg = addImage(namePoster, imgFile);
+            img.setFitHeight(412);
+            img.setFitWidth(290);
+            btnAddPoster.getStyleClass().remove("btnImg");
+            btnAddPoster.getStyleClass().add("btnNewImg");
             img.setImage(addImage(namePoster, imgFile));
         });
     }
@@ -85,6 +89,9 @@ public class AddMovieController implements Initializable {
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
+        }
+        if (newImg == null){
+            GestorApp.loadFXML("views/addmovie-view.fxml","Movie Pro Manager - "+CurrentSession.userSelected.getNombreUsuario());
         }
         return newImg;
     }
