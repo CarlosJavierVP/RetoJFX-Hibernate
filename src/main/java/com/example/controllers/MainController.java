@@ -20,8 +20,11 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+/**
+ * Clase MainController controla la vista para visualizar todas las copias del usuario
+ * @author Carlos Javier
+ */
 public class MainController implements Initializable {
-
     @javafx.fxml.FXML
     private TableView<CopyDTO> tableCopies;
     @javafx.fxml.FXML
@@ -39,6 +42,11 @@ public class MainController implements Initializable {
     ObservableList<CopyDTO> filter = FXCollections.observableArrayList();
     FilteredList<CopyDTO> filterMovie = new FilteredList<>(filter, p -> true); //Inicializar la lista filtrada
 
+    /**
+     * Metodo initialize para inicializar la ventana y mostrar los datos
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -61,6 +69,9 @@ public class MainController implements Initializable {
 
     }
 
+    /**
+     * Metodo search para filtrar las copias del usuario
+     */
     @javafx.fxml.FXML
     private void search() {
         //filtrar por copiasDTO
@@ -91,26 +102,48 @@ public class MainController implements Initializable {
         tableCopies.setItems(busquedaOrdenada); //aplicar filtro con los datos ordenados en la tabla
     }
 
+    /**
+     * Metodo onBack para regresar a la ventana que visualiza las películas de la base de datos
+     * @param actionEvent
+     */
     @javafx.fxml.FXML
     public void onBack(ActionEvent actionEvent) {
         GestorApp.loadFXML("views/allmovies-view.fxml", "Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
     }
+
+    /**
+     * Metodo btnAllMovies del boton para ir a la ventana de visualizacion de todas las peliculas de la base de datos
+     * @param actionEvent
+     */
     @javafx.fxml.FXML
     public void btnAllMovies(ActionEvent actionEvent) {
         GestorApp.loadFXML("views/allmovies-view.fxml", "Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
     }
+
+    /**
+     * Metodo cerrar para desconectar la sesion y cerrar la app
+     * @param actionEvent
+     */
     @javafx.fxml.FXML
     public void cerrar(ActionEvent actionEvent) {
         CurrentSession.setParamsToNull();
         System.exit(0);
     }
 
+    /**
+     * Metodo ventanaLog para desconectar y volver al loggin
+     * @param actionEvent
+     */
     @javafx.fxml.FXML
     public void ventanaLog(ActionEvent actionEvent) {
         CurrentSession.setParamsToNull();
         GestorApp.loadFXML("views/loggin-view.fxml","Movie Pro Manager - Login");
     }
 
+    /**
+     * Metodo exportPDF para generar informes sobre las copias del usuario
+     * @param actionEvent
+     */
     @FXML
     public void exportPDF(ActionEvent actionEvent) {
         ReportService rs = new ReportService(JdbcUtil.getCon());

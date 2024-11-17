@@ -5,12 +5,19 @@ import net.sf.jasperreports.engine.*;
 import java.sql.Connection;
 import java.util.HashMap;
 
+/**
+ * Clase ReportService que recoge metodos que proporionan servicios, generando informes
+ * @author Carlos Javier
+ */
 public class ReportService {
     private static Connection con;
 
     public ReportService(Connection c) {con=c;
     }
 
+    /**
+     * Metodo generarInformePeliculas genera un informe de todas las peliculas de la base de datos en pdf
+     */
     public void generarInformePeliculas(){
         try{
             JasperPrint jp = JasperFillManager.fillReport("listadoPelis.jasper", null, con);
@@ -21,6 +28,9 @@ public class ReportService {
 
     }
 
+    /**
+     * Metodo generarInformeCopias para generar un informe de todas las copias del usuario en pdf
+     */
     public void generarInformeCopias(){
         HashMap<String, Object> param = new HashMap<>();
         param.put("UsuarioId",CurrentSession.userSelected.getIdUsuario());
@@ -30,8 +40,13 @@ public class ReportService {
         } catch (JRException e) {
             throw new RuntimeException(e);
         }
-
     }
+
+    /**
+     * Metodo informeCopiasSoporteEstado para generar un informe de copias segun el soporte y estado de las copias
+     * @param soporte
+     * @param estado
+     */
     public void informeCopiasSoporteEstado(String soporte, String estado){
         HashMap<String, Object> params = new HashMap<>();
         params.put("Soporte", soporte);
@@ -43,10 +58,12 @@ public class ReportService {
         }catch (JRException e){
             throw new RuntimeException();
         }
-
-
     }
 
+    /**
+     * Metodo informeCopias para generar un informe de copias según el parámetro que se elija, soporte o estado
+     * @param parametro
+     */
     public void informeCopias(String parametro){
         HashMap<String, Object> param = new HashMap<>();
         param.put("UsuarioId",CurrentSession.userSelected.getIdUsuario());
@@ -63,7 +80,6 @@ public class ReportService {
         } catch (JRException e) {
             throw new RuntimeException(e);
         }
-
     }
 
 }

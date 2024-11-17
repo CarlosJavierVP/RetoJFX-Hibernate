@@ -4,11 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit retoques y ajustes padding y margin de las alertas">
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit ajustes imagenPoster añadir Peli">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/covers/dungeons_dragons_honor_among_thieves.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/covers/dungeons_dragons_honor_among_thieves.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CurrentSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CurrentSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/GestorApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/GestorApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/HibernateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JdbcUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/JdbcUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/AddMovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/AddMovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/AllMoviesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/AllMoviesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailCopyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailCopyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailMovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailMovieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/LogginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/LogginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/CopiaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/CopiaDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/PeliculaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/PeliculaDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/UsuarioDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/models/Copia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/models/Copia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/models/Pelicula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/models/Pelicula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/models/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/models/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/models/dto/CopyDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/models/dto/CopyDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/services/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/services/ReportService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,15 +167,7 @@
       <workItem from="1731748648540" duration="3103000" />
       <workItem from="1731751766030" duration="19322000" />
       <workItem from="1731772654922" duration="9148000" />
-      <workItem from="1731823875883" duration="3588000" />
-    </task>
-    <task id="LOCAL-00006" summary="Commit implementación DAO terminada">
-      <option name="closed" value="true" />
-      <created>1729786398151</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1729786398151</updated>
+      <workItem from="1731823875883" duration="7930000" />
     </task>
     <task id="LOCAL-00007" summary="Commit diseño ventana principal y validación usuario">
       <option name="closed" value="true" />
@@ -546,7 +553,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731825304702</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Commit ajustes imagenPoster añadir Peli">
+      <option name="closed" value="true" />
+      <created>1731827533322</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1731827533322</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,7 +569,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Commit add poster y url" />
     <MESSAGE value="Commit save newPoster" />
     <MESSAGE value="Commit persistencia en la dataBase" />
     <MESSAGE value="Commit persistencia en la dataBase 2" />
@@ -579,6 +593,7 @@
     <MESSAGE value="Commit css estilo a las ventanas de alerta" />
     <MESSAGE value="Commit ajuste guardado de película - nuevo poster y url embebida" />
     <MESSAGE value="Commit retoques y ajustes padding y margin de las alertas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit retoques y ajustes padding y margin de las alertas" />
+    <MESSAGE value="Commit ajustes imagenPoster añadir Peli" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit ajustes imagenPoster añadir Peli" />
   </component>
 </project>

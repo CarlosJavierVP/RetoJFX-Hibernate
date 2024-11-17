@@ -5,6 +5,10 @@ import lombok.Data;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Clase Usuario modelo que recoge los datos de Usuario
+ * @author Carlos Javier
+ */
 @Data
 @Entity
 @Table(name = "usuario")
@@ -22,12 +26,19 @@ public class Usuario {
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     private List<Copia> misCopias = new ArrayList<>(0);
 
-
+    /**
+     * Metodo addCopy para añadir una copia a la lista de copias del usuario
+     * @param c
+     */
     public void addCopy(Copia c){
         c.setUser(this);
         this.misCopias.add(c);
     }
 
+    /**
+     * Metodo toString
+     * @return cadena de string
+     */
     @Override
     public String toString() {
         return "Usuario{" +

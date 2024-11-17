@@ -3,6 +3,10 @@ package com.example;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+/**
+ * Clase HibernateUtil para establecer la conexión de la base datos con hibernate
+ * @author Carlos Javier
+ */
 public class HibernateUtil {
     private static SessionFactory sessionFactory;
 
@@ -14,6 +18,10 @@ public class HibernateUtil {
                 .buildSessionFactory();
     }
 
+    /**
+     * Constructor para la conexion
+     * @return
+     */
     public static SessionFactory getSessionFactory(){
         return sessionFactory;
     }

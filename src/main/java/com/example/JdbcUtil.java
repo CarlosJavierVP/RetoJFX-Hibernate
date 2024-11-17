@@ -4,6 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * Clase JdbcUtil para establecer la conexion con la base de datos y generar informes con Jaspersoft
+ * @author Carlos Javier
+ */
 public class JdbcUtil {
     private static Connection con;
 
@@ -19,6 +23,10 @@ public class JdbcUtil {
         }
     }
 
+    /**
+     * Constructor para la conexion
+     * @return
+     */
     public static Connection getCon() {
         return con;
     }

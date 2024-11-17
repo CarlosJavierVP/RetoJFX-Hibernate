@@ -3,6 +3,10 @@ package com.example.models;
 import jakarta.persistence.*;
 import lombok.Data;
 
+/**
+ * Clase Pelicula modelo que recoge los datos de la Pelicula
+ * @author Carlos Javier
+ */
 @Data
 @Entity
 @Table(name = "pelicula")
@@ -21,7 +25,10 @@ public class Pelicula {
     @Column(name = "teaser_url")
     private String teaserUrl;
 
-
+    /**
+     * Metodo toString
+     * @return cadena de String
+     */
     @Override
     public String toString() {
         return "Pelicula{" +

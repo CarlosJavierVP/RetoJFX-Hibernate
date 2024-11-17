@@ -20,8 +20,11 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.web.WebView;
 
+/**
+ * Clase DetailMovieController controla la vista para visualizar el detalle de la película de la base de datos
+ * @author Carlos Javier
+ */
 public class DetailMovieController implements Initializable {
-
     @javafx.fxml.FXML
     private TextField detailDirector;
     @javafx.fxml.FXML
@@ -44,7 +47,11 @@ public class DetailMovieController implements Initializable {
     private Button btnVolver;
     UsuarioDAO userDAO = new UsuarioDAO(HibernateUtil.getSessionFactory());
 
-
+    /**
+     * Metodo initialize para inicializar la ventana y sus métodos
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         detailYear.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1975,2024,2024,0));
@@ -65,6 +72,10 @@ public class DetailMovieController implements Initializable {
 
     }
 
+    /**
+     * Metodo addCopy del boton para añadir la película al listado de copias del usuario
+     * @param actionEvent
+     */
     @javafx.fxml.FXML
     public void addCopy(ActionEvent actionEvent) {
         Alert alert = new Alert (Alert.AlertType.NONE);
@@ -112,17 +123,29 @@ public class DetailMovieController implements Initializable {
 
     }
 
+    /**
+     * Metodo onBack que regresa a la ventana de la visualizacion de todas las peliculas
+     * @param actionEvent
+     */
     @javafx.fxml.FXML
     public void onBack(ActionEvent actionEvent) {
         GestorApp.loadFXML("views/allmovies-view.fxml", "Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
     }
 
+    /**
+     * Metodo cerrar para desconectar la sesion y cerrar la app
+     * @param actionEvent
+     */
     @javafx.fxml.FXML
     public void cerrar(ActionEvent actionEvent) {
         CurrentSession.setParamsToNull();
         System.exit(0);
     }
 
+    /**
+     * Metodo volver que regresa a la ventana de la visualizacion de todas las peliculas
+     * @param actionEvent
+     */
     @FXML
     public void volver(ActionEvent actionEvent) {
         GestorApp.loadFXML("views/allmovies-view.fxml", "Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());

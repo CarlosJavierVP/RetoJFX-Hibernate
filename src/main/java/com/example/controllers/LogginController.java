@@ -14,8 +14,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.ResourceBundle;
 
+/**
+ * Clase LogginController controla la vista para la visualizacion del loggin, tanto para conectarse como para crear una cuenta nueva
+ * @author Carlos Javier
+ */
 public class LogginController implements Initializable {
-
     @FXML
     private PasswordField pass;
     @FXML
@@ -34,7 +37,10 @@ public class LogginController implements Initializable {
     private Label infoLabel1;
     UsuarioDAO dao = new UsuarioDAO(HibernateUtil.getSessionFactory());
 
-
+    /**
+     * metodo onConectar para conectarse a la cuenta
+     * @param actionEvent
+     */
     @FXML
     public void onConectar(ActionEvent actionEvent) {
         Usuario user = dao.validateUser(txtUser.getText(), pass.getText());
@@ -50,8 +56,12 @@ public class LogginController implements Initializable {
         }else{
             infoLabel.setText("Usuario no encontrado");
         }
-
     }
+
+    /**
+     * Metodo onRegister para registrar un nuevo usuario
+     * @param actionEvent
+     */
     @FXML
     public void onRegister(ActionEvent actionEvent) {
         Usuario nuevoUsuario = dao.validateNewUser(newUser.getText());
@@ -80,12 +90,21 @@ public class LogginController implements Initializable {
         }
     }
 
+    /**
+     * Metodo onCancelar para cerrar la app
+     * @param actionEvent
+     */
     @FXML
     public void onCancelar(ActionEvent actionEvent) {
         CurrentSession.setParamsToNull();
         System.exit(0);
     }
 
+    /**
+     * Metodo initialize que inicializa la ventana
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 

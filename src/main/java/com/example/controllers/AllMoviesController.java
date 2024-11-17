@@ -21,6 +21,10 @@ import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+/**
+ * Clase AllMoviesController controla la vista para visualizar todas las películas de la base de datos
+ * @author Carlos Javier
+ */
 public class AllMoviesController implements Initializable {
     @javafx.fxml.FXML
     private TableView <Pelicula> tableMovies;
@@ -43,8 +47,11 @@ public class AllMoviesController implements Initializable {
     ObservableList<Pelicula> filter = FXCollections.observableArrayList();
     FilteredList<Pelicula> filterMovie = new FilteredList<>(filter, p -> true); //Inicializar la lista filtrada
 
-
-    @Deprecated
+    /**
+     * Metodo initialize para inicializar la ventana
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         tablaTitulo.setCellValueFactory(new PropertyValueFactory<>("Titulo"));
@@ -57,7 +64,6 @@ public class AllMoviesController implements Initializable {
             tableMovies.getItems().add(peli);
             filter.add(peli);
         });
-
         tableMovies.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->{
             CurrentSession.movieSelected = newValue;
             GestorApp.loadFXML("views/detailmovie-view.fxml","Movie Pro Manager - "+CurrentSession.userSelected.getNombreUsuario());
@@ -74,6 +80,9 @@ public class AllMoviesController implements Initializable {
 
     }
 
+    /**
+     * Metodo search para filtar las películas por titulo, genero, año y director
+     */
     @FXML
     private void search() {
         //filtrar por películas
@@ -106,30 +115,49 @@ public class AllMoviesController implements Initializable {
         tableMovies.setItems(busquedaOrdenada); //aplicar filtro con los datos ordenados en la tabla
     }
 
-
+    /**
+     * Metodo para regresar al loggin y desconectar
+     * @param actionEvent
+     */
     @javafx.fxml.FXML
     public void onBack(ActionEvent actionEvent) {
         CurrentSession.setParamsToNull();
         GestorApp.loadFXML("views/loggin-view.fxml","Movie Pro Manager - Login");
     }
 
+    /**
+     * Metodo del boton para ir a la vista de copias del usuario
+     * @param actionEvent
+     */
     @javafx.fxml.FXML
     public void btnMyCopies(ActionEvent actionEvent) {
         GestorApp.loadFXML("views/main-view.fxml","Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
     }
 
+    /**
+     * Metodo para desconectar la sesión y cerrar la app
+     * @param actionEvent
+     */
     @FXML
     public void cerrar(ActionEvent actionEvent) {
         CurrentSession.setParamsToNull();
         System.exit(0);
     }
 
+    /**
+     * Metodo del boton para ir al ventana/vista de añadir una nueva película a la base de datos
+     * @param actionEvent
+     */
     @FXML
     public void addMovie(ActionEvent actionEvent) {
         CurrentSession.movieSelected = null;
         GestorApp.loadFXML("views/addmovie-view.fxml","Movie Pro Manager - "+CurrentSession.userSelected.getNombreUsuario());
     }
 
+    /**
+     * Metodo del boton para generar un informe de todas las películas y exportarlo a pdf
+     * @param actionEvent
+     */
     @FXML
     public void exportPDF(ActionEvent actionEvent) {
         ReportService rs = new ReportService(JdbcUtil.getCon());

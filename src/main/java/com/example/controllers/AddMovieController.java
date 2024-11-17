@@ -16,8 +16,11 @@ import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/***
+ * Clase AddMovieController controla la vista para añadir películas a la base de datos
+ * @author Carlos Javier
+ */
 public class AddMovieController implements Initializable {
-
     @javafx.fxml.FXML
     private TextField detailDirector;
     @javafx.fxml.FXML
@@ -44,6 +47,11 @@ public class AddMovieController implements Initializable {
     PeliculaDAO peliDAO = new PeliculaDAO(HibernateUtil.getSessionFactory());
 
 
+    /**
+     * Metodo initialize que inicializa la ventana
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         detailYear.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1975, 2024, 2024, 1));
@@ -51,6 +59,9 @@ public class AddMovieController implements Initializable {
 
     }
 
+    /**
+     * Metodo addPoster en el botón para añadir el poster a la nueva película
+     */
     private void addPoster() {
         btnAddPoster.setOnAction(e -> {
             FileChooser fc = new FileChooser();
@@ -66,10 +77,17 @@ public class AddMovieController implements Initializable {
             img.setFitWidth(290);
             btnAddPoster.getStyleClass().remove("btnImg");
             btnAddPoster.getStyleClass().add("btnNewImg");
+            //se llama al método addImage para copiar el poster y ponerlo en directorio covers y setear la img de la película desde ahí
             img.setImage(addImage(namePoster, imgFile));
         });
     }
 
+    /**
+     * Metodo addImage para copiar la imagen seleccionada y ponerla en el directorio covers
+     * @param namePoster
+     * @param imgFile
+     * @return
+     */
     private Image addImage(String namePoster, File imgFile) {
         File f = new File("covers/" + namePoster);
         FileOutputStream fos = null;
@@ -96,22 +114,38 @@ public class AddMovieController implements Initializable {
         return newImg;
     }
 
+    /**
+     * Metodo para regresar a la ventana de todas las películas
+     * @param actionEvent
+     */
     @javafx.fxml.FXML
     public void onBack(ActionEvent actionEvent) {
         GestorApp.loadFXML("views/allmovies-view.fxml", "Movie Pro Manager - " + CurrentSession.userSelected.getNombreUsuario());
     }
 
+    /**
+     * Metodo para cerrar la sesión de la app
+     * @param actionEvent
+     */
     @javafx.fxml.FXML
     public void cerrar(ActionEvent actionEvent) {
         CurrentSession.setParamsToNull();
         System.exit(0);
     }
 
+    /**
+     * Metodo cancelar para no guardar los datos de la película y volver a la ventana de todas las películas
+     * @param actionEvent
+     */
     @javafx.fxml.FXML
     public void cancelar(ActionEvent actionEvent) {
         GestorApp.loadFXML("views/allmovies-view.fxml", "Movie Pro Manager - " + CurrentSession.userSelected.getNombreUsuario());
     }
 
+    /**
+     * Metodo addMovie para persistir la nueva película en la base de datos
+     * @param actionEvent
+     */
     @javafx.fxml.FXML
     public void addMovie(ActionEvent actionEvent) {
         CurrentSession.movieSelected = new Pelicula();
@@ -143,6 +177,9 @@ public class AddMovieController implements Initializable {
         }
     }
 
+    /**
+     * Metodo alertaError para lanzar las alertas
+     */
     private void alertaError() {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Añadir película");
@@ -151,6 +188,11 @@ public class AddMovieController implements Initializable {
         alert.show();
     }
 
+    /**
+     * Metodo embed para embeber el link del teaser
+     * @param url
+     * @return
+     */
     private String embed(String url) {
         String resultado= "";
         //Para hacer que el enlace del vídeo sea embebido

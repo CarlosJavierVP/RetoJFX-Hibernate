@@ -18,8 +18,11 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+/**
+ * Clase DetailCopyController controla la vista para visualizar el detalle de la copia
+ * @author Carlos Javier
+ */
 public class DetailCopyController implements Initializable {
-
     @javafx.fxml.FXML
     private TextField detailDirector;
     @javafx.fxml.FXML
@@ -44,8 +47,13 @@ public class DetailCopyController implements Initializable {
     private Label idFormato;
     @javafx.fxml.FXML
     private Button btnDelete;
-
     CopiaDAO copyDAO = new CopiaDAO(HibernateUtil.getSessionFactory());
+
+    /**
+     * Metodo initialize para inicializar la ventana y sus métodos
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         detailYear.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1975,2024,2024,0));
@@ -67,17 +75,29 @@ public class DetailCopyController implements Initializable {
         idTeaser.getEngine().load(CurrentSession.movieSelected.getTeaserUrl());
     }
 
+    /**
+     * Metodo onBack para regresar a la ventana principal, el listado de copias del usuario
+     * @param actionEvent
+     */
     @javafx.fxml.FXML
     public void onBack(ActionEvent actionEvent) {
         GestorApp.loadFXML("views/main-view.fxml","Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
     }
 
+    /**
+     * Metodo cerrar para desconectar de la sesion y cerrar la app
+     * @param actionEvent
+     */
     @javafx.fxml.FXML
     public void cerrar(ActionEvent actionEvent) {
         CurrentSession.setParamsToNull();
         System.exit(0);
     }
 
+    /**
+     * Metodo updateCopy del boton para actualizar los datos de la copia
+     * @param actionEvent
+     */
     @javafx.fxml.FXML
     public void updateCopy(ActionEvent actionEvent) {
         Alert alert = new Alert(Alert.AlertType.NONE);
@@ -124,6 +144,10 @@ public class DetailCopyController implements Initializable {
         }
     }
 
+    /**
+     * Metodo deleteCopia del boton para eliminar la copia
+     * @param actionEvent
+     */
     @javafx.fxml.FXML
     public void deleteCopia(ActionEvent actionEvent) {
         CurrentSession.copySelected = copyDAO.findById(CurrentSession.copyDTOselected.getIdMyCopy());

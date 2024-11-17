@@ -1,11 +1,13 @@
 package com.example.models.dto;
 
-import com.example.models.Copia;
-import com.example.models.Pelicula;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Clase CopyDTO para transportar datos
+ * @author Carlos Javier
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
