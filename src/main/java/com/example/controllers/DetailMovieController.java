@@ -16,7 +16,6 @@ import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
-
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.web.WebView;
@@ -43,8 +42,6 @@ public class DetailMovieController implements Initializable {
     private WebView idTeaser;
     @FXML
     private Button btnVolver;
-
-    //CopiaDAO copyDAO = new CopiaDAO(HibernateUtil.getSessionFactory());
     UsuarioDAO userDAO = new UsuarioDAO(HibernateUtil.getSessionFactory());
 
 
@@ -65,7 +62,6 @@ public class DetailMovieController implements Initializable {
             throw new RuntimeException(e);
         }
         idTeaser.getEngine().load(CurrentSession.movieSelected.getTeaserUrl());
-
 
     }
 

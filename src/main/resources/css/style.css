@@ -145,6 +145,13 @@
     -fx-background-color: #e3936e;
 }
 
+.radio-button {
+    -fx-padding: 10px;
+}
+.choice-box{
+    -fx-margin: 10px;
+}
+
 
 .btnImg{
     -fx-background-color: #9e4c1c;

@@ -32,7 +32,6 @@ public class LogginController implements Initializable {
     private PasswordField newPass2;
     @FXML
     private Label infoLabel1;
-
     UsuarioDAO dao = new UsuarioDAO(HibernateUtil.getSessionFactory());
 
 

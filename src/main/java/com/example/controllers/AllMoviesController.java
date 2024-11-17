@@ -40,7 +40,6 @@ public class AllMoviesController implements Initializable {
     private Button btnExportPDF;
     private List<Pelicula> allMovies;
     PeliculaDAO peliDAO = new PeliculaDAO(HibernateUtil.getSessionFactory());
-
     ObservableList<Pelicula> filter = FXCollections.observableArrayList();
     FilteredList<Pelicula> filterMovie = new FilteredList<>(filter, p -> true); //Inicializar la lista filtrada
 

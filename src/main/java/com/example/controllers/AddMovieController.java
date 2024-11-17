@@ -6,20 +6,14 @@ import com.example.HibernateUtil;
 import com.example.dao.PeliculaDAO;
 import com.example.models.Pelicula;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.web.WebView;
 import javafx.stage.FileChooser;
-import javafx.stage.Stage;
-
 import java.io.*;
 import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.StandardCopyOption;
 import java.util.ResourceBundle;
 
 public class AddMovieController implements Initializable {
@@ -44,10 +38,10 @@ public class AddMovieController implements Initializable {
     private TextField newUrl;
     @javafx.fxml.FXML
     private Button btnAddPoster;
-    private File imgFile = null;
-    PeliculaDAO peliDAO = new PeliculaDAO(HibernateUtil.getSessionFactory());
     @javafx.fxml.FXML
     private Button btnCancelar;
+    private File imgFile = null;
+    PeliculaDAO peliDAO = new PeliculaDAO(HibernateUtil.getSessionFactory());
 
 
     @Override
