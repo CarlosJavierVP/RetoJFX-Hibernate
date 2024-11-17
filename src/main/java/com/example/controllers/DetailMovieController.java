@@ -118,6 +118,11 @@ public class DetailMovieController implements Initializable {
                 CurrentSession.userSelected.addCopy(CurrentSession.copySelected);
                 userDAO.update(CurrentSession.userSelected);
                 CurrentSession.copySelected = null;
+                CurrentSession.movieSelected = null;
+                var name =CurrentSession.userSelected.getNombreUsuario();
+                var pss = CurrentSession.userSelected.getPassword();
+                CurrentSession.userSelected = null;
+                CurrentSession.userSelected = userDAO.validateUser(name, pss);
                 GestorApp.loadFXML("views/main-view.fxml", "Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
             }
         }
