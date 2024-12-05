@@ -8,6 +8,7 @@ import org.hibernate.cfg.Configuration;
  * @author Carlos Javier
  */
 public class HibernateUtil {
+    /** SessionFactory para gestionar las sesiones de Hibernate*/
     private static SessionFactory sessionFactory;
 
     static{
@@ -18,9 +19,12 @@ public class HibernateUtil {
                 .buildSessionFactory();
     }
 
+    private HibernateUtil() {
+    }
+
     /**
-     * Constructor para la conexion
-     * @return
+     * Getter para la conexion
+     * @return sessionFactory
      */
     public static SessionFactory getSessionFactory(){
         return sessionFactory;

@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit upd">
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit dlt">
+      <change afterPath="$PROJECT_DIR$/AllMovies.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyCopies.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyCopiesBlu-ray.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyCopiesBlu-ray_dañado.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyCopiesdañado.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/covers/dungeons_dragons_honor_among_thieves.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/covers/dungeons_dragons_honor_among_thieves.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,32 +48,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "JPA.DatabaseSchemaImportDialog": "5b02abaa-dc03-4781-8ab4-1efcebc789b0",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Carlos/Desktop/2DAM/HIBERNATE - EJERCICIOS/RepasoHibernate",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "advanced.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;5b02abaa-dc03-4781-8ab4-1efcebc789b0&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Carlos/Desktop/2DAM/Desarrollo de interfaces/RetoConjunto1&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Carlos\Desktop\2DAM\Desarrollo de interfaces\RetoConjunto2" />
@@ -149,15 +155,31 @@
       <workItem from="1731748648540" duration="3103000" />
       <workItem from="1731751766030" duration="19322000" />
       <workItem from="1731772654922" duration="9148000" />
-      <workItem from="1731823875883" duration="15541000" />
-    </task>
-    <task id="LOCAL-00010" summary="Commit sentencia HQL - revisar">
-      <option name="closed" value="true" />
-      <created>1730400151056</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1730400151056</updated>
+      <workItem from="1731823875883" duration="16197000" />
+      <workItem from="1731840870415" duration="693000" />
+      <workItem from="1731845069163" duration="71000" />
+      <workItem from="1731945072618" duration="619000" />
+      <workItem from="1732013339647" duration="2162000" />
+      <workItem from="1732125356944" duration="263000" />
+      <workItem from="1732177388986" duration="631000" />
+      <workItem from="1732258506291" duration="2103000" />
+      <workItem from="1732440010455" duration="1467000" />
+      <workItem from="1732557797121" duration="2577000" />
+      <workItem from="1732562838332" duration="15000" />
+      <workItem from="1732562991444" duration="20000" />
+      <workItem from="1732563065098" duration="75000" />
+      <workItem from="1732692637014" duration="648000" />
+      <workItem from="1732781229642" duration="1306000" />
+      <workItem from="1732865008979" duration="76000" />
+      <workItem from="1732865097485" duration="131000" />
+      <workItem from="1732873830162" duration="755000" />
+      <workItem from="1732875120802" duration="3342000" />
+      <workItem from="1732964395348" duration="351000" />
+      <workItem from="1733066692046" duration="4658000" />
+      <workItem from="1733207649537" duration="81000" />
+      <workItem from="1733207737552" duration="656000" />
+      <workItem from="1733296620379" duration="1336000" />
+      <workItem from="1733304939730" duration="175000" />
     </task>
     <task id="LOCAL-00011" summary="Commit sentencia HQL revisada - DTO ajustado">
       <option name="closed" value="true" />
@@ -543,7 +565,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731839850324</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Commit dlt">
+      <option name="closed" value="true" />
+      <created>1731840285411</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1731840285411</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,7 +581,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Commit correcta implementación de addPoster para la película y la persistencia en la db" />
     <MESSAGE value="Commit parsear enlace del vídeo para embeberlo" />
     <MESSAGE value="Commit implementación de informe Jaspersoft - lista de todas las películas" />
     <MESSAGE value="Commit implementación de informe Jaspersoft - lista de las copias del usuario" />
@@ -576,6 +605,7 @@
     <MESSAGE value="Commit javadoc" />
     <MESSAGE value="Commit detalles fin" />
     <MESSAGE value="Commit upd" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit upd" />
+    <MESSAGE value="Commit dlt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit dlt" />
   </component>
 </project>
