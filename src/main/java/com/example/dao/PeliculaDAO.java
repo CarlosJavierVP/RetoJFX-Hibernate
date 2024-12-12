@@ -11,7 +11,7 @@ import java.util.List;
  * @author Carlos Javier
  */
 public class PeliculaDAO implements DAO<Pelicula>{
-    private SessionFactory sessionFactory = null;
+    private final SessionFactory sessionFactory;
 
     public PeliculaDAO(SessionFactory sessionFactory){
         this.sessionFactory = sessionFactory;
@@ -74,7 +74,7 @@ public class PeliculaDAO implements DAO<Pelicula>{
 
     /**
      * Metodo findByTitle para obtener una pelicula por su titulo
-     * @param title
+     * @param title titulo de la pelicula
      * @return pelicula por su titulo dado
      */
     public Pelicula findByTitle (String title){

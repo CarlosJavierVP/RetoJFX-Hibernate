@@ -28,7 +28,7 @@ public class Usuario {
 
     /**
      * Metodo addCopy para añadir una copia a la lista de copias del usuario
-     * @param c
+     * @param c copia
      */
     public void addCopy(Copia c){
         c.setUser(this);

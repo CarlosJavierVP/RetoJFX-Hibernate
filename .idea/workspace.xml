@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit dlt">
-      <change afterPath="$PROJECT_DIR$/AllMovies.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyCopies.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyCopiesBlu-ray.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyCopiesBlu-ray_dañado.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyCopiesdañado.pdf" afterDir="false" />
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit upd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/covers/dungeons_dragons_honor_among_thieves.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/covers/dungeons_dragons_honor_among_thieves.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailMovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailMovieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/PeliculaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/PeliculaDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/models/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/models/Usuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +51,7 @@
     &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;5b02abaa-dc03-4781-8ab4-1efcebc789b0&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Carlos/Desktop/2DAM/Desarrollo de interfaces/RetoConjunto1&quot;,
@@ -180,14 +178,10 @@
       <workItem from="1733207737552" duration="656000" />
       <workItem from="1733296620379" duration="1336000" />
       <workItem from="1733304939730" duration="175000" />
-    </task>
-    <task id="LOCAL-00011" summary="Commit sentencia HQL revisada - DTO ajustado">
-      <option name="closed" value="true" />
-      <created>1730455709219</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1730455709219</updated>
+      <workItem from="1733385230449" duration="775000" />
+      <workItem from="1733390149535" duration="3856000" />
+      <workItem from="1733908078434" duration="2959000" />
+      <workItem from="1733989173438" duration="1484000" />
     </task>
     <task id="LOCAL-00012" summary="Commit covers, details-view y controlador">
       <option name="closed" value="true" />
@@ -573,7 +567,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731840285411</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Commit upd">
+      <option name="closed" value="true" />
+      <created>1733385389781</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1733385389782</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -604,8 +606,8 @@
     <MESSAGE value="Commit ajustes imagenPoster añadir Peli" />
     <MESSAGE value="Commit javadoc" />
     <MESSAGE value="Commit detalles fin" />
-    <MESSAGE value="Commit upd" />
     <MESSAGE value="Commit dlt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit dlt" />
+    <MESSAGE value="Commit upd" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit upd" />
   </component>
 </project>

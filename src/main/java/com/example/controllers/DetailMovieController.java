@@ -126,7 +126,6 @@ public class DetailMovieController implements Initializable {
                 GestorApp.loadFXML("views/main-view.fxml", "Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
             }
         }
-
     }
 
     /**
