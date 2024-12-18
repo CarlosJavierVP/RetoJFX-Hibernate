@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit informe detallado de una copia" />
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit informe detallado de una copia - fin" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -182,15 +182,7 @@
       <workItem from="1734160072398" duration="4859000" />
       <workItem from="1734250730625" duration="4181000" />
       <workItem from="1734536015636" duration="633000" />
-      <workItem from="1734544480139" duration="5798000" />
-    </task>
-    <task id="LOCAL-00014" summary="Commit vistaLoggin y logginController modificados, funcionalidad addUser">
-      <option name="closed" value="true" />
-      <created>1730482948862</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1730482948862</updated>
+      <workItem from="1734544480139" duration="6627000" />
     </task>
     <task id="LOCAL-00015" summary="Commit implementación search bar en la vista de allMovies">
       <option name="closed" value="true" />
@@ -576,7 +568,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734551871280</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Commit informe detallado de una copia - fin">
+      <option name="closed" value="true" />
+      <created>1734553274538</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1734553274538</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,7 +584,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Commit implementación de informe Jaspersoft - lista de las copias del usuario" />
     <MESSAGE value="Commit implementación de informe Jaspersoft - lista de las copias del usuario - retoques" />
     <MESSAGE value="Commit implementación de informe Jaspersoft - lista de las copias del usuario - retoques 2" />
     <MESSAGE value="Commit implementación funcionalidad informes" />
@@ -609,6 +608,7 @@
     <MESSAGE value="Commit upd" />
     <MESSAGE value="Commit x2" />
     <MESSAGE value="Commit informe detallado de una copia" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit informe detallado de una copia" />
+    <MESSAGE value="Commit informe detallado de una copia - fin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit informe detallado de una copia - fin" />
   </component>
 </project>

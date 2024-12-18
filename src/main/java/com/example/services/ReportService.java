@@ -84,7 +84,7 @@ public class ReportService {
 
     public void informeMiCopia(Long idCopia){
         HashMap<String, Object> param = new HashMap<>();
-        param.put("idCopy", idCopia);
+        param.put("idCopia", idCopia);
         try{
             JasperPrint jp = JasperFillManager.fillReport("detalleCopia.jasper", param, con);
             JasperExportManager.exportReportToPdfFile(jp,"MiCopiaDetallada.pdf");
