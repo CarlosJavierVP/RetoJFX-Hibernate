@@ -86,8 +86,8 @@ public class ReportService {
         HashMap<String, Object> param = new HashMap<>();
         param.put("idCopy", idCopia);
         try{
-            JasperPrint jp = JasperFillManager.fillReport("copiaDatos.jasper", param, con);
-            JasperExportManager.exportReportToPdfFile(jp,"MiCopia.pdf");
+            JasperPrint jp = JasperFillManager.fillReport("detalleCopia.jasper", param, con);
+            JasperExportManager.exportReportToPdfFile(jp,"MiCopiaDetallada.pdf");
         } catch (JRException e) {
             throw new RuntimeException(e);
         }

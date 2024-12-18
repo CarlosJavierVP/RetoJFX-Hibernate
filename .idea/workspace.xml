@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit x2">
-      <change afterPath="$PROJECT_DIR$/copiaDatos.jasper" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailCopyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailCopyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailMovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/DetailMovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/models/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/models/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/services/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/services/ReportService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/views/detailcopy-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/views/detailcopy-view.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit informe detallado de una copia" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -191,15 +182,7 @@
       <workItem from="1734160072398" duration="4859000" />
       <workItem from="1734250730625" duration="4181000" />
       <workItem from="1734536015636" duration="633000" />
-      <workItem from="1734544480139" duration="5480000" />
-    </task>
-    <task id="LOCAL-00013" summary="Commit vista detalle y controlador">
-      <option name="closed" value="true" />
-      <created>1730464944789</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1730464944789</updated>
+      <workItem from="1734544480139" duration="5798000" />
     </task>
     <task id="LOCAL-00014" summary="Commit vistaLoggin y logginController modificados, funcionalidad addUser">
       <option name="closed" value="true" />
@@ -585,7 +568,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734004230529</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Commit informe detallado de una copia">
+      <option name="closed" value="true" />
+      <created>1734551871279</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1734551871280</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -593,7 +584,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Commit implementación de informe Jaspersoft - lista de todas las películas" />
     <MESSAGE value="Commit implementación de informe Jaspersoft - lista de las copias del usuario" />
     <MESSAGE value="Commit implementación de informe Jaspersoft - lista de las copias del usuario - retoques" />
     <MESSAGE value="Commit implementación de informe Jaspersoft - lista de las copias del usuario - retoques 2" />
@@ -618,6 +608,7 @@
     <MESSAGE value="Commit dlt" />
     <MESSAGE value="Commit upd" />
     <MESSAGE value="Commit x2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit x2" />
+    <MESSAGE value="Commit informe detallado de una copia" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit informe detallado de una copia" />
   </component>
 </project>
