@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit informe detallado de una copia - fin" />
+    <list default="true" id="c38544b3-6703-48b2-9808-fd509951660e" name="Changes" comment="Commit informe detallado de una copia - fin!">
+      <change afterPath="$PROJECT_DIR$/MiCopiaDetallada.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -182,15 +185,7 @@
       <workItem from="1734160072398" duration="4859000" />
       <workItem from="1734250730625" duration="4181000" />
       <workItem from="1734536015636" duration="633000" />
-      <workItem from="1734544480139" duration="6627000" />
-    </task>
-    <task id="LOCAL-00015" summary="Commit implementación search bar en la vista de allMovies">
-      <option name="closed" value="true" />
-      <created>1730490570873</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1730490570873</updated>
+      <workItem from="1734544480139" duration="7007000" />
     </task>
     <task id="LOCAL-00016" summary="Commit implementación search">
       <option name="closed" value="true" />
@@ -576,7 +571,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734553274538</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Commit informe detallado de una copia - fin!">
+      <option name="closed" value="true" />
+      <created>1734553448949</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1734553448949</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,7 +587,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Commit implementación de informe Jaspersoft - lista de las copias del usuario - retoques" />
     <MESSAGE value="Commit implementación de informe Jaspersoft - lista de las copias del usuario - retoques 2" />
     <MESSAGE value="Commit implementación funcionalidad informes" />
     <MESSAGE value="Commit implementación funcionalidad informes 2" />
@@ -609,6 +611,7 @@
     <MESSAGE value="Commit x2" />
     <MESSAGE value="Commit informe detallado de una copia" />
     <MESSAGE value="Commit informe detallado de una copia - fin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit informe detallado de una copia - fin" />
+    <MESSAGE value="Commit informe detallado de una copia - fin!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit informe detallado de una copia - fin!" />
   </component>
 </project>
