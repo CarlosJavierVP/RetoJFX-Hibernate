@@ -130,6 +130,19 @@
                                     </Button>
                                  </children>
                               </FlowPane>
+                              <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="btnExportPDF" mnemonicParsing="false" onAction="#exportPDF" style="-fx-background-color: #00000000;">
+                                       <graphic>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../../../media/pdf.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </FlowPane>
                               <FlowPane alignment="CENTER_RIGHT">
                                  <children>
                                     <Button fx:id="btnEditCopy" mnemonicParsing="false" onAction="#updateCopy" text="Actualizar Copia">

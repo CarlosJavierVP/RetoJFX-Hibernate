@@ -3,8 +3,10 @@ package com.example.controllers;
 import com.example.CurrentSession;
 import com.example.GestorApp;
 import com.example.HibernateUtil;
+import com.example.JdbcUtil;
 import com.example.dao.CopiaDAO;
 import com.example.dao.UsuarioDAO;
+import com.example.services.ReportService;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -50,6 +52,8 @@ public class DetailCopyController implements Initializable {
     private Button btnDelete;
     CopiaDAO copyDAO = new CopiaDAO(HibernateUtil.getSessionFactory());
     UsuarioDAO userDAO = new UsuarioDAO(HibernateUtil.getSessionFactory());
+    @javafx.fxml.FXML
+    private Button btnExportPDF;
 
     /**
      * Metodo initialize para inicializar la ventana y sus métodos
@@ -161,5 +165,30 @@ public class DetailCopyController implements Initializable {
         CurrentSession.userSelected = null;
         CurrentSession.userSelected = userDAO.validateUser(name, pss);
         GestorApp.loadFXML("views/main-view.fxml","Movie Pro Manager - "+ CurrentSession.userSelected.getNombreUsuario());
+    }
+
+    @javafx.fxml.FXML
+    public void exportPDF(ActionEvent actionEvent) {
+        ReportService rs = new ReportService(JdbcUtil.getCon());
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Informe de la copia");
+        alert.setHeaderText("Generar archivo pdf");
+        alert.setContentText("¿Desea un informe de la copia?");
+        alert.getDialogPane().getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
+        Optional<ButtonType> resultado = alert.showAndWait();
+
+        if(resultado.isPresent()){
+            if(resultado.get() == ButtonType.OK){
+                rs.informeMiCopia(CurrentSession.copyDTOselected.getIdMyCopy());
+                Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
+                alert2.setTitle("Informe generado");
+                alert2.setContentText("Archivo pdf creado correctamente");
+
+                alert2.getDialogPane().getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
+                alert2.show();
+            }
+        }
+
     }
 }

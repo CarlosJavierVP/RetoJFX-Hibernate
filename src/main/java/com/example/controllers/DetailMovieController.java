@@ -115,7 +115,8 @@ public class DetailMovieController implements Initializable {
                 CurrentSession.copySelected.setIdPelicula(CurrentSession.movieSelected.getIdPelicula());
                 CurrentSession.copySelected.setSoporte(soporteCopia);
                 CurrentSession.copySelected.setUser(CurrentSession.userSelected);
-                CurrentSession.userSelected.addCopy(CurrentSession.copySelected);
+                CurrentSession.userSelected.addCopy(CurrentSession.copySelected); // *habría que ver si es necesario este método cuando se emplea el cascade
+                //save copy y en cascade actualizar el usuario
                 userDAO.update(CurrentSession.userSelected);
                 CurrentSession.copySelected = null;
                 CurrentSession.movieSelected = null;
